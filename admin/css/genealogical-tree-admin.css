@@ -1,0 +1,258 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+.gta-container * {
+	box-sizing: border-box;
+}
+
+.gta-container {
+	width: 100%;
+}
+
+.gta-row {
+	margin-left: -12px;
+	margin-right: -12px;
+}
+
+.gta-row:after,
+.gta-row:before {
+	display: table;
+	content: "";
+}
+
+.gta-row:after {
+	clear: both;
+}
+
+.gta-col-3 {
+	float: left;
+	width: 33.3333333%;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+@media(max-width: 1650px) {
+	.gta-col-3 {
+		width: 50%;
+	}
+}
+
+@media(max-width: 1350px) {
+	.gta-col-3 {
+		width: 100%;
+	}
+}
+
+.shortcode.column-shortcode {
+	width: 100%;
+}
+
+.shortcode.column-shortcode code {
+	white-space: nowrap;
+	width: 100%;
+	display: block;
+	box-sizing: border-box;
+}
+
+.shortcode.column-shortcode td {
+	padding: 0px;
+}
+
+.taxonomy-gt-family-group .fixed .column-slug {
+	width: 15%;
+}
+
+.gta-table {
+	width: 100%;
+}
+
+.gta-table td {
+	vertical-align: top;
+}
+
+.gta-table td:first-child {
+	width: 150px;
+}
+
+.gta-table td td:first-child {
+	width: 50px;
+}
+
+.gta-table .gta-table td:first-child {
+	width: initial;
+}
+
+.gta-table select,
+.gta-table input[type=text] {
+	width: 100%;
+}
+
+.gta-table h4 {
+	font-size: 18px;
+	margin: 0px;
+	padding: 10px 0px;
+}
+
+.gta-table label {
+	padding: 5px 0;
+	display: block;
+}
+
+.gta-table .repetead-field {
+	padding-right: 32px;
+	position: relative;
+	margin-bottom: 8px;
+}
+
+table.gta-table {
+	border-spacing: 0px 0px;
+	border-collapse: separate;
+}
+
+table.gta-table td {
+	padding: 4px 3px;
+	;
+}
+
+.gta-table .repetead-field .clone {
+	position: absolute;
+	right: 0px;
+	top: 1px;
+	font-size: 0px;
+	width: 27px;
+	height: 27px;
+	background: url('../img/add.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.gta-table .repetead-field .delete {
+	position: absolute;
+	right: 0px;
+	top: 1px;
+	font-size: 0px;
+	width: 27px;
+	height: 27px;
+	background: url('../img/delete.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.select2-container {
+}
+.gt-subnav li {
+	display: inline-block;
+}
+
+.gt-subnav li a {
+	text-decoration: none;
+}
+
+.gt-subnav .gt-subnav-active {
+	color: #000;
+	font-weight: 600;
+}
+
+th p.description {
+	font-weight: normal;
+	display: none;
+}
+
+.wp-picker-container .hidden {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.wp-picker-holder {
+	position: absolute;
+	z-index: 4;
+}
+
+.gt-tree td,
+.gt-tree th {
+	padding: 4px;
+	vertical-align: middle;
+}
+
+.gt-tree td label {
+	font-weight: bold;
+}
+
+.gt-tree .higlighted {
+	background: #d5d5d5;
+	border-radius: 4px;
+}
+
+.gt-tree .higlighted h4 {
+	margin: 0;
+	padding: 0;
+}
+
+.gt-tree .wp-picker-container .wp-color-result.button {
+	margin-bottom: 0px;
+}
+
+.wp-core-ui .button.button-small.wp-picker-clear {
+	padding: 2px 8px;
+	margin-left: 6px;
+}
+
+#genealogical-tree-member-meta-box.closed .inside,
+#genealogical-tree-tree-meta-box.closed .inside {
+	display: block;
+}
+
+#genealogical-tree-member-meta-box .handlediv,
+#genealogical-tree-tree-meta-box .handlediv {
+	display: none;
+}
+
+.repetead-field.rep-birt-deat-event .delete,
+.repetead-field.rep-birt-deat-event .clone {
+	top: 10px;
+}
+#gt-family-groupchecklist li {
+	display: none;
+}
+#gt-family-groupchecklist-pop li {
+	display: none;
+}
+#gt-family-group-adder {
+	display: none;
+}
+
+.type-gt-member.merged_with {
+	background-color: rgb(0 128 0 / 25%) !important;
+}
+.type-gt-member.merged_to {
+	    background-color: rgb(255 255 0 / 25%) !important
+}
+.misha_gallery_mtb {
+	
+}
+.misha_gallery_mtb > li {
+    display: inline-block;
+    width: 28%;
+    border: 1px solid #c3c4c7;
+    margin: 2px;
+    position: relative;
+    padding: 3px;
+}
+.misha_gallery_mtb > li img {
+	max-width: 100%;
+}
+.misha_gallery_mtb > li .misha_gallery_remove {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    background: red;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 15px;
+    color: #fff;
+    text-decoration: none;
+}

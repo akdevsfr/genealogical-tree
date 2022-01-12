@@ -1,0 +1,1205 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2020-07-07 14:54+0600\n"
+"PO-Revision-Date: 2020-07-10 19:52+0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3.1\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#. Plugin Name of the plugin/theme
+#: admin/class-genealogical-tree-admin.php:110
+#: admin/class-genealogical-tree-admin.php:111
+msgid "Genealogical Tree"
+msgstr ""
+
+#: admin/class-genealogical-tree-admin.php:121
+#: admin/class-genealogical-tree-admin.php:122
+msgid "Family"
+msgstr "Семейство"
+
+#: admin/class-genealogical-tree-admin.php:131
+#: admin/class-genealogical-tree-admin.php:132
+msgid "Import .GED"
+msgstr "Импорт. Ged"
+
+#: admin/class-genealogical-tree-admin.php:139
+#: admin/class-genealogical-tree-admin.php:140
+msgid "Export .GED"
+msgstr "Экспорт. Ged"
+
+#: admin/class-genealogical-tree-admin.php:167
+msgctxt "post type general name"
+msgid "Members"
+msgstr "Участники"
+
+#: admin/class-genealogical-tree-admin.php:168
+msgctxt "post type singular name"
+msgid "Member"
+msgstr "Участник"
+
+#: admin/class-genealogical-tree-admin.php:169
+msgctxt "admin menu"
+msgid "Members"
+msgstr "Участники"
+
+#: admin/class-genealogical-tree-admin.php:170
+msgctxt "add new on admin bar"
+msgid "Member"
+msgstr "Участник"
+
+#: admin/class-genealogical-tree-admin.php:171
+msgctxt "member"
+msgid "Add New"
+msgstr "Добавить новый"
+
+#: admin/class-genealogical-tree-admin.php:172
+msgid "Add New Member"
+msgstr "Добавить нового участника"
+
+#: admin/class-genealogical-tree-admin.php:173
+msgid "New Member"
+msgstr "Новый участник"
+
+#: admin/class-genealogical-tree-admin.php:174
+msgid "Edit Member"
+msgstr "Изменить участника"
+
+#: admin/class-genealogical-tree-admin.php:175
+msgid "View Member"
+msgstr "Просмотр сотрудника"
+
+#: admin/class-genealogical-tree-admin.php:176
+msgid "Members"
+msgstr "Участники"
+
+#: admin/class-genealogical-tree-admin.php:177
+msgid "Search Members"
+msgstr "Поиск участников"
+
+#: admin/class-genealogical-tree-admin.php:178
+msgid "Parent Members:"
+msgstr "Родительские пользователи:"
+
+#: admin/class-genealogical-tree-admin.php:179
+msgid "No members found."
+msgstr "Члены группы не были найдены."
+
+#: admin/class-genealogical-tree-admin.php:180
+msgid "No members found in Trash."
+msgstr "Пользователей в корзине не найдено"
+
+#: admin/class-genealogical-tree-admin.php:193
+#: admin/class-genealogical-tree-admin.php:231
+#: admin/class-genealogical-tree-admin.php:269
+msgid "Description."
+msgstr "Описание."
+
+#: admin/class-genealogical-tree-admin.php:211
+msgctxt "post type general name"
+msgid "Trees"
+msgstr "Деревья"
+
+#: admin/class-genealogical-tree-admin.php:212
+msgctxt "post type singular name"
+msgid "Tree"
+msgstr "Дерево"
+
+#: admin/class-genealogical-tree-admin.php:213
+msgctxt "admin menu"
+msgid "Trees"
+msgstr "Деревья"
+
+#: admin/class-genealogical-tree-admin.php:214
+msgctxt "add new on admin bar"
+msgid "Tree"
+msgstr "Дерево"
+
+#: admin/class-genealogical-tree-admin.php:215
+msgctxt "tree"
+msgid "Add New"
+msgstr "Добавить новый"
+
+#: admin/class-genealogical-tree-admin.php:216
+msgid "Add New Tree"
+msgstr "Добавить новое дерево"
+
+#: admin/class-genealogical-tree-admin.php:217
+msgid "New Tree"
+msgstr "Новое дерево"
+
+#: admin/class-genealogical-tree-admin.php:218
+msgid "Edit Tree"
+msgstr "Редактировать дерево"
+
+#: admin/class-genealogical-tree-admin.php:219
+msgid "View Tree"
+msgstr "Просмотреть дерево"
+
+#: admin/class-genealogical-tree-admin.php:220
+msgid "Trees"
+msgstr "Деревья"
+
+#: admin/class-genealogical-tree-admin.php:221
+msgid "Search Trees"
+msgstr "Поиск деревьев"
+
+#: admin/class-genealogical-tree-admin.php:222
+msgid "Parent Trees:"
+msgstr "Родительские деревья:"
+
+#: admin/class-genealogical-tree-admin.php:223
+msgid "No trees found."
+msgstr "Деревьев не найдено."
+
+#: admin/class-genealogical-tree-admin.php:224
+msgid "No trees found in Trash."
+msgstr "В корзине не найдено деревьев."
+
+#: admin/class-genealogical-tree-admin.php:249
+msgctxt "post type general name"
+msgid "Families"
+msgstr "Категории"
+
+#: admin/class-genealogical-tree-admin.php:250
+msgctxt "post type singular name"
+msgid "Family"
+msgstr "Семейство"
+
+#: admin/class-genealogical-tree-admin.php:251
+msgctxt "admin menu"
+msgid "Families"
+msgstr "Категории"
+
+#: admin/class-genealogical-tree-admin.php:252
+msgctxt "add new on admin bar"
+msgid "Family"
+msgstr "Семейство"
+
+#: admin/class-genealogical-tree-admin.php:253
+msgctxt "family"
+msgid "Add New"
+msgstr "Добавить новый"
+
+#: admin/class-genealogical-tree-admin.php:254
+msgid "Add New Family"
+msgstr "Добавить новую семью"
+
+#: admin/class-genealogical-tree-admin.php:255
+msgid "New Family"
+msgstr "Новая семья"
+
+#: admin/class-genealogical-tree-admin.php:256
+msgid "Edit Family"
+msgstr "Редактировать семьи"
+
+#: admin/class-genealogical-tree-admin.php:257
+msgid "View Family"
+msgstr "Посмотреть семью"
+
+#: admin/class-genealogical-tree-admin.php:258
+msgid "All Families"
+msgstr "Все семьи"
+
+#: admin/class-genealogical-tree-admin.php:259
+msgid "Search Families"
+msgstr "Поиск семей"
+
+#: admin/class-genealogical-tree-admin.php:260
+msgid "Parent Families:"
+msgstr "Родительские семьи:"
+
+#: admin/class-genealogical-tree-admin.php:261
+msgid "No families found."
+msgstr "Семьи не найдены."
+
+#: admin/class-genealogical-tree-admin.php:262
+msgid "No families found in Trash."
+msgstr "В Корзине нет ни одного семьи."
+
+#: admin/class-genealogical-tree-admin.php:291
+msgctxt "genealogical-tree"
+msgid "Family Groups"
+msgstr "Семейные группы"
+
+#: admin/class-genealogical-tree-admin.php:292
+msgctxt "taxonomy singular name"
+msgid "Family Group"
+msgstr "Семейная группа"
+
+#: admin/class-genealogical-tree-admin.php:293
+msgid "Search Family Groups"
+msgstr "Поиск семейных групп"
+
+#: admin/class-genealogical-tree-admin.php:294
+msgid "Popular Family Groups"
+msgstr "Популярные семейные группы"
+
+#: admin/class-genealogical-tree-admin.php:295
+msgid "All Family Groups"
+msgstr "Все семейные группы"
+
+#: admin/class-genealogical-tree-admin.php:296
+#: admin/class-genealogical-tree-admin.php:297
+msgid "Parent Family Group"
+msgstr "Родительская семейная группа"
+
+#: admin/class-genealogical-tree-admin.php:298
+msgid "Edit Family Group"
+msgstr "Редактировать семейную группу"
+
+#: admin/class-genealogical-tree-admin.php:299
+msgid "Update Family Group"
+msgstr "Обновление Семейной группы"
+
+#: admin/class-genealogical-tree-admin.php:300
+msgid "Add New Group"
+msgstr "Добавить новую группу"
+
+#: admin/class-genealogical-tree-admin.php:301
+msgid "New Group Name"
+msgstr "Имя новой группы"
+
+#: admin/class-genealogical-tree-admin.php:302
+msgid "Separate family group with commas"
+msgstr "Отдельная семейная группа с запятыми"
+
+#: admin/class-genealogical-tree-admin.php:303
+msgid "Add or remove family group"
+msgstr "Добавить или удалить семейную группу"
+
+#: admin/class-genealogical-tree-admin.php:304
+msgid "Choose from the most used family group"
+msgstr "Выберите из наиболее часто используемой семейной группы"
+
+#: admin/class-genealogical-tree-admin.php:305
+msgid "No family group found."
+msgstr "Ни одна семейная группа не найдена."
+
+#: admin/class-genealogical-tree-admin.php:306
+msgid "Family Groups"
+msgstr "Семейные группы"
+
+#: admin/class-genealogical-tree-admin.php:329
+#: admin/partials/genealogical-tree-admin-settings.php:5
+msgid "Tree Settings"
+msgstr "Настройки дерева"
+
+#: admin/class-genealogical-tree-admin.php:409
+#: admin/partials/genealogical-tree-meta-member-info.php:32
+msgid "ID"
+msgstr "ID"
+
+#: admin/class-genealogical-tree-admin.php:410
+msgid "Born"
+msgstr "Дата рождения"
+
+#: admin/class-genealogical-tree-admin.php:411
+#: admin/partials/genealogical-tree-meta-member-info.php:42
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:142
+#: admin/partials/genealogical-tree-meta-tree-settings.php:145
+#: public/Traits/traits-genealogical-tree-single-member-info.php:82
+msgid "Name"
+msgstr "Имя"
+
+#: admin/class-genealogical-tree-admin.php:452
+msgid "Shortcode"
+msgstr "Шорткод"
+
+#: admin/class-genealogical-tree-admin.php:473
+#: admin/class-genealogical-tree-admin.php:529
+msgid "Member info"
+msgstr "Информация об участнике"
+
+#: admin/class-genealogical-tree-admin.php:485
+#: admin/class-genealogical-tree-admin.php:509
+msgid "Additional Member info"
+msgstr "Дополнительная информация о участнике"
+
+#: admin/class-genealogical-tree-admin.php:497
+msgid "Additional Children / Siblings info"
+msgstr "Дополнительные дети / Информация о братьях и сестрах"
+
+#: admin/class-genealogical-tree-admin.php:548
+msgid "Family info"
+msgstr "Информация о семье"
+
+#: admin/class-genealogical-tree-admin.php:1260
+msgid "Import Ged"
+msgstr "Импорт Гед"
+
+#: admin/class-genealogical-tree-admin.php:1263
+msgid ""
+"You may see some warning on import process for some file, but no worry about "
+"that. But if any error, you can contact us."
+msgstr ""
+"Вы можете увидеть некоторое предупреждение о процессе импорта для некоторых "
+"файлов, но не беспокойтесь об этом. Но если какая-либо ошибка, вы можете "
+"связаться с нами."
+
+#: admin/class-genealogical-tree-admin.php:1266
+msgid "Select file (.ged)"
+msgstr "Выберите файл (.ged)"
+
+#: admin/class-genealogical-tree-admin.php:1271
+msgid "Import"
+msgstr "Импорт"
+
+#: admin/class-genealogical-tree-admin.php:1280
+msgid "Imported successfully"
+msgstr "Импорт успешно"
+
+#: admin/class-genealogical-tree-admin.php:1281
+msgid "Family Tree"
+msgstr "Семейное дерево"
+
+#: admin/class-genealogical-tree-admin.php:1281
+msgid "View Page"
+msgstr "Просмотр страницы"
+
+#: admin/class-genealogical-tree-admin.php:1295
+#: admin/class-genealogical-tree-admin.php:1319
+msgid "Export"
+msgstr "Экспорт"
+
+#: admin/class-genealogical-tree-admin.php:1296
+msgid ""
+"This will export a Zip file for download, which contains a Gedcom (.ged) "
+"format (version 5.5) file of your data."
+msgstr ""
+"Это позволит экспортировать файл для загрузки, который содержит Gedcom (."
+"ged) формат (версия 5.5) файл ваших данных."
+
+#: admin/class-genealogical-tree-admin.php:1301
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:38
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:42
+#: admin/partials/genealogical-tree-meta-tree-settings.php:45
+msgid "Select Family"
+msgstr "Выберите семью"
+
+#: admin/genealogical-tree-handel-export.php:6
+#: admin/genealogical-tree-handel-import.php:6
+msgid "You are not authorized to do this."
+msgstr "Вы не уполномочены делать это."
+
+#: admin/genealogical-tree-handel-import.php:13
+msgid "File required"
+msgstr "Требуется файл"
+
+#: admin/genealogical-tree-handel-import.php:27
+msgid "Family group  required"
+msgstr "Требуется семейная группа"
+
+#: admin/inc/class-genealogical-tree-family.php:100
+msgid "Default Tree"
+msgstr "Дерево по умолчанию"
+
+#: admin/inc/class-genealogical-tree-family.php:131
+msgid "Generate Default Tree"
+msgstr "Создание дерева по умолчанию"
+
+#: admin/inc/class-genealogical-tree-family.php:135
+msgid "View Tree."
+msgstr "Посмотреть дерево."
+
+#: admin/inc/class-genealogical-tree-family.php:142
+msgid "Possible Roots"
+msgstr "Возможные корни"
+
+#: admin/inc/class-genealogical-tree-family.php:148
+msgid "To view possibles first generate default tree"
+msgstr "Для просмотра возможных сначала генерируется дерево по умолчанию"
+
+#: admin/inc/class-genealogical-tree-family.php:154
+msgid "Members Page"
+msgstr "Страница участников"
+
+#: admin/inc/class-genealogical-tree-family.php:222
+#: admin/partials/genealogical-tree-admin-settings.php:13
+msgid "Upgrade Now!"
+msgstr "Обновить сейчас!"
+
+#: admin/partials/genealogical-tree-admin-settings.php:4
+msgid "General Settings"
+msgstr "Основные настройки"
+
+#: admin/partials/genealogical-tree-admin-settings.php:11
+msgid "You are using Free plan, To get premium features"
+msgstr "Вы используете бесплатный план, чтобы получить премиум-функции"
+
+#: admin/partials/genealogical-tree-admin-settings.php:23
+msgid "Enable Import (.ged)"
+msgstr "Включить импорт (.ged)"
+
+#: admin/partials/genealogical-tree-admin-settings.php:24
+msgid "It will allow you to import members from a ged formated file."
+msgstr "Это позволит вам импортировать членов из ged форматированного файла."
+
+#: admin/partials/genealogical-tree-admin-settings.php:34
+msgid "Enable Export (.ged)"
+msgstr "Включить экспорт (.ged)"
+
+#: admin/partials/genealogical-tree-admin-settings.php:35
+msgid "It will allow you to export members and family to a ged formated file."
+msgstr ""
+"Это позволит вам экспортировать членов и членов семьи в ged форматированный "
+"файл."
+
+#: admin/partials/genealogical-tree-admin-settings.php:44
+msgid "Hide Credit Text"
+msgstr "Скрыть кредитный текст"
+
+#: admin/partials/genealogical-tree-admin-settings.php:45
+msgid "This will Credit Text"
+msgstr "Это будет Кредитный текст"
+
+#: admin/partials/genealogical-tree-admin-settings.php:63
+#: admin/partials/genealogical-tree-meta-tree-settings.php:98
+msgid "Tree Style 1"
+msgstr "Дерево Стиль 1"
+
+#: admin/partials/genealogical-tree-admin-settings.php:66
+msgid "Tree Style 2"
+msgstr "Дерево Стиль 2"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:47
+#: public/Traits/traits-genealogical-tree-single-member-info.php:476
+msgid "Full Name"
+msgstr "Полное имя"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:55
+msgid "Given Name"
+msgstr "Указанное имя"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:63
+msgid "Surname"
+msgstr "Фамилия"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:71
+#: admin/partials/genealogical-tree-meta-member-info.php:76
+msgid "Gender"
+msgstr "Пол"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:80
+msgid "Select Gender"
+msgstr "Выбрать пол"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:81
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:335
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:389
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:549
+#: admin/partials/genealogical-tree-meta-tree-settings.php:337
+#: admin/partials/genealogical-tree-meta-tree-settings.php:391
+#: admin/partials/genealogical-tree-meta-tree-settings.php:550
+#: public/Traits/traits-genealogical-tree-ind-style.php:159
+msgid "Male"
+msgstr "Мужской"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:82
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:341
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:395
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:555
+#: admin/partials/genealogical-tree-meta-tree-settings.php:343
+#: admin/partials/genealogical-tree-meta-tree-settings.php:397
+#: admin/partials/genealogical-tree-meta-tree-settings.php:556
+#: public/Traits/traits-genealogical-tree-ind-style.php:162
+msgid "Female"
+msgstr "Женский"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:89
+#: public/Traits/traits-genealogical-tree-single-member-info.php:198
+msgid "Birth"
+msgstr "день рождения"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:111
+#: admin/partials/genealogical-tree-meta-member-info.php:171
+#: admin/partials/genealogical-tree-meta-member-info.php:272
+#: admin/partials/genealogical-tree-meta-member-info.php:317
+#: admin/partials/genealogical-tree-meta-member-info.php:366
+#: admin/partials/genealogical-tree-meta-member-info.php:383
+#: admin/partials/genealogical-tree-meta-member-info.php:400
+#: admin/partials/genealogical-tree-meta-member-info.php:542
+msgid "Add"
+msgstr "Добавить"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:113
+#: admin/partials/genealogical-tree-meta-member-info.php:173
+#: admin/partials/genealogical-tree-meta-member-info.php:274
+#: admin/partials/genealogical-tree-meta-member-info.php:319
+#: admin/partials/genealogical-tree-meta-member-info.php:368
+#: admin/partials/genealogical-tree-meta-member-info.php:385
+#: admin/partials/genealogical-tree-meta-member-info.php:402
+#: admin/partials/genealogical-tree-meta-member-info.php:544
+msgid "Delete"
+msgstr "Удалить"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:119
+#: admin/partials/genealogical-tree-meta-member-info.php:178
+msgid "REF"
+msgstr "ССЫЛ."
+
+#: admin/partials/genealogical-tree-meta-member-info.php:125
+#: admin/partials/genealogical-tree-meta-member-info.php:184
+#: admin/partials/genealogical-tree-meta-member-info.php:582
+#: public/Traits/traits-genealogical-tree-single-member-info.php:416
+msgid "Date"
+msgstr "Дата"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:133
+#: admin/partials/genealogical-tree-meta-member-info.php:193
+#: admin/partials/genealogical-tree-meta-member-info.php:586
+#: public/Traits/traits-genealogical-tree-single-member-info.php:426
+msgid "Place"
+msgstr "Место"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:152
+#: admin/partials/genealogical-tree-meta-member-info.php:296
+#: admin/partials/genealogical-tree-meta-member-info.php:341
+#: public/Traits/traits-genealogical-tree-single-member-info.php:263
+msgid "Death"
+msgstr "Смерть"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:188
+msgid "Leave empty if still alive"
+msgstr "Оставьте пустым, если еще жив"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:216
+msgid "Parents"
+msgstr "Родительский"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:221
+#: public/Traits/traits-genealogical-tree-single-member-info.php:496
+msgid "Mother"
+msgstr "мать"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:225
+msgid "Select Mother"
+msgstr "Выберите мать"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:234
+#: public/Traits/traits-genealogical-tree-single-member-info.php:489
+msgid "Father"
+msgstr "Отец"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:238
+msgid "Select Father"
+msgstr "Выберите Отца"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:247
+msgid "Spouses"
+msgstr "Супругов"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:253
+msgid "Wife"
+msgstr "Жена"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:277
+msgid "Select Wife"
+msgstr "Выберите жену"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:285
+#: admin/partials/genealogical-tree-meta-member-info.php:330
+msgid "From"
+msgstr "От"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:287
+#: admin/partials/genealogical-tree-meta-member-info.php:332
+msgid "To"
+msgstr "Кому"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:291
+#: admin/partials/genealogical-tree-meta-member-info.php:294
+#: admin/partials/genealogical-tree-meta-member-info.php:336
+#: admin/partials/genealogical-tree-meta-member-info.php:339
+msgid "Select a Reason"
+msgstr "Выберите причину"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:295
+#: admin/partials/genealogical-tree-meta-member-info.php:340
+#: admin/partials/genealogical-tree-meta-member-info.php:443
+#: public/Traits/traits-genealogical-tree-single-member-info.php:355
+msgid "Divorce"
+msgstr "Развод"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:297
+#: admin/partials/genealogical-tree-meta-member-info.php:342
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:347
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:401
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:561
+#: admin/partials/genealogical-tree-meta-tree-settings.php:349
+#: admin/partials/genealogical-tree-meta-tree-settings.php:403
+#: admin/partials/genealogical-tree-meta-tree-settings.php:562
+msgid "Other"
+msgstr "Другое"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:311
+msgid "Husband"
+msgstr "Супруг"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:322
+msgid "Select Husband"
+msgstr "Выберите мужа"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:355
+msgid "Contact Information"
+msgstr "Контактная информация"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:360
+msgid "Phone"
+msgstr "Телефон"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:377
+msgid "Email"
+msgstr "Email"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:394
+msgid "Address"
+msgstr "Адрес"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:427
+#: public/Traits/traits-genealogical-tree-single-member-info.php:339
+msgid "Burial"
+msgstr "Погребение"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:431
+#: public/Traits/traits-genealogical-tree-single-member-info.php:343
+msgid "Adoption"
+msgstr "Принятие"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:435
+#: public/Traits/traits-genealogical-tree-single-member-info.php:347
+msgid "Engagement"
+msgstr "Взаимодействие"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:439
+#: public/Traits/traits-genealogical-tree-single-member-info.php:351
+msgid "Marriage"
+msgstr "Вступление в брак"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:447
+#: public/Traits/traits-genealogical-tree-single-member-info.php:359
+msgid "Address (Other)"
+msgstr "Адрес (Другой)"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:451
+#: public/Traits/traits-genealogical-tree-single-member-info.php:363
+msgid "Baptism"
+msgstr "Крещение"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:455
+msgid "Christening"
+msgstr "Крещение"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:459
+#: public/Traits/traits-genealogical-tree-single-member-info.php:367
+msgid "arms"
+msgstr ""
+
+#: admin/partials/genealogical-tree-meta-member-info.php:463
+msgid "BAR_MITZVAH"
+msgstr ""
+
+#: admin/partials/genealogical-tree-meta-member-info.php:467
+msgid "BLESSING"
+msgstr ""
+
+#: admin/partials/genealogical-tree-meta-member-info.php:471
+msgid "CENSUS"
+msgstr "Перепись"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:475
+msgid "CREMATION"
+msgstr "Кремация"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:479
+msgid "EMIGRATION"
+msgstr ""
+
+#: admin/partials/genealogical-tree-meta-member-info.php:483
+msgid "GRADUATION"
+msgstr "ВЫПУСК"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:487
+msgid "IMMIGRATION"
+msgstr "ИММИГРАЦИОННАЯ СЛУЖБА"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:491
+msgid "NATURALIZATION"
+msgstr ""
+
+#: admin/partials/genealogical-tree-meta-member-info.php:495
+msgid "RETIREMENT"
+msgstr ""
+
+#: admin/partials/genealogical-tree-meta-member-info.php:499
+msgid "PROBATE"
+msgstr "официальное утверждение завещания"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:503
+msgid "WILL"
+msgstr ""
+
+#: admin/partials/genealogical-tree-meta-member-info.php:507
+#: public/Traits/traits-genealogical-tree-single-member-info.php:371
+msgid "Occupation"
+msgstr "Занятие"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:521
+msgid "Additional Events"
+msgstr "Дополнительные события"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:552
+msgid "Select an Event"
+msgstr "Выберете событие"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:33
+#: admin/partials/genealogical-tree-meta-tree-settings.php:40
+msgid "General Setting"
+msgstr "Общие настройки"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:60
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:64
+#: admin/partials/genealogical-tree-meta-tree-settings.php:65
+#: admin/partials/genealogical-tree-meta-tree-settings.php:69
+msgid "Select Root"
+msgstr "Выбрать корень"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:91
+#: admin/partials/genealogical-tree-meta-tree-settings.php:94
+msgid "Select Style"
+msgstr "Выберите стиль"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:95
+msgid "Style 1"
+msgstr "Стиль 1"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:96
+msgid "Style 2"
+msgstr "Стиль 2"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:97
+msgid "Style 2-Alt"
+msgstr "Стиль 2-Альт"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:99
+msgid "Style 3"
+msgstr "Стиль 3"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:100
+msgid "Style 3-Alt"
+msgstr "Стиль 3-Альт"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:108
+#: admin/partials/genealogical-tree-meta-tree-settings.php:110
+msgid "Select Layout"
+msgstr "Выберите Макет"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:112
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:317
+#: admin/partials/genealogical-tree-meta-tree-settings.php:114
+#: admin/partials/genealogical-tree-meta-tree-settings.php:320
+msgid "Vertical"
+msgstr "Вертикально"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:113
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:318
+#: admin/partials/genealogical-tree-meta-tree-settings.php:115
+#: admin/partials/genealogical-tree-meta-tree-settings.php:321
+msgid "Horizontal"
+msgstr "Горизонтально"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:119
+#: admin/partials/genealogical-tree-meta-tree-settings.php:122
+msgid "Enable Ajax"
+msgstr "Включить Ajax"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:127
+#: admin/partials/genealogical-tree-meta-tree-settings.php:130
+msgid "Show Ancestor"
+msgstr "Показать предка"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:137
+#: admin/partials/genealogical-tree-meta-tree-settings.php:140
+msgid "Visibility Setting"
+msgstr "Настройка видимости"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:145
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:156
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:179
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:196
+#: admin/partials/genealogical-tree-meta-tree-settings.php:148
+#: admin/partials/genealogical-tree-meta-tree-settings.php:159
+#: admin/partials/genealogical-tree-meta-tree-settings.php:182
+#: admin/partials/genealogical-tree-meta-tree-settings.php:199
+msgid "Full"
+msgstr "Полный"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:148
+#: admin/partials/genealogical-tree-meta-tree-settings.php:151
+msgid "First"
+msgstr "Первый"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:153
+#: admin/partials/genealogical-tree-meta-tree-settings.php:156
+msgid "Birth Day"
+msgstr "День рождения"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:159
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:182
+#: admin/partials/genealogical-tree-meta-tree-settings.php:162
+#: admin/partials/genealogical-tree-meta-tree-settings.php:185
+msgid "Year"
+msgstr "Год"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:162
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:185
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:202
+#: admin/partials/genealogical-tree-meta-tree-settings.php:165
+#: admin/partials/genealogical-tree-meta-tree-settings.php:188
+#: admin/partials/genealogical-tree-meta-tree-settings.php:205
+msgid "None"
+msgstr "Нет"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:168
+#: admin/partials/genealogical-tree-meta-tree-settings.php:171
+msgid "Hide Birth Day Who Alive"
+msgstr "Скрыть День рождения, кто жив"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:176
+#: admin/partials/genealogical-tree-meta-tree-settings.php:179
+msgid "Died"
+msgstr "Смерть"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:190
+#: admin/partials/genealogical-tree-meta-tree-settings.php:193
+msgid "Show Gender"
+msgstr "Показать пол"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:193
+#: admin/partials/genealogical-tree-meta-tree-settings.php:196
+msgid "Icon"
+msgstr "Иконка"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:199
+#: admin/partials/genealogical-tree-meta-tree-settings.php:202
+msgid "Short"
+msgstr "Короткий"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:208
+#: admin/partials/genealogical-tree-meta-tree-settings.php:211
+msgid "Sibling Order"
+msgstr "Заказ братьев и сестер"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:212
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:601
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:714
+#: admin/partials/genealogical-tree-meta-tree-settings.php:605
+#: admin/partials/genealogical-tree-meta-tree-settings.php:689
+msgid "Default"
+msgstr "По умолчанию"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:213
+msgid "Oldest"
+msgstr "Старые"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:214
+msgid "Youngest"
+msgstr "Янг"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:220
+#: admin/partials/genealogical-tree-meta-tree-settings.php:223
+msgid "Show Generation"
+msgstr "Показать поколение"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:228
+#: admin/partials/genealogical-tree-meta-tree-settings.php:231
+msgid "Show Tree Link"
+msgstr "Показать дерево ссылка"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:238
+#: admin/partials/genealogical-tree-meta-tree-settings.php:241
+msgid "Container Setting"
+msgstr "Настройка контейнера"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:243
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:333
+#: admin/partials/genealogical-tree-meta-tree-settings.php:246
+#: admin/partials/genealogical-tree-meta-tree-settings.php:335
+msgid "Background Color"
+msgstr "Цвет фона"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:251
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:354
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:514
+#: admin/partials/genealogical-tree-meta-tree-settings.php:254
+#: admin/partials/genealogical-tree-meta-tree-settings.php:356
+#: admin/partials/genealogical-tree-meta-tree-settings.php:515
+msgid "Border Width"
+msgstr "Ширина рамки"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:268
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:371
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:531
+#: admin/partials/genealogical-tree-meta-tree-settings.php:271
+#: admin/partials/genealogical-tree-meta-tree-settings.php:373
+#: admin/partials/genealogical-tree-meta-tree-settings.php:532
+msgid "Border Style"
+msgstr "Стиль рамки"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:284
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:387
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:547
+#: admin/partials/genealogical-tree-meta-tree-settings.php:287
+#: admin/partials/genealogical-tree-meta-tree-settings.php:389
+#: admin/partials/genealogical-tree-meta-tree-settings.php:548
+msgid "Border Color"
+msgstr "Цвет границы"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:292
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:408
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:568
+#: admin/partials/genealogical-tree-meta-tree-settings.php:295
+#: admin/partials/genealogical-tree-meta-tree-settings.php:410
+#: admin/partials/genealogical-tree-meta-tree-settings.php:569
+msgid "Border Radius"
+msgstr "Радиус границы"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:308
+#: admin/partials/genealogical-tree-meta-tree-settings.php:311
+msgid "Box Setting"
+msgstr "Настройка блока"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:313
+#: admin/partials/genealogical-tree-meta-tree-settings.php:316
+msgid "Layout"
+msgstr "Макет"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:323
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:507
+#: admin/partials/genealogical-tree-meta-tree-settings.php:326
+#: admin/partials/genealogical-tree-meta-tree-settings.php:508
+msgid "Width"
+msgstr "Ширина"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:327
+msgid "If Layout is Horizontal, Width is  'auto' is recommended."
+msgstr "Если Layout является Горизонтальным, ширина 'авто' рекомендуется."
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:428
+#: admin/partials/genealogical-tree-meta-tree-settings.php:427
+msgid "Line Setting"
+msgstr "Настройка строки"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:451
+#: admin/partials/genealogical-tree-meta-tree-settings.php:450
+msgid "Line Style"
+msgstr "Стиль линии"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:468
+#: admin/partials/genealogical-tree-meta-tree-settings.php:468
+msgid "Line Corner Radius"
+msgstr "Линия Угловой Радиус"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:486
+#: admin/partials/genealogical-tree-meta-tree-settings.php:487
+msgid "Line Color"
+msgstr "Цвет линии"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:494
+#: admin/partials/genealogical-tree-meta-tree-settings.php:495
+msgid "Image Setting"
+msgstr "Настройка изображения"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:499
+#: admin/partials/genealogical-tree-meta-tree-settings.php:500
+msgid "Show Image"
+msgstr "Показать изображение"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:587
+#: admin/partials/genealogical-tree-meta-tree-settings.php:591
+msgid "Name Text Setting"
+msgstr "Настройка текста имен"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:592
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:704
+#: admin/partials/genealogical-tree-meta-tree-settings.php:596
+#: admin/partials/genealogical-tree-meta-tree-settings.php:679
+msgid "Font Family"
+msgstr "Семейство шрифтов"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:643
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:758
+#: admin/partials/genealogical-tree-meta-tree-settings.php:618
+#: admin/partials/genealogical-tree-meta-tree-settings.php:706
+msgid "Font Size"
+msgstr "Размер шрифта"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:657
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:773
+#: admin/partials/genealogical-tree-meta-tree-settings.php:632
+#: admin/partials/genealogical-tree-meta-tree-settings.php:720
+msgid "Font Weight"
+msgstr "Толщина шрифта"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:667
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:783
+#: admin/partials/genealogical-tree-meta-tree-settings.php:642
+#: admin/partials/genealogical-tree-meta-tree-settings.php:730
+msgid "Font Style"
+msgstr "Стиль шрифта"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:676
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:793
+#: admin/partials/genealogical-tree-meta-tree-settings.php:651
+#: admin/partials/genealogical-tree-meta-tree-settings.php:740
+msgid "Font Color"
+msgstr "Цвет шрифта"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:684
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:804
+#: admin/partials/genealogical-tree-meta-tree-settings.php:659
+#: admin/partials/genealogical-tree-meta-tree-settings.php:751
+msgid "Text Align"
+msgstr "Выравнивание текста"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:699
+#: admin/partials/genealogical-tree-meta-tree-settings.php:674
+msgid "Other Text Setting"
+msgstr "Другие настройки текста"
+
+#: admin/partials/genealogical-tree-meta-tree-settings.php:99
+msgid "Style Style 2"
+msgstr "Стиль стиль 2"
+
+#: admin/partials/genealogical-tree-meta-tree-settings.php:100
+msgid "Style Style 2-Alt"
+msgstr "Стиль стиль 2-Альт"
+
+#: admin/partials/genealogical-tree-meta-tree-settings.php:101
+msgid "Style Style 3"
+msgstr "Стиль стиль 3"
+
+#: admin/partials/genealogical-tree-meta-tree-settings.php:102
+msgid "Style Style 3-Alt"
+msgstr "Стиль стиль 3-Альт"
+
+#: admin/partials/genealogical-tree-meta-tree-settings.php:330
+msgid "If Layout is Horizontal, Width is recommended to set auto."
+msgstr "Если layout является Horizontal, Ширина рекомендуется установить авто."
+
+#: admin/partials/genealogical-tree-meta-tree-settings.php:432
+msgid "Line Size"
+msgstr "Размер линии"
+
+#: admin/partials/genealogical-tree-meta-tree-settings.php:758
+msgid "Left"
+msgstr "Слева"
+
+#: admin/partials/genealogical-tree-meta-tree-settings.php:759
+msgid "Center"
+msgstr "Центр"
+
+#: admin/partials/genealogical-tree-meta-tree-settings.php:760
+msgid "Right"
+msgstr "Справа"
+
+#: public/Traits/traits-genealogical-tree-ind-style.php:24
+msgid "Your license is not active."
+msgstr "Ваша лицензия не активна."
+
+#: public/Traits/traits-genealogical-tree-ind-style.php:75
+#: public/Traits/traits-genealogical-tree-single-member-info.php:88
+msgid "Unknown"
+msgstr "Неизвестно"
+
+#: public/Traits/traits-genealogical-tree-ind-style.php:150
+msgid "M"
+msgstr "M"
+
+#: public/Traits/traits-genealogical-tree-ind-style.php:153
+msgid "F"
+msgstr "F"
+
+#: public/Traits/traits-genealogical-tree-ind-style.php:184
+#: public/Traits/traits-genealogical-tree-ind-style.php:187
+msgid "B"
+msgstr "B"
+
+#: public/Traits/traits-genealogical-tree-ind-style.php:195
+msgid "D"
+msgstr "D"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:72
+msgid "Spouse"
+msgstr "Супруг/Супруга"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:97
+msgid "Date of Marriage"
+msgstr "Дата заключения брака"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:120
+msgid "Children"
+msgstr "Дети"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:164
+msgid "Siblings"
+msgstr "Родной брат"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:212
+msgid "Date of Birth"
+msgstr "Дата рождения"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:226
+msgid "Place of Birth"
+msgstr "Место рождения"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:277
+msgid "Date of death"
+msgstr "Дата смерти"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:291
+msgid "Place of death"
+msgstr "Место смерти"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:313
+msgid "Location"
+msgstr "Местоположение"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:391
+msgid "Events"
+msgstr "События"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:453
+msgid "Member Information"
+msgstr "Информация об участнике"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:513
+msgid "Additional Information"
+msgstr "Дополнительная информация"
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/genealogical-tree"
+msgstr "https://wordpress.org/plugins/genealogical-tree"
+
+#. Description of the plugin/theme
+msgid ""
+"Genealogical Tree is a ultimate solution for creating and displaying family "
+"trees, family history on WordPress."
+msgstr ""
+"Генеалогическое дерево является окончательным решением для создания и "
+"отображения семейных деревьев, семейной истории на WordPress."
+
+#. Author of the plugin/theme
+msgid "ak devs"
+msgstr "ak devs"
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/akdevsfr"
+msgstr "https://github.com/akdevsfr"

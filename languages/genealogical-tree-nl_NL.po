@@ -1,0 +1,1207 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2020-07-07 14:54+0600\n"
+"PO-Revision-Date: 2020-07-10 20:15+0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3.1\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin/theme
+#: admin/class-genealogical-tree-admin.php:110
+#: admin/class-genealogical-tree-admin.php:111
+msgid "Genealogical Tree"
+msgstr "Genealogische boom"
+
+#: admin/class-genealogical-tree-admin.php:121
+#: admin/class-genealogical-tree-admin.php:122
+msgid "Family"
+msgstr "Familie"
+
+#: admin/class-genealogical-tree-admin.php:131
+#: admin/class-genealogical-tree-admin.php:132
+msgid "Import .GED"
+msgstr "Importeren. Ged"
+
+#: admin/class-genealogical-tree-admin.php:139
+#: admin/class-genealogical-tree-admin.php:140
+msgid "Export .GED"
+msgstr "Exporteren. Ged"
+
+#: admin/class-genealogical-tree-admin.php:167
+msgctxt "post type general name"
+msgid "Members"
+msgstr "Leden"
+
+#: admin/class-genealogical-tree-admin.php:168
+msgctxt "post type singular name"
+msgid "Member"
+msgstr "Lid"
+
+#: admin/class-genealogical-tree-admin.php:169
+msgctxt "admin menu"
+msgid "Members"
+msgstr "Leden"
+
+#: admin/class-genealogical-tree-admin.php:170
+msgctxt "add new on admin bar"
+msgid "Member"
+msgstr "Lid"
+
+#: admin/class-genealogical-tree-admin.php:171
+msgctxt "member"
+msgid "Add New"
+msgstr "Nieuwe toevoegen"
+
+#: admin/class-genealogical-tree-admin.php:172
+msgid "Add New Member"
+msgstr "Voeg nieuw lid toe"
+
+#: admin/class-genealogical-tree-admin.php:173
+msgid "New Member"
+msgstr "Nieuw lid"
+
+#: admin/class-genealogical-tree-admin.php:174
+msgid "Edit Member"
+msgstr "Bewerk lid"
+
+#: admin/class-genealogical-tree-admin.php:175
+msgid "View Member"
+msgstr "Bekijk lid"
+
+#: admin/class-genealogical-tree-admin.php:176
+msgid "Members"
+msgstr "Leden"
+
+#: admin/class-genealogical-tree-admin.php:177
+msgid "Search Members"
+msgstr "Zoek leden"
+
+#: admin/class-genealogical-tree-admin.php:178
+msgid "Parent Members:"
+msgstr "Ouderleden:"
+
+#: admin/class-genealogical-tree-admin.php:179
+msgid "No members found."
+msgstr "Geen leden gevonden."
+
+#: admin/class-genealogical-tree-admin.php:180
+msgid "No members found in Trash."
+msgstr "Geen leden gevonden in Trash."
+
+#: admin/class-genealogical-tree-admin.php:193
+#: admin/class-genealogical-tree-admin.php:231
+#: admin/class-genealogical-tree-admin.php:269
+msgid "Description."
+msgstr "Beschrijving."
+
+#: admin/class-genealogical-tree-admin.php:211
+msgctxt "post type general name"
+msgid "Trees"
+msgstr "Bomen"
+
+#: admin/class-genealogical-tree-admin.php:212
+msgctxt "post type singular name"
+msgid "Tree"
+msgstr "Boom"
+
+#: admin/class-genealogical-tree-admin.php:213
+msgctxt "admin menu"
+msgid "Trees"
+msgstr "Bomen"
+
+#: admin/class-genealogical-tree-admin.php:214
+msgctxt "add new on admin bar"
+msgid "Tree"
+msgstr "Boom"
+
+#: admin/class-genealogical-tree-admin.php:215
+msgctxt "tree"
+msgid "Add New"
+msgstr "Nieuwe toevoegen"
+
+#: admin/class-genealogical-tree-admin.php:216
+msgid "Add New Tree"
+msgstr "Nieuwe structuur toevoegen"
+
+#: admin/class-genealogical-tree-admin.php:217
+msgid "New Tree"
+msgstr "Nieuwe boom"
+
+#: admin/class-genealogical-tree-admin.php:218
+msgid "Edit Tree"
+msgstr "Structuur bewerken"
+
+#: admin/class-genealogical-tree-admin.php:219
+msgid "View Tree"
+msgstr "De structuur bekijken"
+
+#: admin/class-genealogical-tree-admin.php:220
+msgid "Trees"
+msgstr "Bomen"
+
+#: admin/class-genealogical-tree-admin.php:221
+msgid "Search Trees"
+msgstr "Zoek bomen"
+
+#: admin/class-genealogical-tree-admin.php:222
+msgid "Parent Trees:"
+msgstr "Ouderbomen:"
+
+#: admin/class-genealogical-tree-admin.php:223
+msgid "No trees found."
+msgstr "Geen bomen gevonden."
+
+#: admin/class-genealogical-tree-admin.php:224
+msgid "No trees found in Trash."
+msgstr "Geen bomen gevonden in Trash."
+
+#: admin/class-genealogical-tree-admin.php:249
+msgctxt "post type general name"
+msgid "Families"
+msgstr "Gezinnen"
+
+#: admin/class-genealogical-tree-admin.php:250
+msgctxt "post type singular name"
+msgid "Family"
+msgstr "Familie"
+
+#: admin/class-genealogical-tree-admin.php:251
+msgctxt "admin menu"
+msgid "Families"
+msgstr "Gezinnen"
+
+#: admin/class-genealogical-tree-admin.php:252
+msgctxt "add new on admin bar"
+msgid "Family"
+msgstr "Familie"
+
+#: admin/class-genealogical-tree-admin.php:253
+msgctxt "family"
+msgid "Add New"
+msgstr "Nieuwe toevoegen"
+
+#: admin/class-genealogical-tree-admin.php:254
+msgid "Add New Family"
+msgstr "Nieuwe familie toevoegen"
+
+#: admin/class-genealogical-tree-admin.php:255
+msgid "New Family"
+msgstr "Nieuwe familie"
+
+#: admin/class-genealogical-tree-admin.php:256
+msgid "Edit Family"
+msgstr "Familie bewerken"
+
+#: admin/class-genealogical-tree-admin.php:257
+msgid "View Family"
+msgstr "Familie bekijken"
+
+#: admin/class-genealogical-tree-admin.php:258
+msgid "All Families"
+msgstr "Alle families"
+
+#: admin/class-genealogical-tree-admin.php:259
+msgid "Search Families"
+msgstr "Gezinnen zoeken"
+
+#: admin/class-genealogical-tree-admin.php:260
+msgid "Parent Families:"
+msgstr "Oudergezinnen:"
+
+#: admin/class-genealogical-tree-admin.php:261
+msgid "No families found."
+msgstr "Geen families gevonden."
+
+#: admin/class-genealogical-tree-admin.php:262
+msgid "No families found in Trash."
+msgstr "Geen families gevonden in Trash."
+
+#: admin/class-genealogical-tree-admin.php:291
+msgctxt "genealogical-tree"
+msgid "Family Groups"
+msgstr "Gezinsgroepen"
+
+#: admin/class-genealogical-tree-admin.php:292
+msgctxt "taxonomy singular name"
+msgid "Family Group"
+msgstr "Gezinsgroep"
+
+#: admin/class-genealogical-tree-admin.php:293
+msgid "Search Family Groups"
+msgstr "Familiegroepen doorzoeken"
+
+#: admin/class-genealogical-tree-admin.php:294
+msgid "Popular Family Groups"
+msgstr "Populaire gezinsgroepen"
+
+#: admin/class-genealogical-tree-admin.php:295
+msgid "All Family Groups"
+msgstr "Alle gezinsgroepen"
+
+#: admin/class-genealogical-tree-admin.php:296
+#: admin/class-genealogical-tree-admin.php:297
+msgid "Parent Family Group"
+msgstr "Bovenliggende gezinsgroep"
+
+#: admin/class-genealogical-tree-admin.php:298
+msgid "Edit Family Group"
+msgstr "Gezinsgroep bewerken"
+
+#: admin/class-genealogical-tree-admin.php:299
+msgid "Update Family Group"
+msgstr "Familiegroep bijwerken"
+
+#: admin/class-genealogical-tree-admin.php:300
+msgid "Add New Group"
+msgstr "Voeg groep toe"
+
+#: admin/class-genealogical-tree-admin.php:301
+msgid "New Group Name"
+msgstr "Voeg groep toe"
+
+#: admin/class-genealogical-tree-admin.php:302
+msgid "Separate family group with commas"
+msgstr "Aparte gezinsgroep met komma's"
+
+#: admin/class-genealogical-tree-admin.php:303
+msgid "Add or remove family group"
+msgstr "Gezinsgroep toevoegen of verwijderen"
+
+#: admin/class-genealogical-tree-admin.php:304
+msgid "Choose from the most used family group"
+msgstr "Kies uit de meest gebruikte gezinsgroep"
+
+#: admin/class-genealogical-tree-admin.php:305
+msgid "No family group found."
+msgstr "Geen familiegroep gevonden."
+
+#: admin/class-genealogical-tree-admin.php:306
+msgid "Family Groups"
+msgstr "Gezinsgroepen"
+
+#: admin/class-genealogical-tree-admin.php:329
+#: admin/partials/genealogical-tree-admin-settings.php:5
+msgid "Tree Settings"
+msgstr "Structuurinstellingen"
+
+#: admin/class-genealogical-tree-admin.php:409
+#: admin/partials/genealogical-tree-meta-member-info.php:32
+msgid "ID"
+msgstr "ID"
+
+#: admin/class-genealogical-tree-admin.php:410
+msgid "Born"
+msgstr "Geboren"
+
+#: admin/class-genealogical-tree-admin.php:411
+#: admin/partials/genealogical-tree-meta-member-info.php:42
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:142
+#: admin/partials/genealogical-tree-meta-tree-settings.php:145
+#: public/Traits/traits-genealogical-tree-single-member-info.php:82
+msgid "Name"
+msgstr "Naam"
+
+#: admin/class-genealogical-tree-admin.php:452
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: admin/class-genealogical-tree-admin.php:473
+#: admin/class-genealogical-tree-admin.php:529
+msgid "Member info"
+msgstr "Ledengegevens"
+
+#: admin/class-genealogical-tree-admin.php:485
+#: admin/class-genealogical-tree-admin.php:509
+msgid "Additional Member info"
+msgstr "Aanvullende ledeninformatie"
+
+#: admin/class-genealogical-tree-admin.php:497
+msgid "Additional Children / Siblings info"
+msgstr "Aanvullende kinderen / broers en zussen info"
+
+#: admin/class-genealogical-tree-admin.php:548
+msgid "Family info"
+msgstr "Familiegegevens"
+
+#: admin/class-genealogical-tree-admin.php:1260
+msgid "Import Ged"
+msgstr "Ged importeren"
+
+#: admin/class-genealogical-tree-admin.php:1263
+msgid ""
+"You may see some warning on import process for some file, but no worry about "
+"that. But if any error, you can contact us."
+msgstr ""
+"U ziet mogelijk een waarschuwing over het importproces voor een bestand, "
+"maar maak je daar geen zorgen over. Maar als er een fout optreedt, u contact "
+"met ons opnemen."
+
+#: admin/class-genealogical-tree-admin.php:1266
+msgid "Select file (.ged)"
+msgstr "Bestand selecteren (.ged)"
+
+#: admin/class-genealogical-tree-admin.php:1271
+msgid "Import"
+msgstr "Importeren"
+
+#: admin/class-genealogical-tree-admin.php:1280
+msgid "Imported successfully"
+msgstr "Geïmporteerd met succes"
+
+#: admin/class-genealogical-tree-admin.php:1281
+msgid "Family Tree"
+msgstr "Familieboom"
+
+#: admin/class-genealogical-tree-admin.php:1281
+msgid "View Page"
+msgstr "Bekijk pagina"
+
+#: admin/class-genealogical-tree-admin.php:1295
+#: admin/class-genealogical-tree-admin.php:1319
+msgid "Export"
+msgstr "Exportieren"
+
+#: admin/class-genealogical-tree-admin.php:1296
+msgid ""
+"This will export a Zip file for download, which contains a Gedcom (.ged) "
+"format (version 5.5) file of your data."
+msgstr ""
+"Hiermee wordt een Zip-bestand geëxporteerd om te downloaden, dat een Gedcom-"
+"indeling (versie 5.5) bestand van uw gegevens bevat."
+
+#: admin/class-genealogical-tree-admin.php:1301
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:38
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:42
+#: admin/partials/genealogical-tree-meta-tree-settings.php:45
+msgid "Select Family"
+msgstr "Gezin selecteren"
+
+#: admin/genealogical-tree-handel-export.php:6
+#: admin/genealogical-tree-handel-import.php:6
+msgid "You are not authorized to do this."
+msgstr "Je bent niet bevoegd om dit te doen."
+
+#: admin/genealogical-tree-handel-import.php:13
+msgid "File required"
+msgstr "Bestand vereist"
+
+#: admin/genealogical-tree-handel-import.php:27
+msgid "Family group  required"
+msgstr "Gezinsgroep vereist"
+
+#: admin/inc/class-genealogical-tree-family.php:100
+msgid "Default Tree"
+msgstr "Standaardstructuur"
+
+#: admin/inc/class-genealogical-tree-family.php:131
+msgid "Generate Default Tree"
+msgstr "Standaardstructuur genereren"
+
+#: admin/inc/class-genealogical-tree-family.php:135
+msgid "View Tree."
+msgstr "Bekijk Boom."
+
+#: admin/inc/class-genealogical-tree-family.php:142
+msgid "Possible Roots"
+msgstr "Mogelijke wortels"
+
+#: admin/inc/class-genealogical-tree-family.php:148
+msgid "To view possibles first generate default tree"
+msgstr ""
+"Als u mogelijke mogelijkheden wilt weergeven, genereert u eerst de "
+"standaardstructuur"
+
+#: admin/inc/class-genealogical-tree-family.php:154
+msgid "Members Page"
+msgstr "Leden Pagina"
+
+#: admin/inc/class-genealogical-tree-family.php:222
+#: admin/partials/genealogical-tree-admin-settings.php:13
+msgid "Upgrade Now!"
+msgstr "Upgrade nu!"
+
+#: admin/partials/genealogical-tree-admin-settings.php:4
+msgid "General Settings"
+msgstr "Algemene instellingen"
+
+#: admin/partials/genealogical-tree-admin-settings.php:11
+msgid "You are using Free plan, To get premium features"
+msgstr "U gebruikt gratis abonnement, Om premium functies te krijgen"
+
+#: admin/partials/genealogical-tree-admin-settings.php:23
+msgid "Enable Import (.ged)"
+msgstr "Importeren inschakelen (.ged)"
+
+#: admin/partials/genealogical-tree-admin-settings.php:24
+msgid "It will allow you to import members from a ged formated file."
+msgstr "Hiermee u leden importeren uit een ged-indelingsbestand."
+
+#: admin/partials/genealogical-tree-admin-settings.php:34
+msgid "Enable Export (.ged)"
+msgstr "Exporteren inschakelen (.ged)"
+
+#: admin/partials/genealogical-tree-admin-settings.php:35
+msgid "It will allow you to export members and family to a ged formated file."
+msgstr "Hiermee u leden en familie exporteren naar een ged-bestand."
+
+#: admin/partials/genealogical-tree-admin-settings.php:44
+msgid "Hide Credit Text"
+msgstr "Krediettekst verbergen"
+
+#: admin/partials/genealogical-tree-admin-settings.php:45
+msgid "This will Credit Text"
+msgstr "Dit zal Credit Text"
+
+#: admin/partials/genealogical-tree-admin-settings.php:63
+#: admin/partials/genealogical-tree-meta-tree-settings.php:98
+msgid "Tree Style 1"
+msgstr "Boomstijl 1"
+
+#: admin/partials/genealogical-tree-admin-settings.php:66
+msgid "Tree Style 2"
+msgstr "Boomstijl 2"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:47
+#: public/Traits/traits-genealogical-tree-single-member-info.php:476
+msgid "Full Name"
+msgstr "Volledige naam"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:55
+msgid "Given Name"
+msgstr "Voornaam"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:63
+msgid "Surname"
+msgstr "Achternaam"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:71
+#: admin/partials/genealogical-tree-meta-member-info.php:76
+msgid "Gender"
+msgstr "Geslacht"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:80
+msgid "Select Gender"
+msgstr "Kies Geslacht"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:81
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:335
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:389
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:549
+#: admin/partials/genealogical-tree-meta-tree-settings.php:337
+#: admin/partials/genealogical-tree-meta-tree-settings.php:391
+#: admin/partials/genealogical-tree-meta-tree-settings.php:550
+#: public/Traits/traits-genealogical-tree-ind-style.php:159
+msgid "Male"
+msgstr "Man"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:82
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:341
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:395
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:555
+#: admin/partials/genealogical-tree-meta-tree-settings.php:343
+#: admin/partials/genealogical-tree-meta-tree-settings.php:397
+#: admin/partials/genealogical-tree-meta-tree-settings.php:556
+#: public/Traits/traits-genealogical-tree-ind-style.php:162
+msgid "Female"
+msgstr "Vrouw"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:89
+#: public/Traits/traits-genealogical-tree-single-member-info.php:198
+msgid "Birth"
+msgstr "Geboorte"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:111
+#: admin/partials/genealogical-tree-meta-member-info.php:171
+#: admin/partials/genealogical-tree-meta-member-info.php:272
+#: admin/partials/genealogical-tree-meta-member-info.php:317
+#: admin/partials/genealogical-tree-meta-member-info.php:366
+#: admin/partials/genealogical-tree-meta-member-info.php:383
+#: admin/partials/genealogical-tree-meta-member-info.php:400
+#: admin/partials/genealogical-tree-meta-member-info.php:542
+msgid "Add"
+msgstr "Toevoegen"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:113
+#: admin/partials/genealogical-tree-meta-member-info.php:173
+#: admin/partials/genealogical-tree-meta-member-info.php:274
+#: admin/partials/genealogical-tree-meta-member-info.php:319
+#: admin/partials/genealogical-tree-meta-member-info.php:368
+#: admin/partials/genealogical-tree-meta-member-info.php:385
+#: admin/partials/genealogical-tree-meta-member-info.php:402
+#: admin/partials/genealogical-tree-meta-member-info.php:544
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:119
+#: admin/partials/genealogical-tree-meta-member-info.php:178
+msgid "REF"
+msgstr "REF"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:125
+#: admin/partials/genealogical-tree-meta-member-info.php:184
+#: admin/partials/genealogical-tree-meta-member-info.php:582
+#: public/Traits/traits-genealogical-tree-single-member-info.php:416
+msgid "Date"
+msgstr "Datum"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:133
+#: admin/partials/genealogical-tree-meta-member-info.php:193
+#: admin/partials/genealogical-tree-meta-member-info.php:586
+#: public/Traits/traits-genealogical-tree-single-member-info.php:426
+msgid "Place"
+msgstr "Plaats"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:152
+#: admin/partials/genealogical-tree-meta-member-info.php:296
+#: admin/partials/genealogical-tree-meta-member-info.php:341
+#: public/Traits/traits-genealogical-tree-single-member-info.php:263
+msgid "Death"
+msgstr "Dood"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:188
+msgid "Leave empty if still alive"
+msgstr "Laat leeg als nog in leven"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:216
+msgid "Parents"
+msgstr "Ouders"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:221
+#: public/Traits/traits-genealogical-tree-single-member-info.php:496
+msgid "Mother"
+msgstr "Moeder"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:225
+msgid "Select Mother"
+msgstr "Moeder selecteren"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:234
+#: public/Traits/traits-genealogical-tree-single-member-info.php:489
+msgid "Father"
+msgstr "Vader"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:238
+msgid "Select Father"
+msgstr "Vader selecteren"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:247
+msgid "Spouses"
+msgstr "Echtgenoten"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:253
+msgid "Wife"
+msgstr "Vrouw"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:277
+msgid "Select Wife"
+msgstr "Vrouw selecteren"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:285
+#: admin/partials/genealogical-tree-meta-member-info.php:330
+msgid "From"
+msgstr "Van"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:287
+#: admin/partials/genealogical-tree-meta-member-info.php:332
+msgid "To"
+msgstr "Tot"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:291
+#: admin/partials/genealogical-tree-meta-member-info.php:294
+#: admin/partials/genealogical-tree-meta-member-info.php:336
+#: admin/partials/genealogical-tree-meta-member-info.php:339
+msgid "Select a Reason"
+msgstr "Een reden selecteren"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:295
+#: admin/partials/genealogical-tree-meta-member-info.php:340
+#: admin/partials/genealogical-tree-meta-member-info.php:443
+#: public/Traits/traits-genealogical-tree-single-member-info.php:355
+msgid "Divorce"
+msgstr "Echtscheiding"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:297
+#: admin/partials/genealogical-tree-meta-member-info.php:342
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:347
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:401
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:561
+#: admin/partials/genealogical-tree-meta-tree-settings.php:349
+#: admin/partials/genealogical-tree-meta-tree-settings.php:403
+#: admin/partials/genealogical-tree-meta-tree-settings.php:562
+msgid "Other"
+msgstr "Andere"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:311
+msgid "Husband"
+msgstr "Man"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:322
+msgid "Select Husband"
+msgstr "Selecteer Echtgenoot"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:355
+msgid "Contact Information"
+msgstr "Contact informatie"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:360
+msgid "Phone"
+msgstr "Telefoon"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:377
+msgid "Email"
+msgstr "E-mail"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:394
+msgid "Address"
+msgstr "Adres"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:427
+#: public/Traits/traits-genealogical-tree-single-member-info.php:339
+msgid "Burial"
+msgstr "Begrafenis"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:431
+#: public/Traits/traits-genealogical-tree-single-member-info.php:343
+msgid "Adoption"
+msgstr "Aanneming"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:435
+#: public/Traits/traits-genealogical-tree-single-member-info.php:347
+msgid "Engagement"
+msgstr "Betrokkenheid"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:439
+#: public/Traits/traits-genealogical-tree-single-member-info.php:351
+msgid "Marriage"
+msgstr "Huwelijk"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:447
+#: public/Traits/traits-genealogical-tree-single-member-info.php:359
+msgid "Address (Other)"
+msgstr "Adres (overige)"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:451
+#: public/Traits/traits-genealogical-tree-single-member-info.php:363
+msgid "Baptism"
+msgstr "Doopsel"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:455
+msgid "Christening"
+msgstr "Doop"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:459
+#: public/Traits/traits-genealogical-tree-single-member-info.php:367
+msgid "arms"
+msgstr ""
+
+#: admin/partials/genealogical-tree-meta-member-info.php:463
+msgid "BAR_MITZVAH"
+msgstr ""
+
+#: admin/partials/genealogical-tree-meta-member-info.php:467
+msgid "BLESSING"
+msgstr ""
+
+#: admin/partials/genealogical-tree-meta-member-info.php:471
+msgid "CENSUS"
+msgstr ""
+
+#: admin/partials/genealogical-tree-meta-member-info.php:475
+msgid "CREMATION"
+msgstr ""
+
+#: admin/partials/genealogical-tree-meta-member-info.php:479
+msgid "EMIGRATION"
+msgstr ""
+
+#: admin/partials/genealogical-tree-meta-member-info.php:483
+msgid "GRADUATION"
+msgstr ""
+
+#: admin/partials/genealogical-tree-meta-member-info.php:487
+msgid "IMMIGRATION"
+msgstr "IMMIGRATIE"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:491
+msgid "NATURALIZATION"
+msgstr ""
+
+#: admin/partials/genealogical-tree-meta-member-info.php:495
+msgid "RETIREMENT"
+msgstr "GEPENSIONEERDEN"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:499
+msgid "PROBATE"
+msgstr ""
+
+#: admin/partials/genealogical-tree-meta-member-info.php:503
+msgid "WILL"
+msgstr ""
+
+#: admin/partials/genealogical-tree-meta-member-info.php:507
+#: public/Traits/traits-genealogical-tree-single-member-info.php:371
+msgid "Occupation"
+msgstr "Beroep"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:521
+msgid "Additional Events"
+msgstr "Aanvullende evenementen"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:552
+msgid "Select an Event"
+msgstr "Een gebeurtenis selecteren"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:33
+#: admin/partials/genealogical-tree-meta-tree-settings.php:40
+msgid "General Setting"
+msgstr "Algemene Instelling"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:60
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:64
+#: admin/partials/genealogical-tree-meta-tree-settings.php:65
+#: admin/partials/genealogical-tree-meta-tree-settings.php:69
+msgid "Select Root"
+msgstr "Root selecteren"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:91
+#: admin/partials/genealogical-tree-meta-tree-settings.php:94
+msgid "Select Style"
+msgstr "Selecteer Stijl"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:95
+msgid "Style 1"
+msgstr "Stijl 1"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:96
+msgid "Style 2"
+msgstr "Stijl 2"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:97
+msgid "Style 2-Alt"
+msgstr "Stijl 2-Alt"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:99
+msgid "Style 3"
+msgstr "Stijl 3"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:100
+msgid "Style 3-Alt"
+msgstr "Stijl 3-Alt"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:108
+#: admin/partials/genealogical-tree-meta-tree-settings.php:110
+msgid "Select Layout"
+msgstr "Selecteer layout"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:112
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:317
+#: admin/partials/genealogical-tree-meta-tree-settings.php:114
+#: admin/partials/genealogical-tree-meta-tree-settings.php:320
+msgid "Vertical"
+msgstr "Verticaal"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:113
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:318
+#: admin/partials/genealogical-tree-meta-tree-settings.php:115
+#: admin/partials/genealogical-tree-meta-tree-settings.php:321
+msgid "Horizontal"
+msgstr "Horizontaal"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:119
+#: admin/partials/genealogical-tree-meta-tree-settings.php:122
+msgid "Enable Ajax"
+msgstr "Ajax inschakelen"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:127
+#: admin/partials/genealogical-tree-meta-tree-settings.php:130
+msgid "Show Ancestor"
+msgstr "Voorouder weergeven"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:137
+#: admin/partials/genealogical-tree-meta-tree-settings.php:140
+msgid "Visibility Setting"
+msgstr "Zichtbaarheidsinstelling"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:145
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:156
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:179
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:196
+#: admin/partials/genealogical-tree-meta-tree-settings.php:148
+#: admin/partials/genealogical-tree-meta-tree-settings.php:159
+#: admin/partials/genealogical-tree-meta-tree-settings.php:182
+#: admin/partials/genealogical-tree-meta-tree-settings.php:199
+msgid "Full"
+msgstr "Volledig"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:148
+#: admin/partials/genealogical-tree-meta-tree-settings.php:151
+msgid "First"
+msgstr "Eerste"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:153
+#: admin/partials/genealogical-tree-meta-tree-settings.php:156
+msgid "Birth Day"
+msgstr "Geboortedag"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:159
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:182
+#: admin/partials/genealogical-tree-meta-tree-settings.php:162
+#: admin/partials/genealogical-tree-meta-tree-settings.php:185
+msgid "Year"
+msgstr "Jaar"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:162
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:185
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:202
+#: admin/partials/genealogical-tree-meta-tree-settings.php:165
+#: admin/partials/genealogical-tree-meta-tree-settings.php:188
+#: admin/partials/genealogical-tree-meta-tree-settings.php:205
+msgid "None"
+msgstr "Geen"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:168
+#: admin/partials/genealogical-tree-meta-tree-settings.php:171
+msgid "Hide Birth Day Who Alive"
+msgstr "Verbergen Geboortedag who Alive"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:176
+#: admin/partials/genealogical-tree-meta-tree-settings.php:179
+msgid "Died"
+msgstr "Stierf"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:190
+#: admin/partials/genealogical-tree-meta-tree-settings.php:193
+msgid "Show Gender"
+msgstr "Geslacht weergeven"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:193
+#: admin/partials/genealogical-tree-meta-tree-settings.php:196
+msgid "Icon"
+msgstr "Icoon"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:199
+#: admin/partials/genealogical-tree-meta-tree-settings.php:202
+msgid "Short"
+msgstr "Snel"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:208
+#: admin/partials/genealogical-tree-meta-tree-settings.php:211
+msgid "Sibling Order"
+msgstr "Broer of zus Orde"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:212
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:601
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:714
+#: admin/partials/genealogical-tree-meta-tree-settings.php:605
+#: admin/partials/genealogical-tree-meta-tree-settings.php:689
+msgid "Default"
+msgstr "Standaard"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:213
+msgid "Oldest"
+msgstr "Oudste"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:214
+msgid "Youngest"
+msgstr "Jongste"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:220
+#: admin/partials/genealogical-tree-meta-tree-settings.php:223
+msgid "Show Generation"
+msgstr "Generatie weergeven"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:228
+#: admin/partials/genealogical-tree-meta-tree-settings.php:231
+msgid "Show Tree Link"
+msgstr "Structuurkoppeling weergeven"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:238
+#: admin/partials/genealogical-tree-meta-tree-settings.php:241
+msgid "Container Setting"
+msgstr "Containerinstelling"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:243
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:333
+#: admin/partials/genealogical-tree-meta-tree-settings.php:246
+#: admin/partials/genealogical-tree-meta-tree-settings.php:335
+msgid "Background Color"
+msgstr "Achtergrondkleur"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:251
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:354
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:514
+#: admin/partials/genealogical-tree-meta-tree-settings.php:254
+#: admin/partials/genealogical-tree-meta-tree-settings.php:356
+#: admin/partials/genealogical-tree-meta-tree-settings.php:515
+msgid "Border Width"
+msgstr "Border Breedte"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:268
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:371
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:531
+#: admin/partials/genealogical-tree-meta-tree-settings.php:271
+#: admin/partials/genealogical-tree-meta-tree-settings.php:373
+#: admin/partials/genealogical-tree-meta-tree-settings.php:532
+msgid "Border Style"
+msgstr "Randstijl"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:284
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:387
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:547
+#: admin/partials/genealogical-tree-meta-tree-settings.php:287
+#: admin/partials/genealogical-tree-meta-tree-settings.php:389
+#: admin/partials/genealogical-tree-meta-tree-settings.php:548
+msgid "Border Color"
+msgstr "Randkleur"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:292
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:408
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:568
+#: admin/partials/genealogical-tree-meta-tree-settings.php:295
+#: admin/partials/genealogical-tree-meta-tree-settings.php:410
+#: admin/partials/genealogical-tree-meta-tree-settings.php:569
+msgid "Border Radius"
+msgstr "Hoekafronding"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:308
+#: admin/partials/genealogical-tree-meta-tree-settings.php:311
+msgid "Box Setting"
+msgstr "Vakinstelling"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:313
+#: admin/partials/genealogical-tree-meta-tree-settings.php:316
+msgid "Layout"
+msgstr "Layout"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:323
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:507
+#: admin/partials/genealogical-tree-meta-tree-settings.php:326
+#: admin/partials/genealogical-tree-meta-tree-settings.php:508
+msgid "Width"
+msgstr "Breedte"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:327
+msgid "If Layout is Horizontal, Width is  'auto' is recommended."
+msgstr ""
+"Als de indeling horizontaal is, wordt breedte 'automatisch' aanbevolen."
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:428
+#: admin/partials/genealogical-tree-meta-tree-settings.php:427
+msgid "Line Setting"
+msgstr "Regelinstelling"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:451
+#: admin/partials/genealogical-tree-meta-tree-settings.php:450
+msgid "Line Style"
+msgstr "Lijnstijl"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:468
+#: admin/partials/genealogical-tree-meta-tree-settings.php:468
+msgid "Line Corner Radius"
+msgstr "Lijnhoekstraal"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:486
+#: admin/partials/genealogical-tree-meta-tree-settings.php:487
+msgid "Line Color"
+msgstr "Line Height"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:494
+#: admin/partials/genealogical-tree-meta-tree-settings.php:495
+msgid "Image Setting"
+msgstr "Afbeeldingsinstelling"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:499
+#: admin/partials/genealogical-tree-meta-tree-settings.php:500
+msgid "Show Image"
+msgstr "Toon afbeelding"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:587
+#: admin/partials/genealogical-tree-meta-tree-settings.php:591
+msgid "Name Text Setting"
+msgstr "Tekstinstelling naam"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:592
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:704
+#: admin/partials/genealogical-tree-meta-tree-settings.php:596
+#: admin/partials/genealogical-tree-meta-tree-settings.php:679
+msgid "Font Family"
+msgstr "Font Familie"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:643
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:758
+#: admin/partials/genealogical-tree-meta-tree-settings.php:618
+#: admin/partials/genealogical-tree-meta-tree-settings.php:706
+msgid "Font Size"
+msgstr "Lettergrootte"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:657
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:773
+#: admin/partials/genealogical-tree-meta-tree-settings.php:632
+#: admin/partials/genealogical-tree-meta-tree-settings.php:720
+msgid "Font Weight"
+msgstr "Lettertype dikte"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:667
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:783
+#: admin/partials/genealogical-tree-meta-tree-settings.php:642
+#: admin/partials/genealogical-tree-meta-tree-settings.php:730
+msgid "Font Style"
+msgstr "Lettertype stijl"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:676
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:793
+#: admin/partials/genealogical-tree-meta-tree-settings.php:651
+#: admin/partials/genealogical-tree-meta-tree-settings.php:740
+msgid "Font Color"
+msgstr "Lettertype kleur"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:684
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:804
+#: admin/partials/genealogical-tree-meta-tree-settings.php:659
+#: admin/partials/genealogical-tree-meta-tree-settings.php:751
+msgid "Text Align"
+msgstr "Tekst uitlijning"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:699
+#: admin/partials/genealogical-tree-meta-tree-settings.php:674
+msgid "Other Text Setting"
+msgstr "Andere tekstinstelling"
+
+#: admin/partials/genealogical-tree-meta-tree-settings.php:99
+msgid "Style Style 2"
+msgstr "Stijlstijl 2"
+
+#: admin/partials/genealogical-tree-meta-tree-settings.php:100
+msgid "Style Style 2-Alt"
+msgstr "Stijlstijl 2-Alt"
+
+#: admin/partials/genealogical-tree-meta-tree-settings.php:101
+msgid "Style Style 3"
+msgstr "Stijlstijl 3"
+
+#: admin/partials/genealogical-tree-meta-tree-settings.php:102
+msgid "Style Style 3-Alt"
+msgstr "Stijlstijl 3-Alt"
+
+#: admin/partials/genealogical-tree-meta-tree-settings.php:330
+msgid "If Layout is Horizontal, Width is recommended to set auto."
+msgstr ""
+"Als indeling horizontaal is, wordt breedte aanbevolen om automatisch in te "
+"stellen."
+
+#: admin/partials/genealogical-tree-meta-tree-settings.php:432
+msgid "Line Size"
+msgstr "Lijngrootte"
+
+#: admin/partials/genealogical-tree-meta-tree-settings.php:758
+msgid "Left"
+msgstr "Links"
+
+#: admin/partials/genealogical-tree-meta-tree-settings.php:759
+msgid "Center"
+msgstr "Midden"
+
+#: admin/partials/genealogical-tree-meta-tree-settings.php:760
+msgid "Right"
+msgstr "Rechts"
+
+#: public/Traits/traits-genealogical-tree-ind-style.php:24
+msgid "Your license is not active."
+msgstr "Uw licentie is niet actief."
+
+#: public/Traits/traits-genealogical-tree-ind-style.php:75
+#: public/Traits/traits-genealogical-tree-single-member-info.php:88
+msgid "Unknown"
+msgstr "Onbekend"
+
+#: public/Traits/traits-genealogical-tree-ind-style.php:150
+msgid "M"
+msgstr "M"
+
+#: public/Traits/traits-genealogical-tree-ind-style.php:153
+msgid "F"
+msgstr "F"
+
+#: public/Traits/traits-genealogical-tree-ind-style.php:184
+#: public/Traits/traits-genealogical-tree-ind-style.php:187
+msgid "B"
+msgstr "B"
+
+#: public/Traits/traits-genealogical-tree-ind-style.php:195
+msgid "D"
+msgstr "D"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:72
+msgid "Spouse"
+msgstr "Echtgenoot"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:97
+msgid "Date of Marriage"
+msgstr "Datum van het huwelijk"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:120
+msgid "Children"
+msgstr "Kinderen"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:164
+msgid "Siblings"
+msgstr "Zusters"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:212
+msgid "Date of Birth"
+msgstr "Geboortedatum"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:226
+msgid "Place of Birth"
+msgstr "Geboorteplaats"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:277
+msgid "Date of death"
+msgstr "Datum van overlijden"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:291
+msgid "Place of death"
+msgstr "Plaats van overlijden"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:313
+msgid "Location"
+msgstr "Locatie"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:391
+msgid "Events"
+msgstr "Evenementen"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:453
+msgid "Member Information"
+msgstr "Informatie over het lid"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:513
+msgid "Additional Information"
+msgstr "Extra informatie"
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/genealogical-tree"
+msgstr "https://wordpress.org/plugins/genealogical-tree"
+
+#. Description of the plugin/theme
+msgid ""
+"Genealogical Tree is a ultimate solution for creating and displaying family "
+"trees, family history on WordPress."
+msgstr ""
+"Genealogische Boom is een ultieme oplossing voor het maken en weergeven van "
+"stambomen, familiegeschiedenis op WordPress."
+
+#. Author of the plugin/theme
+msgid "ak devs"
+msgstr "ak devs"
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/akdevsfr"
+msgstr "https://github.com/akdevsfr"

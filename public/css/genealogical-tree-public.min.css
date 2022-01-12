@@ -1,0 +1,484 @@
+/*
+ * Member single page table css
+ */
+table.indi.genealogical-tree-member .gt-gender-emoji {
+    font-family: apple color emoji, segoe ui emoji, noto color emoji, android emoji, emojisymbols, emojione mozilla, twemoji mozilla, segoe ui symbol;
+}
+table.indi.genealogical-tree-member td>a {
+    display: inline-block;
+}
+table.indi.genealogical-tree-member td>img {
+    display: inline-block;
+}
+table.indi.genealogical-tree-member td>a>img {
+    box-shadow: none;
+    display: inline-block;
+}
+table.indi.genealogical-tree-member td>a.tree_link {
+    padding: 0 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*
+ * Tree container css/
+ */
+div.gt-container {
+    width: 100%;
+    max-width: initial !important;
+    position: relative;
+    direction: ltr;
+}
+div.gt-container .gt-zoom-contorl {
+    padding: 10px;
+    text-align: right;
+    position: relative;
+    z-index: 399;
+}
+div.gt-container .gt-zoom-contorl:after,
+div.gt-container .gt-zoom-contorl:before {
+    display: table;
+    content: "";
+}
+div.gt-container .gt-zoom-contorl:after {
+    clear: both;
+}
+div.gt-container .gt-zoom-contorl button {
+    padding: 4px 8px;
+    min-width: 32px;
+    height: 32px;
+    display: block;
+    float: right;
+    margin-left: 2px;
+    outline: none !important;
+}
+div.gt-container .gt-zoom-contorl button img {
+    outline: none !important;
+}
+div.gt-container .gt-expand-compress .gt-expand-icon {}
+div.gt-container .gt-expand-compress .gt-compress-icon {
+    display: none;
+}
+div.gt-container.gt-expand-compress-toggle .gt-expand-compress .gt-expand-icon {
+    display: none;
+}
+div.gt-container.gt-expand-compress-toggle .gt-expand-compress .gt-compress-icon {
+    display: block;
+}
+div.gt-container .spinner {
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translate(-50%, -50%)
+}
+div.gt-content {
+    border: 1px solid #d5d5d5;
+    overflow: hidden;
+}
+div.gt-content.gt-expand-compress-toggle {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999999999;
+}
+div.gt-tree * {
+    box-sizing: border-box;
+}
+div.gt-tree *:before,
+div.gt-tree *:after {
+    box-sizing: border-box;
+}
+/*
+ * 
+ */
+div.gt-tree:not(.type-gt-tree) {
+    width: max-content;
+    word-wrap: initial;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+div.gt-tree a {
+    word-break: initial;
+}
+div.gt-tree div.ind>.ind-cont>.info {}
+div.gt-tree div.ind>.ind-cont>.image {
+    padding-bottom: 5px;
+    position: relative;
+}
+div.gt-tree div.ind>.ind-cont>.image>.image-cont>img {
+    display: block;
+}
+div.gt-tree div.ind>.ind-cont>.info>.tree-link {
+    display: block;
+    text-align: center;
+}
+div.gt-tree div.ind>.ind-cont>.info>.tree-link a {
+    display: inline-block;
+}
+div.gt-tree div.ind>.ind-cont>.info>.tree-link a>img {
+    box-shadow: none !important;
+}
+div.gt-tree div.ind.F {
+    background: #ffdbe0;
+}
+div.gt-tree div.ind.M {
+    background: #daeef3;
+}
+div.gt-tree div.ind.H {
+    background: #ff8 !important;
+}
+
+div.gt-tree div.ind>.ind-cont .gender.M>span:before {
+    content: "♂️";
+    font-weight: 400;
+    font-family: apple color emoji, segoe ui emoji, noto color emoji, android emoji, emojisymbols, emojione mozilla, twemoji mozilla, segoe ui symbol;
+}
+div.gt-tree div.ind>.ind-cont .gender.F>span:before {
+    content: " ♀️";
+    font-family: apple color emoji, segoe ui emoji, noto color emoji, android emoji, emojisymbols, emojione mozilla, twemoji mozilla, segoe ui symbol;
+}
+div.gt-tree div.ind>.ind-cont>div.image>.image-cont {
+    width: 60px;
+    margin: 0 auto;
+        max-width: 100%;
+}
+div.gt-tree div.ind>.ind-cont>div.image>.image-cont>img {
+    width: 100%;
+    background: #fff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.gt-tree div.ind>.ind-cont>.info>.birt-deat {
+    word-break: initial;
+    word-wrap: normal;
+}
+div.gt-tree .gt-generation {
+    background: #fff;
+    display: block;
+    border: 1px solid #000;
+    z-index: 44444;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    width: fit-content;
+    word-break: initial;
+    padding: 2px 8px;
+}
+div.gt-tree div.ind.hr>.ind-cont>div.image,
+div.gt-tree div.ind.hr>.ind-cont>div.image+div.info,
+div.gt-tree div.ind.hr>.ind-cont>div.partners {
+    display: table-cell;
+    vertical-align: top;
+}
+div.gt-tree div.ind.hr>.ind-cont>div.image {
+    padding-bottom: 0px;
+}
+div.gt-tree div.ind>.ind-cont>div.info {
+    padding: 5px;
+}
+div.gt-tree div.ind.hr>.ind-cont>.partners>.partner {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0px;
+}
+div.gt-tree .partners>.partner>div.ind {
+    max-width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+div.gt-tree .partners>.partner> div.ind > .ind-cont > div.image >.image-cont {
+    max-width: 100%;
+}
+
+div.gt-tree {
+    width: max-content;
+    word-wrap: initial;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, .05);
+    padding: 10px;
+}
+div.gt-tree ul {
+    margin: 0 auto !important;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    display: table;
+}
+div.gt-tree li {
+    margin: 0 auto !important;
+    padding: 0;
+    display: table-cell;
+    vertical-align: top;
+    position: relative;
+}
+div.gt-tree li:only-child {
+    padding-top: 0px !important;
+}
+div.gt-tree div.ind {
+    display: inline-block;
+    border: 1px solid;
+    position: relative;
+    background-color: #fff;
+    z-index: 5;
+    padding: 4px;
+    font-size: 12px;
+    width: auto;
+    vertical-align: top;
+    cursor: default;
+    min-height: 30px;
+    margin: 0 2px;
+    border-radius: 5px;
+    white-space: initial;
+    word-break: initial;
+}
+div.gt-tree.gt-tree-hr ul {
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+}
+div.gt-tree.gt-tree-hr li {
+    display: block;
+    vertical-align: middle;
+}
+div.gt-tree.gt-tree-hr li:only-child {
+    padding-left: 0px !important;
+}
+div.gt-tree.gt-tree-hr div.ind {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 2px 0;
+}
+div.gt-tree ul.parents > li > div.ind {
+    display: block;
+}
+div.gt-tree div.partners > div.partner > div.ind {
+    display: block;
+    margin-top: 4px;
+}
+div.gt-tree ul.parents > li > div.ind {
+    margin: 0px;
+    border-radius: 0px;
+}
+
+div.gt-tree.gt-style-3-alt div.ind.F>.ind-cont {
+    background: #ffdbe0;
+}
+div.gt-tree.gt-style-3-alt div.ind.M>.ind-cont {
+    background: #daeef3;
+}
+div.gt-tree.gt-style-3-alt div.ind.H>.ind-cont {
+    background: #ff8 !important;
+}
+
+
+
+
+
+.gt-popover-container {
+    position: absolute;
+    left: 0px;
+    width: 600px;
+    max-width: 100%;
+    top: 0px;
+    bottom: 0px;
+    z-index: 500;
+}
+.gt-popover-container .close {
+    position: absolute;
+    top: 17px;
+    right: 2px;
+    z-index: 3;
+}
+.gt-popover {
+    position: absolute;
+    left: 15px;
+    right: 0;
+    top: 15px;
+    bottom: 15px;
+    background: #fff;
+    overflow-y: scroll;
+    padding: 20px;
+    z-index: 1;
+    border: 1px solid #d5d5d5;
+}
+.gt-popover h3 {
+    margin: 0px !important;
+    padding: 15px 0px !important;
+}
+
+/*
+ * 
+ */
+
+
+div.gt-tree .gt-style-4 li.spouse:not(:first-child):not(:last-child) > .ind:before {
+    border-left: 1px solid;
+    top: -30px;
+    height: 29px;
+}
+
+div.gt-tree.gt-tree-hr .gt-style-4 li.spouse > .ind:before {
+    height: 0px;
+    top: 50%;
+    border-top: 1px solid;
+    border-left: 0px solid;
+    left: -20px;
+    width: 20px;
+}
+div.gt-tree.gt-tree-hr .gt-style-4 li.spouse:not(:first-child):not(:last-child) > .ind:before {
+    border-top: 1px solid;
+    top: 50%;
+    left: -31px;
+    height: 0px;
+    width: 30px;
+}
+div.gt-tree.gt-tree-hr .gt-style-4 li.child:not(:first-child):not(:last-child) > ul.family:before {
+    width: 21px;
+    left: -10px;
+    top: 50%;
+    height: 0px;
+}
+div.gt-tree .gt-style-4 li.spouse {
+    padding-top: 30px;
+}
+div.gt-tree.gt-tree-hr .gt-style-4 li.spouse {
+    padding-top: 0px;
+    padding-left: 30px;
+}
+div.gt-tree .gt-style-4 li.spouse > .ind {
+    border-style: dashed !important;
+}
+
+
+
+div.gt-tree-mobile .birt-deat,
+div.gt-tree-mobile .name {
+    display: inline-block;
+}
+
+div.gt-tree-mobile ul {
+    list-style: none;
+        margin: 0 !important;
+        margin-left: 10px !important;
+}
+
+div.gt-tree-mobile li{
+    position: relative;
+    margin:0;
+    padding-left: 15px;
+}
+div.gt-tree-mobile li > div {
+    position: relative;
+    padding-left: 25px;
+}
+div.gt-tree-mobile li > div:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: -25px;
+    border-top: 1px solid;
+    width: 30px;
+}
+div.gt-tree-mobile li:last-child > div:before{
+    content: "";
+    position: absolute;
+    top: -15px;
+    bottom: 50%;
+    left: -25px;
+    border-left: 1px solid;
+}
+
+div.gt-tree-mobile li:before{
+    content: "";
+    position: absolute;
+    top: -15px;
+    bottom: 0;
+    left: -10px;
+    border-left: 1px solid;
+}
+
+div.gt-tree-mobile li:last-child:before {
+    border-left: 0px solid;
+}
+
+
+div.gt-tree .gt-collapse-family {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    position: relative;
+    text-align: center;
+}
+div.gt-tree .gt-collapse-family:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+}
+div.gt-tree.gt-tree-hr .gt-collapsible {
+    padding-right: 34px;
+}
+div.gt-tree.gt-tree-hr .gt-collapse-family {
+    display: block;
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    margin-top: -15px;
+}
+div.gt-tree.gt-tree-hr .gt-collapse-family:after {
+    left: initial !important;
+    top: 50%;
+}
+
+.gt-member .wp-post-image {
+    display: none;
+}
+
+div.gt-tree.gt-tree-hr .gt-style-3 .gt-collapse-family {
+    right: 4px;
+    top: 4px;
+    margin-top: 0px;
+}
+
+
+ul.has-ancestor > li {
+    display: block !important;
+    padding-top: 0 !important; 
+}
+
+ul.has-ancestor > li:before,
+ul.has-ancestor:before {
+    display: none !important;
+}
+
+
+
+ul.has-ancestor > .alter-tree  li {
+    vertical-align: bottom !important;
+}
+ul.has-ancestor > .alter-tree  li > div.ind {
+    display: inline-block !important;
+}
+
+
+ul.has-ancestor > .alter-tree  li.parent {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.gt-tree-hr ul.has-ancestor > li {
+    display: inline-block !important;
+    padding-left: 0px !important;
+}
+
+.gt-tree-hr ul.has-ancestor ul.parents > li  {
+    text-align: right;
+}
+
