@@ -72,7 +72,7 @@
         // VVV default public network IP.
         define( 'WP_FS__VVV_DEFAULT_PUBLIC_IP', '192.168.50.4' );
 
-//		define( 'WP_FS__LOCALHOST_IP', WP_FS__VVV_DEFAULT_PUBLIC_IP );
+//      define( 'WP_FS__LOCALHOST_IP', WP_FS__VVV_DEFAULT_PUBLIC_IP );
     }
 
     /**
@@ -284,7 +284,7 @@
     if ( ! defined( 'WP_FS__TIME_10_MIN_IN_SEC' ) ) {
         define( 'WP_FS__TIME_10_MIN_IN_SEC', 600 );
     }
-//	define( 'WP_FS__TIME_15_MIN_IN_SEC', 900 );
+//  define( 'WP_FS__TIME_15_MIN_IN_SEC', 900 );
     if ( ! defined( 'WP_FS__TIME_12_HOURS_IN_SEC' ) ) {
         define( 'WP_FS__TIME_12_HOURS_IN_SEC', 43200 );
     }
@@ -388,4 +388,4 @@
     }
     if ( ! defined( 'FS_SDK__SSLVERIFY' ) ) {
         define( 'FS_SDK__SSLVERIFY', false );
-    }
+    }

@@ -1437,14 +1437,11 @@ class Genealogical_Tree_Admin
     /**
      * 
      */
-    public function gt_update_db_check()
-    {
-        
-        if ( !get_site_option( '_gt_version_fixed' ) ) {
+    public function gt_update_db_check() {
+        if ( ! get_site_option( '_gt_version_fixed' ) ) {
             $this->fix_ver_upgrade_ajax();
             add_site_option( '_gt_version_fixed', time() );
         }
-    
     }
     
     /**
