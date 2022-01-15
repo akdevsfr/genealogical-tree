@@ -792,17 +792,15 @@ class Genealogical_Tree_Admin
         foreach ( $spouses as $key => $spouse ) {
             $sex = ( get_post_meta( $post_id, 'sex', true ) ? get_post_meta( $post_id, 'sex', true ) : null );
             $spouse_id = $spouse['id'];
-            
-            if ( $spouse_id ) {
-                $motherOrFather = $this->isFatherOrMother( $post_id, $spouse_id );
-                $mother = $motherOrFather['mother'];
-                $father = $motherOrFather['father'];
-                if ( $mother || $father ) {
-                    $family_id = $this->findOrCreateFamily( $mother, $father, array() );
-                }
-                array_push( $indis, $mother );
-                array_push( $indis, $father );
+        
+            $motherOrFather = $this->isFatherOrMother( $post_id, $spouse_id );
+            $mother = $motherOrFather['mother'];
+            $father = $motherOrFather['father'];
+            if ( $mother || $father ) {
+                $family_id = $this->findOrCreateFamily( $mother, $father, array() );
             }
+            array_push( $indis, $mother );
+            array_push( $indis, $father );
         
         }
         $famc = get_post_meta( $post_id, 'famc' );

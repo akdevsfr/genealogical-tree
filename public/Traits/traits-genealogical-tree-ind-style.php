@@ -95,12 +95,16 @@ trait Genealogical_Tree_Ind_Style
         
         if ( isset( $setting->thumb->show ) && $setting->thumb->show == 'on' ) {
             $image_url = GENEALOGICAL_TREE_DIR_URL . 'public/img/ava-' . $gender . '.jpg';
-            if ( $gender == 'F' ) {
-                $image_url = 'https://randomuser.me/api/portraits/med/women/' . rand( 1, 99 ) . '.jpg';
+             
+            if ( defined( 'GENEALOGICAL_DEV' ) && GENEALOGICAL_DEV ) {
+                if ( $gender == 'F' ) {
+                    $image_url = 'https://randomuser.me/api/portraits/med/women/' . rand( 1, 99 ) . '.jpg';
+                }
+                if ( $gender == 'M' ) {
+                    $image_url = 'https://randomuser.me/api/portraits/med/men/' . rand( 1, 99 ) . '.jpg';
+                }
             }
-            if ( $gender == 'M' ) {
-                $image_url = 'https://randomuser.me/api/portraits/med/men/' . rand( 1, 99 ) . '.jpg';
-            }
+
             $html .= ' 
 			<div class="image">
 				<div class="image-cont">';
