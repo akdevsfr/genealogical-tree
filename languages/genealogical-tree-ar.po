@@ -1,341 +1,363 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-07-07 14:54+0600\n"
-"PO-Revision-Date: 2020-07-07 14:56+0600\n"
+"POT-Creation-Date: 2022-01-12 22:23+0600\n"
+"PO-Revision-Date: 2022-01-12 22:30+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.4.3\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 
-#. Plugin Name of the plugin/theme
-#: admin/class-genealogical-tree-admin.php:110
-#: admin/class-genealogical-tree-admin.php:111
-msgid "Genealogical Tree"
-msgstr "شجرة الأنساب"
-
-#: admin/class-genealogical-tree-admin.php:121
-#: admin/class-genealogical-tree-admin.php:122
-msgid "Family"
-msgstr "أسرة"
-
-#: admin/class-genealogical-tree-admin.php:131
-#: admin/class-genealogical-tree-admin.php:132
-msgid "Import .GED"
-msgstr "استيراد .GED"
-
-#: admin/class-genealogical-tree-admin.php:139
-#: admin/class-genealogical-tree-admin.php:140
-msgid "Export .GED"
-msgstr "تصدير .GED"
-
-#: admin/class-genealogical-tree-admin.php:167
+#: admin/class-genealogical-tree-admin.php:145
 msgctxt "post type general name"
 msgid "Members"
 msgstr "الأعضاء"
 
-#: admin/class-genealogical-tree-admin.php:168
+#: admin/class-genealogical-tree-admin.php:146
 msgctxt "post type singular name"
 msgid "Member"
 msgstr "عضو"
 
-#: admin/class-genealogical-tree-admin.php:169
+#: admin/class-genealogical-tree-admin.php:147
 msgctxt "admin menu"
 msgid "Members"
 msgstr "الأعضاء"
 
-#: admin/class-genealogical-tree-admin.php:170
+#: admin/class-genealogical-tree-admin.php:148
 msgctxt "add new on admin bar"
 msgid "Member"
 msgstr "عضو"
 
-#: admin/class-genealogical-tree-admin.php:171
+#: admin/class-genealogical-tree-admin.php:149
 msgctxt "member"
 msgid "Add New"
 msgstr "اضف جديد"
 
-#: admin/class-genealogical-tree-admin.php:172
+#: admin/class-genealogical-tree-admin.php:150
 msgid "Add New Member"
 msgstr "أضف عضوا جديدا"
 
-#: admin/class-genealogical-tree-admin.php:173
+#: admin/class-genealogical-tree-admin.php:151
 msgid "New Member"
 msgstr "عضو جديد"
 
-#: admin/class-genealogical-tree-admin.php:174
+#: admin/class-genealogical-tree-admin.php:152
 msgid "Edit Member"
 msgstr "تحرير العضو"
 
-#: admin/class-genealogical-tree-admin.php:175
+#: admin/class-genealogical-tree-admin.php:153
 msgid "View Member"
 msgstr "عرض العضو"
 
-#: admin/class-genealogical-tree-admin.php:176
+#: admin/class-genealogical-tree-admin.php:154
 msgid "Members"
 msgstr "الأعضاء"
 
-#: admin/class-genealogical-tree-admin.php:177
+#: admin/class-genealogical-tree-admin.php:155
 msgid "Search Members"
 msgstr "البحث في الأعضاء"
 
-#: admin/class-genealogical-tree-admin.php:178
+#: admin/class-genealogical-tree-admin.php:156
 msgid "Parent Members:"
 msgstr "الأعضاء الأم:"
 
-#: admin/class-genealogical-tree-admin.php:179
+#: admin/class-genealogical-tree-admin.php:157
 msgid "No members found."
 msgstr "لا يوجد أعضاء."
 
-#: admin/class-genealogical-tree-admin.php:180
+#: admin/class-genealogical-tree-admin.php:158
 msgid "No members found in Trash."
 msgstr "لم يتم العثور على أعضاء في سلة المهملات."
 
-#: admin/class-genealogical-tree-admin.php:193
-#: admin/class-genealogical-tree-admin.php:231
-#: admin/class-genealogical-tree-admin.php:269
+#: admin/class-genealogical-tree-admin.php:171
+#: admin/class-genealogical-tree-admin.php:210
+#: admin/class-genealogical-tree-admin.php:253
 msgid "Description."
 msgstr "الوصف."
 
-#: admin/class-genealogical-tree-admin.php:211
-msgctxt "post type general name"
-msgid "Trees"
-msgstr "الأشجار"
-
-#: admin/class-genealogical-tree-admin.php:212
-msgctxt "post type singular name"
-msgid "Tree"
-msgstr "شجرة"
-
-#: admin/class-genealogical-tree-admin.php:213
-msgctxt "admin menu"
-msgid "Trees"
-msgstr "الأشجار"
-
-#: admin/class-genealogical-tree-admin.php:214
-msgctxt "add new on admin bar"
-msgid "Tree"
-msgstr "شجرة"
-
-#: admin/class-genealogical-tree-admin.php:215
-msgctxt "tree"
-msgid "Add New"
-msgstr "اضف جديد"
-
-#: admin/class-genealogical-tree-admin.php:216
-msgid "Add New Tree"
-msgstr "إضافة شجرة جديدة"
-
-#: admin/class-genealogical-tree-admin.php:217
-msgid "New Tree"
-msgstr "شجرة جديدة"
-
-#: admin/class-genealogical-tree-admin.php:218
-msgid "Edit Tree"
-msgstr "تحرير شجرة"
-
-#: admin/class-genealogical-tree-admin.php:219
-msgid "View Tree"
-msgstr "عرض شجرة"
-
-#: admin/class-genealogical-tree-admin.php:220
-msgid "Trees"
-msgstr "الأشجار"
-
-#: admin/class-genealogical-tree-admin.php:221
-msgid "Search Trees"
-msgstr "البحث عن الأشجار"
-
-#: admin/class-genealogical-tree-admin.php:222
-msgid "Parent Trees:"
-msgstr "أشجار الأصل:"
-
-#: admin/class-genealogical-tree-admin.php:223
-msgid "No trees found."
-msgstr "لم يتم العثور على أشجار."
-
-#: admin/class-genealogical-tree-admin.php:224
-msgid "No trees found in Trash."
-msgstr "لا توجد أشجار في سلة المهملات."
-
-#: admin/class-genealogical-tree-admin.php:249
+#: admin/class-genealogical-tree-admin.php:190
 msgctxt "post type general name"
 msgid "Families"
 msgstr "الأسر"
 
-#: admin/class-genealogical-tree-admin.php:250
+#: admin/class-genealogical-tree-admin.php:191
 msgctxt "post type singular name"
 msgid "Family"
 msgstr "أسرة"
 
-#: admin/class-genealogical-tree-admin.php:251
+#: admin/class-genealogical-tree-admin.php:192
 msgctxt "admin menu"
 msgid "Families"
 msgstr "الأسر"
 
-#: admin/class-genealogical-tree-admin.php:252
+#: admin/class-genealogical-tree-admin.php:193
 msgctxt "add new on admin bar"
 msgid "Family"
 msgstr "أسرة"
 
-#: admin/class-genealogical-tree-admin.php:253
+#: admin/class-genealogical-tree-admin.php:194
 msgctxt "family"
 msgid "Add New"
 msgstr "اضف جديد"
 
-#: admin/class-genealogical-tree-admin.php:254
+#: admin/class-genealogical-tree-admin.php:195
 msgid "Add New Family"
 msgstr "إضافة عائلة جديدة"
 
-#: admin/class-genealogical-tree-admin.php:255
+#: admin/class-genealogical-tree-admin.php:196
 msgid "New Family"
 msgstr "عائلة جديدة"
 
-#: admin/class-genealogical-tree-admin.php:256
+#: admin/class-genealogical-tree-admin.php:197
 msgid "Edit Family"
 msgstr "تحرير الأسرة"
 
-#: admin/class-genealogical-tree-admin.php:257
+#: admin/class-genealogical-tree-admin.php:198
 msgid "View Family"
 msgstr "عرض العائلة"
 
-#: admin/class-genealogical-tree-admin.php:258
-msgid "All Families"
-msgstr "جميع العائلات"
+#: admin/class-genealogical-tree-admin.php:199
+msgid "Families"
+msgstr "الأسر"
 
-#: admin/class-genealogical-tree-admin.php:259
+#: admin/class-genealogical-tree-admin.php:200
 msgid "Search Families"
 msgstr "بحث عن عائلات"
 
-#: admin/class-genealogical-tree-admin.php:260
+#: admin/class-genealogical-tree-admin.php:201
 msgid "Parent Families:"
 msgstr "الأسر التي لها الوالدين:"
 
-#: admin/class-genealogical-tree-admin.php:261
+#: admin/class-genealogical-tree-admin.php:202
 msgid "No families found."
 msgstr "لم يتم العثور على عائلات."
 
-#: admin/class-genealogical-tree-admin.php:262
+#: admin/class-genealogical-tree-admin.php:203
 msgid "No families found in Trash."
 msgstr "لم يتم العثور على عائلات في سلة المهملات."
 
-#: admin/class-genealogical-tree-admin.php:291
+#: admin/class-genealogical-tree-admin.php:233
+msgctxt "post type general name"
+msgid "Trees"
+msgstr "الأشجار"
+
+#: admin/class-genealogical-tree-admin.php:234
+msgctxt "post type singular name"
+msgid "Tree"
+msgstr "شجرة"
+
+#: admin/class-genealogical-tree-admin.php:235
+msgctxt "admin menu"
+msgid "Trees"
+msgstr "الأشجار"
+
+#: admin/class-genealogical-tree-admin.php:236
+msgctxt "add new on admin bar"
+msgid "Tree"
+msgstr "شجرة"
+
+#: admin/class-genealogical-tree-admin.php:237
+msgctxt "tree"
+msgid "Add New"
+msgstr "اضف جديد"
+
+#: admin/class-genealogical-tree-admin.php:238
+msgid "Add New Tree"
+msgstr "إضافة شجرة جديدة"
+
+#: admin/class-genealogical-tree-admin.php:239
+msgid "New Tree"
+msgstr "شجرة جديدة"
+
+#: admin/class-genealogical-tree-admin.php:240
+msgid "Edit Tree"
+msgstr "تحرير شجرة"
+
+#: admin/class-genealogical-tree-admin.php:241
+msgid "View Tree"
+msgstr "عرض شجرة"
+
+#: admin/class-genealogical-tree-admin.php:242
+msgid "Trees"
+msgstr "الأشجار"
+
+#: admin/class-genealogical-tree-admin.php:243
+msgid "Search Trees"
+msgstr "البحث عن الأشجار"
+
+#: admin/class-genealogical-tree-admin.php:244
+msgid "Parent Trees:"
+msgstr "أشجار الأصل:"
+
+#: admin/class-genealogical-tree-admin.php:245
+msgid "No trees found."
+msgstr "لم يتم العثور على أشجار."
+
+#: admin/class-genealogical-tree-admin.php:246
+msgid "No trees found in Trash."
+msgstr "لا توجد أشجار في سلة المهملات."
+
+#: admin/class-genealogical-tree-admin.php:272
 msgctxt "genealogical-tree"
 msgid "Family Groups"
 msgstr "مجموعات عائلية"
 
-#: admin/class-genealogical-tree-admin.php:292
+#: admin/class-genealogical-tree-admin.php:273
 msgctxt "taxonomy singular name"
 msgid "Family Group"
 msgstr "أسر المستفيدين"
 
-#: admin/class-genealogical-tree-admin.php:293
+#: admin/class-genealogical-tree-admin.php:274
 msgid "Search Family Groups"
 msgstr "البحث في مجموعات العائلة"
 
-#: admin/class-genealogical-tree-admin.php:294
+#: admin/class-genealogical-tree-admin.php:275
 msgid "Popular Family Groups"
 msgstr "مجموعات عائلية شائعة"
 
-#: admin/class-genealogical-tree-admin.php:295
+#: admin/class-genealogical-tree-admin.php:276
 msgid "All Family Groups"
 msgstr "كافة المجموعات العائلية"
 
-#: admin/class-genealogical-tree-admin.php:296
-#: admin/class-genealogical-tree-admin.php:297
+#: admin/class-genealogical-tree-admin.php:277
+#: admin/class-genealogical-tree-admin.php:278
 msgid "Parent Family Group"
 msgstr "مجموعة العائلة الأم"
 
-#: admin/class-genealogical-tree-admin.php:298
+#: admin/class-genealogical-tree-admin.php:279
 msgid "Edit Family Group"
 msgstr "تحرير مجموعة العائلة"
 
-#: admin/class-genealogical-tree-admin.php:299
+#: admin/class-genealogical-tree-admin.php:280
 msgid "Update Family Group"
 msgstr "تحديث مجموعة العائلة"
 
-#: admin/class-genealogical-tree-admin.php:300
+#: admin/class-genealogical-tree-admin.php:281
 msgid "Add New Group"
 msgstr "إضافة مجموعة جديدة"
 
-#: admin/class-genealogical-tree-admin.php:301
+#: admin/class-genealogical-tree-admin.php:282
 msgid "New Group Name"
 msgstr "اسم المجموعة الجديد"
 
-#: admin/class-genealogical-tree-admin.php:302
+#: admin/class-genealogical-tree-admin.php:283
 msgid "Separate family group with commas"
 msgstr "مجموعة عائلية منفصلة بفواصل"
 
-#: admin/class-genealogical-tree-admin.php:303
+#: admin/class-genealogical-tree-admin.php:284
 msgid "Add or remove family group"
 msgstr "إضافة مجموعة عائلية أو إزالتها"
 
-#: admin/class-genealogical-tree-admin.php:304
+#: admin/class-genealogical-tree-admin.php:285
 msgid "Choose from the most used family group"
 msgstr "اختر من المجموعة العائلية الأكثر استخدامًا"
 
-#: admin/class-genealogical-tree-admin.php:305
+#: admin/class-genealogical-tree-admin.php:286
 msgid "No family group found."
 msgstr "لم يتم العثور على مجموعة عائلية."
 
-#: admin/class-genealogical-tree-admin.php:306
+#: admin/class-genealogical-tree-admin.php:287
 msgid "Family Groups"
 msgstr "مجموعات عائلية"
 
-#: admin/class-genealogical-tree-admin.php:329
-#: admin/partials/genealogical-tree-admin-settings.php:5
-msgid "Tree Settings"
-msgstr "إعدادات الشجرة"
+#: admin/class-genealogical-tree-admin.php:310
+#: admin/class-genealogical-tree-admin.php:311
+msgid "Genealogical Tree"
+msgstr "شجرة الأنساب"
 
-#: admin/class-genealogical-tree-admin.php:409
+#: admin/class-genealogical-tree-admin.php:321
+#: admin/class-genealogical-tree-admin.php:322
+msgid "Family Group"
+msgstr "أسر المستفيدين"
+
+#: admin/class-genealogical-tree-admin.php:329
+#: admin/class-genealogical-tree-admin.php:330
+msgid "Version Upgrade"
+msgstr "ترقية الإصدار"
+
+#: admin/class-genealogical-tree-admin.php:340
+msgid "Collaboration "
+msgstr "معلومات الاتصال"
+
+#: admin/class-genealogical-tree-admin.php:341
+msgid "Collaboration"
+msgstr "تعاون"
+
+#: admin/class-genealogical-tree-admin.php:349
+#: admin/class-genealogical-tree-admin.php:350
+msgid "Import .GED"
+msgstr "استيراد .GED"
+
+#: admin/class-genealogical-tree-admin.php:358
+#: admin/class-genealogical-tree-admin.php:359
+msgid "Export .GED"
+msgstr "تصدير .GED"
+
+#: admin/class-genealogical-tree-admin.php:438
 #: admin/partials/genealogical-tree-meta-member-info.php:32
 msgid "ID"
 msgstr "المعرف"
 
-#: admin/class-genealogical-tree-admin.php:410
+#: admin/class-genealogical-tree-admin.php:439
 msgid "Born"
 msgstr "وُلِدت"
 
-#: admin/class-genealogical-tree-admin.php:411
-#: admin/partials/genealogical-tree-meta-member-info.php:42
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:142
-#: admin/partials/genealogical-tree-meta-tree-settings.php:145
-#: public/Traits/traits-genealogical-tree-single-member-info.php:82
+#: admin/class-genealogical-tree-admin.php:440
+#: admin/partials/genealogical-tree-meta-member-info.php:41
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:258
+#: admin/partials/genealogical-tree-meta-tree-settings.php:243
+#: public/Traits/traits-genealogical-tree-single-member-info.php:372
 msgid "Name"
 msgstr "الاسم"
 
-#: admin/class-genealogical-tree-admin.php:452
+#: admin/class-genealogical-tree-admin.php:441
+#: admin/partials/genealogical-tree-meta-member-info.php:88
+#: public/Traits/traits-genealogical-tree-single-member-info.php:248
+msgid "Parents"
+msgstr "اولياء الامر"
+
+#: admin/class-genealogical-tree-admin.php:442
+#: admin/partials/genealogical-tree-meta-member-info.php:210
+msgid "Spouses"
+msgstr "الأزواج/ الزوجات"
+
+#: admin/class-genealogical-tree-admin.php:443
+msgid "Author"
+msgstr "الكاتب"
+
+#: admin/class-genealogical-tree-admin.php:517
 msgid "Shortcode"
 msgstr "اختصار"
 
-#: admin/class-genealogical-tree-admin.php:473
-#: admin/class-genealogical-tree-admin.php:529
+#: admin/class-genealogical-tree-admin.php:539
+#: admin/class-genealogical-tree-admin.php:1960
 msgid "Member info"
 msgstr "معلومات العضو"
 
-#: admin/class-genealogical-tree-admin.php:485
-#: admin/class-genealogical-tree-admin.php:509
+#: admin/class-genealogical-tree-admin.php:551
 msgid "Additional Member info"
 msgstr "معلومات إضافية عن العضو"
 
-#: admin/class-genealogical-tree-admin.php:497
-msgid "Additional Children / Siblings info"
-msgstr "معلومات إضافية عن الأطفال / الأشقاء"
+#: admin/class-genealogical-tree-admin.php:899
+#: admin/partials/genealogical-tree-admin-settings.php:5
+msgid "Tree Settings"
+msgstr "إعدادات الشجرة"
 
-#: admin/class-genealogical-tree-admin.php:548
-msgid "Family info"
-msgstr "معلومات العائلة"
+#: admin/class-genealogical-tree-admin.php:1173
+msgid "Select"
+msgstr "تحديد"
 
-#: admin/class-genealogical-tree-admin.php:1260
+#: admin/class-genealogical-tree-admin.php:1416
 msgid "Import Ged"
 msgstr "استيراد Ged"
 
-#: admin/class-genealogical-tree-admin.php:1263
+#: admin/class-genealogical-tree-admin.php:1419
 msgid ""
 "You may see some warning on import process for some file, but no worry about "
 "that. But if any error, you can contact us."
@@ -343,34 +365,32 @@ msgstr ""
 "قد تشاهد بعض التحذير على عملية الاستيراد لبعض الملفات، ولكن لا تقلق بشأن "
 "ذلك. ولكن إذا كان هناك أي خطأ، يمكنك الاتصال بنا."
 
-#: admin/class-genealogical-tree-admin.php:1266
+#: admin/class-genealogical-tree-admin.php:1422
 msgid "Select file (.ged)"
 msgstr "تحديد الملف (.ged)"
 
-#: admin/class-genealogical-tree-admin.php:1271
+#: admin/class-genealogical-tree-admin.php:1427
 msgid "Import"
 msgstr "استيراد"
 
-#: admin/class-genealogical-tree-admin.php:1280
+#: admin/class-genealogical-tree-admin.php:1436
 msgid "Imported successfully"
 msgstr "تم استيراده بنجاح"
 
-#: admin/class-genealogical-tree-admin.php:1281
+#: admin/class-genealogical-tree-admin.php:1437
 msgid "Family Tree"
 msgstr "شجرة العائلة"
 
-#: admin/class-genealogical-tree-admin.php:1281
-#, fuzzy
-#| msgid " View Page"
+#: admin/class-genealogical-tree-admin.php:1437
 msgid "View Page"
-msgstr " مشاهده صفحه"
+msgstr "عرض الصفحة"
 
-#: admin/class-genealogical-tree-admin.php:1295
-#: admin/class-genealogical-tree-admin.php:1319
+#: admin/class-genealogical-tree-admin.php:1451
+#: admin/class-genealogical-tree-admin.php:1475
 msgid "Export"
 msgstr "تصدير"
 
-#: admin/class-genealogical-tree-admin.php:1296
+#: admin/class-genealogical-tree-admin.php:1452
 msgid ""
 "This will export a Zip file for download, which contains a Gedcom (.ged) "
 "format (version 5.5) file of your data."
@@ -378,35 +398,132 @@ msgstr ""
 "هذا سيتم تصدير ملف مضغوط للتحميل، والذي يحتوي على ملف تنسيق Gedcom (.ged) "
 "(الإصدار 5.5) من البيانات الخاصة بك."
 
-#: admin/class-genealogical-tree-admin.php:1301
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:38
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:42
-#: admin/partials/genealogical-tree-meta-tree-settings.php:45
+#: admin/class-genealogical-tree-admin.php:1457
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:61
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:65
+#: admin/partials/genealogical-tree-meta-tree-settings.php:63
 msgid "Select Family"
 msgstr "تحديد العائلة"
 
+#: admin/class-genealogical-tree-admin.php:1500
+#: public/Traits/traits-genealogical-tree-single-member-info.php:576
+msgid "Burial"
+msgstr "دفن"
+
+#: admin/class-genealogical-tree-admin.php:1504
+#: public/Traits/traits-genealogical-tree-single-member-info.php:580
+msgid "Adoption"
+msgstr "القرارات"
+
+#: admin/class-genealogical-tree-admin.php:1508
+#: public/Traits/traits-genealogical-tree-single-member-info.php:584
+msgid "Engagement"
+msgstr "التفاعل"
+
+#: admin/class-genealogical-tree-admin.php:1512
+#: public/Traits/traits-genealogical-tree-single-member-info.php:588
+msgid "Marriage"
+msgstr "الزواج"
+
+#: admin/class-genealogical-tree-admin.php:1516
+#: public/Traits/traits-genealogical-tree-single-member-info.php:592
+msgid "Divorce"
+msgstr "الطلاق"
+
+#: admin/class-genealogical-tree-admin.php:1520
+#: public/Traits/traits-genealogical-tree-single-member-info.php:596
+msgid "Address (Other)"
+msgstr "العنوان (آخر)"
+
+#: admin/class-genealogical-tree-admin.php:1524
+#: public/Traits/traits-genealogical-tree-single-member-info.php:600
+msgid "Baptism"
+msgstr "مَعْمُودِيَّة"
+
+#: admin/class-genealogical-tree-admin.php:1528
+msgid "Christening"
+msgstr "التعميد"
+
+#: admin/class-genealogical-tree-admin.php:1532
+#: public/Traits/traits-genealogical-tree-single-member-info.php:604
+msgid "arms"
+msgstr "احضان"
+
+#: admin/class-genealogical-tree-admin.php:1536
+msgid "BAR_MITZVAH"
+msgstr ""
+
+#: admin/class-genealogical-tree-admin.php:1540
+msgid "BLESSING"
+msgstr "نعمه"
+
+#: admin/class-genealogical-tree-admin.php:1544
+msgid "CENSUS"
+msgstr "التعداد"
+
+#: admin/class-genealogical-tree-admin.php:1548
+msgid "CREMATION"
+msgstr "الحرق"
+
+#: admin/class-genealogical-tree-admin.php:1552
+msgid "EMIGRATION"
+msgstr "الهجره"
+
+#: admin/class-genealogical-tree-admin.php:1556
+msgid "GRADUATION"
+msgstr "تخرج"
+
+#: admin/class-genealogical-tree-admin.php:1560
+msgid "IMMIGRATION"
+msgstr "هجرة"
+
+#: admin/class-genealogical-tree-admin.php:1564
+msgid "NATURALIZATION"
+msgstr "توطين"
+
+#: admin/class-genealogical-tree-admin.php:1568
+msgid "RETIREMENT"
+msgstr "تقاعد"
+
+#: admin/class-genealogical-tree-admin.php:1572
+msgid "PROBATE"
+msgstr "الوصايا"
+
+#: admin/class-genealogical-tree-admin.php:1576
+msgid "WILL"
+msgstr "سوف"
+
+#: admin/class-genealogical-tree-admin.php:1580
+#: public/Traits/traits-genealogical-tree-single-member-info.php:608
+msgid "Occupation"
+msgstr "المهنة"
+
+#: admin/class-genealogical-tree-admin.php:1979
+msgid "Family info"
+msgstr "معلومات العائلة"
+
 #: admin/genealogical-tree-handel-export.php:6
-#: admin/genealogical-tree-handel-import.php:6
+#: admin/genealogical-tree-handel-import.php:7
 msgid "You are not authorized to do this."
 msgstr "أنت غير مخول للقيام بذلك."
 
-#: admin/genealogical-tree-handel-import.php:13
+#: admin/genealogical-tree-handel-import.php:14
 msgid "File required"
 msgstr "الملف مطلوب"
 
-#: admin/genealogical-tree-handel-import.php:27
+#: admin/genealogical-tree-handel-import.php:30
 msgid "Family group  required"
 msgstr "مجموعة العائلة المطلوبة"
 
-#: admin/inc/class-genealogical-tree-family.php:100
+#: admin/inc/class-genealogical-tree-family.php:113
 msgid "Default Tree"
 msgstr "شجرة افتراضية"
 
-#: admin/inc/class-genealogical-tree-family.php:131
+#: admin/inc/class-genealogical-tree-family.php:117
 msgid "Generate Default Tree"
 msgstr "إنشاء شجرة افتراضية"
 
-#: admin/inc/class-genealogical-tree-family.php:135
+#: admin/inc/class-genealogical-tree-family.php:137
 msgid "View Tree."
 msgstr "عرض شجرة."
 
@@ -418,11 +535,27 @@ msgstr "الجذور المحتملة"
 msgid "To view possibles first generate default tree"
 msgstr "لعرض المحتملة أولاً إنشاء شجرة افتراضية"
 
-#: admin/inc/class-genealogical-tree-family.php:154
+#: admin/inc/class-genealogical-tree-family.php:155
 msgid "Members Page"
 msgstr "صفحة الأعضاء"
 
-#: admin/inc/class-genealogical-tree-family.php:222
+#: admin/inc/class-genealogical-tree-family.php:164
+msgid "Allow Merge Request"
+msgstr "السماح بطلب دمج"
+
+#: admin/inc/class-genealogical-tree-family.php:172
+msgid "Allow Use Request"
+msgstr "السماح بطلب الاستخدام"
+
+#: admin/inc/class-genealogical-tree-family.php:180
+msgid "Allow Suggestion"
+msgstr "السماح بالاقتراح"
+
+#: admin/inc/class-genealogical-tree-family.php:188
+msgid "Allow Use By"
+msgstr "السماح بالاستخدام بواسطة"
+
+#: admin/inc/class-genealogical-tree-family.php:337
 #: admin/partials/genealogical-tree-admin-settings.php:13
 msgid "Upgrade Now!"
 msgstr "ترقية الآن!"
@@ -460,7 +593,6 @@ msgid "This will Credit Text"
 msgstr "هذا سوف نص الائتمان"
 
 #: admin/partials/genealogical-tree-admin-settings.php:63
-#: admin/partials/genealogical-tree-meta-tree-settings.php:98
 msgid "Tree Style 1"
 msgstr "نمط الشجرة 1"
 
@@ -468,644 +600,569 @@ msgstr "نمط الشجرة 1"
 msgid "Tree Style 2"
 msgstr "نمط الشجرة 2"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:47
-#: public/Traits/traits-genealogical-tree-single-member-info.php:476
+#: admin/partials/genealogical-tree-meta-member-info.php:46
+#: public/Traits/traits-genealogical-tree-single-member-info.php:694
 msgid "Full Name"
 msgstr "الاسم بالكامل"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:55
+#: admin/partials/genealogical-tree-meta-member-info.php:54
 msgid "Given Name"
 msgstr "الاسم المذكور"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:63
+#: admin/partials/genealogical-tree-meta-member-info.php:62
 msgid "Surname"
 msgstr "إسم العائلة"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:71
-#: admin/partials/genealogical-tree-meta-member-info.php:76
+#: admin/partials/genealogical-tree-meta-member-info.php:70
+#: admin/partials/genealogical-tree-meta-member-info.php:75
 msgid "Gender"
 msgstr "الجنس"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:80
+#: admin/partials/genealogical-tree-meta-member-info.php:79
 msgid "Select Gender"
 msgstr "حدد نوع الجنس"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:81
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:335
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:389
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:549
-#: admin/partials/genealogical-tree-meta-tree-settings.php:337
-#: admin/partials/genealogical-tree-meta-tree-settings.php:391
-#: admin/partials/genealogical-tree-meta-tree-settings.php:550
-#: public/Traits/traits-genealogical-tree-ind-style.php:159
+#: admin/partials/genealogical-tree-meta-member-info.php:80
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:518
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:572
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:732
+#: admin/partials/genealogical-tree-meta-tree-settings.php:506
+#: admin/partials/genealogical-tree-meta-tree-settings.php:560
+#: admin/partials/genealogical-tree-meta-tree-settings.php:719
+#: public/Traits/traits-genealogical-tree-ind-style.php:182
 msgid "Male"
 msgstr "ذكر"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:82
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:341
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:395
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:555
-#: admin/partials/genealogical-tree-meta-tree-settings.php:343
-#: admin/partials/genealogical-tree-meta-tree-settings.php:397
-#: admin/partials/genealogical-tree-meta-tree-settings.php:556
-#: public/Traits/traits-genealogical-tree-ind-style.php:162
+#: admin/partials/genealogical-tree-meta-member-info.php:81
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:524
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:578
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:738
+#: admin/partials/genealogical-tree-meta-tree-settings.php:512
+#: admin/partials/genealogical-tree-meta-tree-settings.php:566
+#: admin/partials/genealogical-tree-meta-tree-settings.php:725
+#: public/Traits/traits-genealogical-tree-ind-style.php:185
 msgid "Female"
 msgstr "أنثى"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:89
-#: public/Traits/traits-genealogical-tree-single-member-info.php:198
-msgid "Birth"
-msgstr "الولاده"
-
-#: admin/partials/genealogical-tree-meta-member-info.php:111
-#: admin/partials/genealogical-tree-meta-member-info.php:171
-#: admin/partials/genealogical-tree-meta-member-info.php:272
-#: admin/partials/genealogical-tree-meta-member-info.php:317
-#: admin/partials/genealogical-tree-meta-member-info.php:366
-#: admin/partials/genealogical-tree-meta-member-info.php:383
-#: admin/partials/genealogical-tree-meta-member-info.php:400
-#: admin/partials/genealogical-tree-meta-member-info.php:542
+#: admin/partials/genealogical-tree-meta-member-info.php:109
+#: admin/partials/genealogical-tree-meta-member-info.php:240
+#: admin/partials/genealogical-tree-meta-member-info.php:333
+#: admin/partials/genealogical-tree-meta-member-info.php:382
+#: admin/partials/genealogical-tree-meta-member-info.php:447
+#: admin/partials/genealogical-tree-meta-member-info.php:520
+#: admin/partials/genealogical-tree-meta-member-info.php:537
+#: admin/partials/genealogical-tree-meta-member-info.php:554
 msgid "Add"
 msgstr "إضافة"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:113
-#: admin/partials/genealogical-tree-meta-member-info.php:173
-#: admin/partials/genealogical-tree-meta-member-info.php:274
-#: admin/partials/genealogical-tree-meta-member-info.php:319
-#: admin/partials/genealogical-tree-meta-member-info.php:368
-#: admin/partials/genealogical-tree-meta-member-info.php:385
-#: admin/partials/genealogical-tree-meta-member-info.php:402
-#: admin/partials/genealogical-tree-meta-member-info.php:544
+#: admin/partials/genealogical-tree-meta-member-info.php:111
+#: admin/partials/genealogical-tree-meta-member-info.php:242
+#: admin/partials/genealogical-tree-meta-member-info.php:335
+#: admin/partials/genealogical-tree-meta-member-info.php:384
+#: admin/partials/genealogical-tree-meta-member-info.php:449
+#: admin/partials/genealogical-tree-meta-member-info.php:522
+#: admin/partials/genealogical-tree-meta-member-info.php:539
+#: admin/partials/genealogical-tree-meta-member-info.php:556
 msgid "Delete"
 msgstr "حذف"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:119
-#: admin/partials/genealogical-tree-meta-member-info.php:178
-msgid "REF"
-msgstr "الرقم المرجعي"
+#: admin/partials/genealogical-tree-meta-member-info.php:116
+#: admin/partials/genealogical-tree-meta-member-info.php:247
+msgid "REF #"
+msgstr "الرقم المرجعي #"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:125
-#: admin/partials/genealogical-tree-meta-member-info.php:184
-#: admin/partials/genealogical-tree-meta-member-info.php:582
-#: public/Traits/traits-genealogical-tree-single-member-info.php:416
-msgid "Date"
-msgstr "التاريخ"
-
-#: admin/partials/genealogical-tree-meta-member-info.php:133
-#: admin/partials/genealogical-tree-meta-member-info.php:193
-#: admin/partials/genealogical-tree-meta-member-info.php:586
-#: public/Traits/traits-genealogical-tree-single-member-info.php:426
-msgid "Place"
-msgstr "مكان"
-
-#: admin/partials/genealogical-tree-meta-member-info.php:152
-#: admin/partials/genealogical-tree-meta-member-info.php:296
-#: admin/partials/genealogical-tree-meta-member-info.php:341
-#: public/Traits/traits-genealogical-tree-single-member-info.php:263
-msgid "Death"
-msgstr "تاريخ"
-
-#: admin/partials/genealogical-tree-meta-member-info.php:188
-msgid "Leave empty if still alive"
-msgstr "اتركها فارغة إذا كانت لا تزال على قيد الحياة"
-
-#: admin/partials/genealogical-tree-meta-member-info.php:216
-msgid "Parents"
-msgstr "اولياء الامر"
-
-#: admin/partials/genealogical-tree-meta-member-info.php:221
-#: public/Traits/traits-genealogical-tree-single-member-info.php:496
+#: public/Traits/traits-genealogical-tree-single-member-info.php:256
 msgid "Mother"
 msgstr "ام"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:225
-msgid "Select Mother"
-msgstr "اختر الأم"
-
-#: admin/partials/genealogical-tree-meta-member-info.php:234
-#: public/Traits/traits-genealogical-tree-single-member-info.php:489
+#: admin/partials/genealogical-tree-meta-member-info.php:139
+#: public/Traits/traits-genealogical-tree-single-member-info.php:271
 msgid "Father"
 msgstr "الاب"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:238
-msgid "Select Father"
-msgstr "حدد الأب"
+#: admin/partials/genealogical-tree-meta-member-info.php:154
+msgid "Family Relation"
+msgstr "علاقة عائلية"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:247
-msgid "Spouses"
-msgstr "الأزواج/ الزوجات"
-
-#: admin/partials/genealogical-tree-meta-member-info.php:253
-msgid "Wife"
-msgstr "زوجة"
-
-#: admin/partials/genealogical-tree-meta-member-info.php:277
-msgid "Select Wife"
-msgstr "اختر الزوجة"
-
-#: admin/partials/genealogical-tree-meta-member-info.php:285
-#: admin/partials/genealogical-tree-meta-member-info.php:330
-msgid "From"
-msgstr "من"
-
-#: admin/partials/genealogical-tree-meta-member-info.php:287
-#: admin/partials/genealogical-tree-meta-member-info.php:332
-msgid "To"
-msgstr "إلى"
-
-#: admin/partials/genealogical-tree-meta-member-info.php:291
-#: admin/partials/genealogical-tree-meta-member-info.php:294
-#: admin/partials/genealogical-tree-meta-member-info.php:336
-#: admin/partials/genealogical-tree-meta-member-info.php:339
-msgid "Select a Reason"
-msgstr "تحديد سبب"
-
-#: admin/partials/genealogical-tree-meta-member-info.php:295
-#: admin/partials/genealogical-tree-meta-member-info.php:340
-#: admin/partials/genealogical-tree-meta-member-info.php:443
-#: public/Traits/traits-genealogical-tree-single-member-info.php:355
-msgid "Divorce"
-msgstr "الطلاق"
-
-#: admin/partials/genealogical-tree-meta-member-info.php:297
-#: admin/partials/genealogical-tree-meta-member-info.php:342
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:347
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:401
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:561
-#: admin/partials/genealogical-tree-meta-tree-settings.php:349
-#: admin/partials/genealogical-tree-meta-tree-settings.php:403
-#: admin/partials/genealogical-tree-meta-tree-settings.php:562
-msgid "Other"
-msgstr "أخرى"
-
-#: admin/partials/genealogical-tree-meta-member-info.php:311
-msgid "Husband"
+#: admin/partials/genealogical-tree-meta-member-info.php:256
+#: public/Traits/traits-genealogical-tree-single-member-info.php:364
+msgid "Spouse"
 msgstr "الزوج"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:322
-msgid "Select Husband"
-msgstr "حدد الزوج"
+#: admin/partials/genealogical-tree-meta-member-info.php:270
+msgid "Marriage Date"
+msgstr "تاريخ الزواج"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:355
-msgid "Contact Information"
-msgstr "معلومات الاتصال"
+#: admin/partials/genealogical-tree-meta-member-info.php:274
+msgid "Marriage Place"
+msgstr "مكان الزواج"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:360
-msgid "Phone"
-msgstr "الهاتف"
+#: admin/partials/genealogical-tree-meta-member-info.php:314
+#: public/Traits/traits-genealogical-tree-single-member-info.php:435
+msgid "Birth"
+msgstr "الولاده"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:377
-msgid "Email"
-msgstr "البريد الإلكتروني"
+#: admin/partials/genealogical-tree-meta-member-info.php:340
+#: admin/partials/genealogical-tree-meta-member-info.php:389
+msgid "REF"
+msgstr "الرقم المرجعي"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:394
-msgid "Address"
-msgstr "العنوان"
+#: admin/partials/genealogical-tree-meta-member-info.php:342
+#: admin/partials/genealogical-tree-meta-member-info.php:391
+#: admin/partials/genealogical-tree-meta-member-info.php:482
+#: public/Traits/traits-genealogical-tree-single-member-info.php:653
+msgid "Date"
+msgstr "التاريخ"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:427
-#: public/Traits/traits-genealogical-tree-single-member-info.php:339
-msgid "Burial"
-msgstr "دفن"
+#: admin/partials/genealogical-tree-meta-member-info.php:346
+#: admin/partials/genealogical-tree-meta-member-info.php:395
+#: admin/partials/genealogical-tree-meta-member-info.php:486
+#: public/Traits/traits-genealogical-tree-single-member-info.php:663
+msgid "Place"
+msgstr "مكان"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:431
-#: public/Traits/traits-genealogical-tree-single-member-info.php:343
-msgid "Adoption"
-msgstr "القرارات"
+#: admin/partials/genealogical-tree-meta-member-info.php:363
+#: public/Traits/traits-genealogical-tree-single-member-info.php:500
+msgid "Death"
+msgstr "تاريخ"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:435
-#: public/Traits/traits-genealogical-tree-single-member-info.php:347
-msgid "Engagement"
-msgstr "التفاعل"
-
-#: admin/partials/genealogical-tree-meta-member-info.php:439
-#: public/Traits/traits-genealogical-tree-single-member-info.php:351
-msgid "Marriage"
-msgstr "الزواج"
-
-#: admin/partials/genealogical-tree-meta-member-info.php:447
-#: public/Traits/traits-genealogical-tree-single-member-info.php:359
-msgid "Address (Other)"
-msgstr "العنوان (آخر)"
-
-#: admin/partials/genealogical-tree-meta-member-info.php:451
-#: public/Traits/traits-genealogical-tree-single-member-info.php:363
-msgid "Baptism"
-msgstr ""
-
-#: admin/partials/genealogical-tree-meta-member-info.php:455
-msgid "Christening"
-msgstr ""
-
-#: admin/partials/genealogical-tree-meta-member-info.php:459
-#: public/Traits/traits-genealogical-tree-single-member-info.php:367
-msgid "arms"
-msgstr ""
-
-#: admin/partials/genealogical-tree-meta-member-info.php:463
-msgid "BAR_MITZVAH"
-msgstr ""
-
-#: admin/partials/genealogical-tree-meta-member-info.php:467
-msgid "BLESSING"
-msgstr ""
-
-#: admin/partials/genealogical-tree-meta-member-info.php:471
-msgid "CENSUS"
-msgstr ""
-
-#: admin/partials/genealogical-tree-meta-member-info.php:475
-msgid "CREMATION"
-msgstr ""
-
-#: admin/partials/genealogical-tree-meta-member-info.php:479
-msgid "EMIGRATION"
-msgstr ""
-
-#: admin/partials/genealogical-tree-meta-member-info.php:483
-msgid "GRADUATION"
-msgstr ""
-
-#: admin/partials/genealogical-tree-meta-member-info.php:487
-msgid "IMMIGRATION"
-msgstr ""
-
-#: admin/partials/genealogical-tree-meta-member-info.php:491
-msgid "NATURALIZATION"
-msgstr ""
-
-#: admin/partials/genealogical-tree-meta-member-info.php:495
-msgid "RETIREMENT"
-msgstr ""
-
-#: admin/partials/genealogical-tree-meta-member-info.php:499
-msgid "PROBATE"
-msgstr ""
-
-#: admin/partials/genealogical-tree-meta-member-info.php:503
-msgid "WILL"
-msgstr ""
-
-#: admin/partials/genealogical-tree-meta-member-info.php:507
-#: public/Traits/traits-genealogical-tree-single-member-info.php:371
-msgid "Occupation"
-msgstr "المهنة"
-
-#: admin/partials/genealogical-tree-meta-member-info.php:521
+#: admin/partials/genealogical-tree-meta-member-info.php:432
 msgid "Additional Events"
 msgstr "أحداث إضافية"
 
-#: admin/partials/genealogical-tree-meta-member-info.php:552
+#: admin/partials/genealogical-tree-meta-member-info.php:456
 msgid "Select an Event"
 msgstr "تحديد حدث"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:33
-#: admin/partials/genealogical-tree-meta-tree-settings.php:40
+#: admin/partials/genealogical-tree-meta-member-info.php:509
+msgid "Contact Information"
+msgstr "معلومات الاتصال"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:514
+msgid "Phone"
+msgstr "الهاتف"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:531
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: admin/partials/genealogical-tree-meta-member-info.php:548
+msgid "Address"
+msgstr "العنوان"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:56
+#: admin/partials/genealogical-tree-meta-tree-settings.php:58
 msgid "General Setting"
 msgstr "الإعدادات العامة"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:60
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:64
-#: admin/partials/genealogical-tree-meta-tree-settings.php:65
-#: admin/partials/genealogical-tree-meta-tree-settings.php:69
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:80
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:109
+#: admin/partials/genealogical-tree-meta-tree-settings.php:83
+#: admin/partials/genealogical-tree-meta-tree-settings.php:87
 msgid "Select Root"
 msgstr "حدد الجذر"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:91
-#: admin/partials/genealogical-tree-meta-tree-settings.php:94
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:126
+#: admin/partials/genealogical-tree-meta-tree-settings.php:112
+msgid "Highlight Root"
+msgstr "تسليط الضوء على الجذر"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:135
+#: admin/partials/genealogical-tree-meta-tree-settings.php:120
 msgid "Select Style"
 msgstr "اختر نمط العرض"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:95
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:139
+#: admin/partials/genealogical-tree-meta-tree-settings.php:124
 msgid "Style 1"
 msgstr "النمط 1"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:96
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:140
+#: admin/partials/genealogical-tree-meta-tree-settings.php:125
 msgid "Style 2"
 msgstr "النمط 2"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:97
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:141
+#: admin/partials/genealogical-tree-meta-tree-settings.php:126
 msgid "Style 2-Alt"
 msgstr "نمط 2-Alt"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:99
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:142
+#: admin/partials/genealogical-tree-meta-tree-settings.php:127
 msgid "Style 3"
 msgstr "النمط 3"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:100
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:143
+#: admin/partials/genealogical-tree-meta-tree-settings.php:128
 msgid "Style 3-Alt"
 msgstr "نمط 3-Alt"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:108
-#: admin/partials/genealogical-tree-meta-tree-settings.php:110
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:144
+#: admin/partials/genealogical-tree-meta-tree-settings.php:129
+msgid "Style 4"
+msgstr "اسلوب 4"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:145
+#: admin/partials/genealogical-tree-meta-tree-settings.php:130
+msgid "Style 5"
+msgstr "استايل 5"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:160
+#: admin/partials/genealogical-tree-meta-tree-settings.php:145
 msgid "Select Layout"
 msgstr "حدد التنسيق"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:112
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:317
-#: admin/partials/genealogical-tree-meta-tree-settings.php:114
-#: admin/partials/genealogical-tree-meta-tree-settings.php:320
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:164
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:500
+#: admin/partials/genealogical-tree-meta-tree-settings.php:149
+#: admin/partials/genealogical-tree-meta-tree-settings.php:489
 msgid "Vertical"
 msgstr "عمودي"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:113
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:318
-#: admin/partials/genealogical-tree-meta-tree-settings.php:115
-#: admin/partials/genealogical-tree-meta-tree-settings.php:321
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:165
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:501
+#: admin/partials/genealogical-tree-meta-tree-settings.php:150
+#: admin/partials/genealogical-tree-meta-tree-settings.php:490
 msgid "Horizontal"
 msgstr "أفقي"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:119
-#: admin/partials/genealogical-tree-meta-tree-settings.php:122
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:172
+#: admin/partials/genealogical-tree-meta-tree-settings.php:157
 msgid "Enable Ajax"
 msgstr "تمكين اياكس"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:127
-#: admin/partials/genealogical-tree-meta-tree-settings.php:130
-msgid "Show Ancestor"
-msgstr "إظهار سلف"
-
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:137
-#: admin/partials/genealogical-tree-meta-tree-settings.php:140
-msgid "Visibility Setting"
-msgstr "إعداد الرؤية"
-
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:145
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:156
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:179
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:196
-#: admin/partials/genealogical-tree-meta-tree-settings.php:148
-#: admin/partials/genealogical-tree-meta-tree-settings.php:159
-#: admin/partials/genealogical-tree-meta-tree-settings.php:182
-#: admin/partials/genealogical-tree-meta-tree-settings.php:199
-msgid "Full"
-msgstr "كامل"
-
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:148
-#: admin/partials/genealogical-tree-meta-tree-settings.php:151
-msgid "First"
-msgstr "الأول"
-
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:153
-#: admin/partials/genealogical-tree-meta-tree-settings.php:156
-msgid "Birth Day"
-msgstr "يوم الميلاد"
-
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:159
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:182
-#: admin/partials/genealogical-tree-meta-tree-settings.php:162
-#: admin/partials/genealogical-tree-meta-tree-settings.php:185
-msgid "Year"
-msgstr "السنة"
+#: admin/partials/genealogical-tree-meta-tree-settings.php:168
+msgid "Enable Popup"
+msgstr "تمكين منبثق"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:162
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:185
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:202
-#: admin/partials/genealogical-tree-meta-tree-settings.php:165
-#: admin/partials/genealogical-tree-meta-tree-settings.php:188
-#: admin/partials/genealogical-tree-meta-tree-settings.php:205
-msgid "None"
-msgstr "لا شيء"
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:191
+#: admin/partials/genealogical-tree-meta-tree-settings.php:177
+msgid "Hide Female Tree"
+msgstr "إخفاء شجرة أنثى"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:168
-#: admin/partials/genealogical-tree-meta-tree-settings.php:171
-msgid "Hide Birth Day Who Alive"
-msgstr "إخفاء يوم الولادة الذي على قيد الحياة"
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:201
+#: admin/partials/genealogical-tree-meta-tree-settings.php:187
+msgid "Hide Spouse"
+msgstr "إخفاء الزوج"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:176
-#: admin/partials/genealogical-tree-meta-tree-settings.php:179
-msgid "Died"
-msgstr "توفيت"
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:211
+#: admin/partials/genealogical-tree-meta-tree-settings.php:198
+msgid "Hide Unknown Spouse"
+msgstr "إخفاء الزوج المجهول"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:190
-#: admin/partials/genealogical-tree-meta-tree-settings.php:193
-msgid "Show Gender"
-msgstr "إظهار الجنس"
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:221
+#: admin/partials/genealogical-tree-meta-tree-settings.php:208
+msgid "Collapsible Family"
+msgstr "عائلة قابلة للطي"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:193
-#: admin/partials/genealogical-tree-meta-tree-settings.php:196
-msgid "Icon"
-msgstr "أيقونة"
-
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:199
-#: admin/partials/genealogical-tree-meta-tree-settings.php:202
-msgid "Short"
-msgstr "قصير"
-
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:208
-#: admin/partials/genealogical-tree-meta-tree-settings.php:211
-msgid "Sibling Order"
-msgstr "ترتيب الأشقاء"
-
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:212
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:601
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:714
-#: admin/partials/genealogical-tree-meta-tree-settings.php:605
-#: admin/partials/genealogical-tree-meta-tree-settings.php:689
-msgid "Default"
-msgstr "افتراضي"
-
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:213
-msgid "Oldest"
-msgstr "الأقدم"
-
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:214
-msgid "Youngest"
-msgstr "اصغر"
-
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:220
-#: admin/partials/genealogical-tree-meta-tree-settings.php:223
-msgid "Show Generation"
-msgstr "إظهار الجيل"
-
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:228
-#: admin/partials/genealogical-tree-meta-tree-settings.php:231
-msgid "Show Tree Link"
-msgstr "إظهار ارتباط الشجرة"
-
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:238
-#: admin/partials/genealogical-tree-meta-tree-settings.php:241
-msgid "Container Setting"
-msgstr "إعداد الحاوية"
-
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:243
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:333
-#: admin/partials/genealogical-tree-meta-tree-settings.php:246
-#: admin/partials/genealogical-tree-meta-tree-settings.php:335
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:242
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:404
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:516
+#: admin/partials/genealogical-tree-meta-tree-settings.php:229
+#: admin/partials/genealogical-tree-meta-tree-settings.php:392
+#: admin/partials/genealogical-tree-meta-tree-settings.php:504
 msgid "Background Color"
 msgstr "لون الخلفية"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:251
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:354
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:514
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:253
+#: admin/partials/genealogical-tree-meta-tree-settings.php:238
+msgid "Visibility Setting"
+msgstr "إعداد الرؤية"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:261
+msgid "Title"
+msgstr "العنوان"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:265
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:276
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:299
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:316
+#: admin/partials/genealogical-tree-meta-tree-settings.php:246
+#: admin/partials/genealogical-tree-meta-tree-settings.php:257
+#: admin/partials/genealogical-tree-meta-tree-settings.php:284
+#: admin/partials/genealogical-tree-meta-tree-settings.php:301
+msgid "Full"
+msgstr "كامل"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:268
+#: admin/partials/genealogical-tree-meta-tree-settings.php:249
+msgid "First"
+msgstr "الأول"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:273
 #: admin/partials/genealogical-tree-meta-tree-settings.php:254
-#: admin/partials/genealogical-tree-meta-tree-settings.php:356
-#: admin/partials/genealogical-tree-meta-tree-settings.php:515
+msgid "Birth Day"
+msgstr "يوم الميلاد"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:279
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:302
+#: admin/partials/genealogical-tree-meta-tree-settings.php:260
+#: admin/partials/genealogical-tree-meta-tree-settings.php:287
+msgid "Year"
+msgstr "السنة"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:282
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:305
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:322
+#: admin/partials/genealogical-tree-meta-tree-settings.php:263
+#: admin/partials/genealogical-tree-meta-tree-settings.php:290
+#: admin/partials/genealogical-tree-meta-tree-settings.php:307
+msgid "None"
+msgstr "لا شيء"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:288
+#: admin/partials/genealogical-tree-meta-tree-settings.php:269
+msgid "Hide Birth Day Who Alive"
+msgstr "إخفاء يوم الولادة الذي على قيد الحياة"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:296
+#: admin/partials/genealogical-tree-meta-tree-settings.php:281
+msgid "Died"
+msgstr "توفيت"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:310
+#: admin/partials/genealogical-tree-meta-tree-settings.php:295
+msgid "Show Gender"
+msgstr "إظهار الجنس"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:313
+#: admin/partials/genealogical-tree-meta-tree-settings.php:298
+msgid "Icon"
+msgstr "أيقونة"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:319
+#: admin/partials/genealogical-tree-meta-tree-settings.php:304
+msgid "Short"
+msgstr "قصير"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:328
+#: admin/partials/genealogical-tree-meta-tree-settings.php:313
+msgid "Sibling Order"
+msgstr "ترتيب الأشقاء"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:332
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:784
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:897
+#: admin/partials/genealogical-tree-meta-tree-settings.php:774
+#: admin/partials/genealogical-tree-meta-tree-settings.php:858
+msgid "Default"
+msgstr "افتراضي"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:333
+msgid "Oldest"
+msgstr "الأقدم"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:334
+msgid "Youngest"
+msgstr "اصغر"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:341
+#: admin/partials/genealogical-tree-meta-tree-settings.php:325
+msgid "Show Generation"
+msgstr "إظهار الجيل"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:349
+#: admin/partials/genealogical-tree-meta-tree-settings.php:335
+msgid "Number Of Generation"
+msgstr "عدد الأجيال"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:365
+#: admin/partials/genealogical-tree-meta-tree-settings.php:351
+msgid "Show Ancestor"
+msgstr "إظهار سلف"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:373
+#: admin/partials/genealogical-tree-meta-tree-settings.php:359
+msgid "Number Of Ancestor Generation"
+msgstr "عدد الجيل السلف"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:389
+#: admin/partials/genealogical-tree-meta-tree-settings.php:377
+msgid "Show Tree Link"
+msgstr "إظهار ارتباط الشجرة"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:399
+#: admin/partials/genealogical-tree-meta-tree-settings.php:387
+msgid "Container Setting"
+msgstr "إعداد الحاوية"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:412
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:537
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:697
+#: admin/partials/genealogical-tree-meta-tree-settings.php:400
+#: admin/partials/genealogical-tree-meta-tree-settings.php:525
+#: admin/partials/genealogical-tree-meta-tree-settings.php:684
 msgid "Border Width"
 msgstr "عرض الحدود"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:268
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:371
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:531
-#: admin/partials/genealogical-tree-meta-tree-settings.php:271
-#: admin/partials/genealogical-tree-meta-tree-settings.php:373
-#: admin/partials/genealogical-tree-meta-tree-settings.php:532
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:429
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:554
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:714
+#: admin/partials/genealogical-tree-meta-tree-settings.php:417
+#: admin/partials/genealogical-tree-meta-tree-settings.php:542
+#: admin/partials/genealogical-tree-meta-tree-settings.php:701
 msgid "Border Style"
 msgstr "نمط الحدود"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:284
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:387
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:547
-#: admin/partials/genealogical-tree-meta-tree-settings.php:287
-#: admin/partials/genealogical-tree-meta-tree-settings.php:389
-#: admin/partials/genealogical-tree-meta-tree-settings.php:548
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:445
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:570
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:730
+#: admin/partials/genealogical-tree-meta-tree-settings.php:433
+#: admin/partials/genealogical-tree-meta-tree-settings.php:558
+#: admin/partials/genealogical-tree-meta-tree-settings.php:717
 msgid "Border Color"
 msgstr "لون الحدود"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:292
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:408
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:568
-#: admin/partials/genealogical-tree-meta-tree-settings.php:295
-#: admin/partials/genealogical-tree-meta-tree-settings.php:410
-#: admin/partials/genealogical-tree-meta-tree-settings.php:569
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:453
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:591
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:751
+#: admin/partials/genealogical-tree-meta-tree-settings.php:441
+#: admin/partials/genealogical-tree-meta-tree-settings.php:579
+#: admin/partials/genealogical-tree-meta-tree-settings.php:738
 msgid "Border Radius"
 msgstr "قطر الحدود"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:308
-#: admin/partials/genealogical-tree-meta-tree-settings.php:311
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:471
+#: admin/partials/genealogical-tree-meta-tree-settings.php:458
+msgid "Background Image"
+msgstr "صورة الخلفية"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:481
+#: admin/partials/genealogical-tree-meta-tree-settings.php:468
+msgid "Background Size"
+msgstr "حجم الخلفية"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:491
+#: admin/partials/genealogical-tree-meta-tree-settings.php:480
 msgid "Box Setting"
 msgstr "إعداد المربع"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:313
-#: admin/partials/genealogical-tree-meta-tree-settings.php:316
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:496
+#: admin/partials/genealogical-tree-meta-tree-settings.php:485
 msgid "Layout"
 msgstr "التخطيط"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:323
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:507
-#: admin/partials/genealogical-tree-meta-tree-settings.php:326
-#: admin/partials/genealogical-tree-meta-tree-settings.php:508
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:506
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:690
+#: admin/partials/genealogical-tree-meta-tree-settings.php:495
+#: admin/partials/genealogical-tree-meta-tree-settings.php:677
 msgid "Width"
 msgstr "العرض"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:327
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:510
 msgid "If Layout is Horizontal, Width is  'auto' is recommended."
 msgstr "إذا كان التخطيط أفقياً، يُنصح بأن يكون العرض 'تلقائي'."
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:428
-#: admin/partials/genealogical-tree-meta-tree-settings.php:427
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:530
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:584
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:744
+#: admin/partials/genealogical-tree-meta-tree-settings.php:518
+#: admin/partials/genealogical-tree-meta-tree-settings.php:572
+#: admin/partials/genealogical-tree-meta-tree-settings.php:731
+msgid "Other"
+msgstr "أخرى"
+
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:611
+#: admin/partials/genealogical-tree-meta-tree-settings.php:596
 msgid "Line Setting"
 msgstr "إعداد الخط"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:451
-#: admin/partials/genealogical-tree-meta-tree-settings.php:450
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:634
+#: admin/partials/genealogical-tree-meta-tree-settings.php:619
 msgid "Line Style"
 msgstr "نمط الخط"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:468
-#: admin/partials/genealogical-tree-meta-tree-settings.php:468
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:651
+#: admin/partials/genealogical-tree-meta-tree-settings.php:637
 msgid "Line Corner Radius"
 msgstr "نصف قطر زاوية الخط"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:486
-#: admin/partials/genealogical-tree-meta-tree-settings.php:487
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:669
+#: admin/partials/genealogical-tree-meta-tree-settings.php:656
 msgid "Line Color"
 msgstr "لون الخط"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:494
-#: admin/partials/genealogical-tree-meta-tree-settings.php:495
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:677
+#: admin/partials/genealogical-tree-meta-tree-settings.php:664
 msgid "Image Setting"
 msgstr "إعداد الصورة"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:499
-#: admin/partials/genealogical-tree-meta-tree-settings.php:500
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:682
+#: admin/partials/genealogical-tree-meta-tree-settings.php:669
 msgid "Show Image"
 msgstr "عرض الصورة"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:587
-#: admin/partials/genealogical-tree-meta-tree-settings.php:591
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:770
+#: admin/partials/genealogical-tree-meta-tree-settings.php:760
 msgid "Name Text Setting"
 msgstr "إعداد نص الاسم"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:592
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:704
-#: admin/partials/genealogical-tree-meta-tree-settings.php:596
-#: admin/partials/genealogical-tree-meta-tree-settings.php:679
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:775
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:887
+#: admin/partials/genealogical-tree-meta-tree-settings.php:765
+#: admin/partials/genealogical-tree-meta-tree-settings.php:848
 msgid "Font Family"
 msgstr "نوع الخط"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:643
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:758
-#: admin/partials/genealogical-tree-meta-tree-settings.php:618
-#: admin/partials/genealogical-tree-meta-tree-settings.php:706
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:826
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:941
+#: admin/partials/genealogical-tree-meta-tree-settings.php:787
+#: admin/partials/genealogical-tree-meta-tree-settings.php:875
 msgid "Font Size"
 msgstr "حجم الخط"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:657
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:773
-#: admin/partials/genealogical-tree-meta-tree-settings.php:632
-#: admin/partials/genealogical-tree-meta-tree-settings.php:720
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:840
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:956
+#: admin/partials/genealogical-tree-meta-tree-settings.php:801
+#: admin/partials/genealogical-tree-meta-tree-settings.php:889
 msgid "Font Weight"
 msgstr "وزن الخط"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:667
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:783
-#: admin/partials/genealogical-tree-meta-tree-settings.php:642
-#: admin/partials/genealogical-tree-meta-tree-settings.php:730
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:850
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:966
+#: admin/partials/genealogical-tree-meta-tree-settings.php:811
+#: admin/partials/genealogical-tree-meta-tree-settings.php:899
 msgid "Font Style"
 msgstr "نوع الخط"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:676
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:793
-#: admin/partials/genealogical-tree-meta-tree-settings.php:651
-#: admin/partials/genealogical-tree-meta-tree-settings.php:740
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:859
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:976
+#: admin/partials/genealogical-tree-meta-tree-settings.php:820
+#: admin/partials/genealogical-tree-meta-tree-settings.php:909
 msgid "Font Color"
 msgstr "لون النص"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:684
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:804
-#: admin/partials/genealogical-tree-meta-tree-settings.php:659
-#: admin/partials/genealogical-tree-meta-tree-settings.php:751
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:867
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:987
+#: admin/partials/genealogical-tree-meta-tree-settings.php:828
+#: admin/partials/genealogical-tree-meta-tree-settings.php:920
 msgid "Text Align"
 msgstr "محاذاة النص"
 
-#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:699
-#: admin/partials/genealogical-tree-meta-tree-settings.php:674
+#: admin/partials/genealogical-tree-meta-tree-settings-premium.php:882
+#: admin/partials/genealogical-tree-meta-tree-settings.php:843
 msgid "Other Text Setting"
 msgstr "إعداد نص آخر"
 
-#: admin/partials/genealogical-tree-meta-tree-settings.php:99
-msgid "Style Style 2"
-msgstr "نمط النمط 2"
-
-#: admin/partials/genealogical-tree-meta-tree-settings.php:100
-msgid "Style Style 2-Alt"
-msgstr "نمط نمط 2-Alt"
-
-#: admin/partials/genealogical-tree-meta-tree-settings.php:101
-msgid "Style Style 3"
-msgstr "نمط 3"
-
-#: admin/partials/genealogical-tree-meta-tree-settings.php:102
-msgid "Style Style 3-Alt"
-msgstr "نمط نمط 3-Alt"
-
-#: admin/partials/genealogical-tree-meta-tree-settings.php:330
+#: admin/partials/genealogical-tree-meta-tree-settings.php:499
 msgid "If Layout is Horizontal, Width is recommended to set auto."
 msgstr "إذا كان التخطيط أفقياً، يوصى بتعيين العرض تلقائيًا."
 
-#: admin/partials/genealogical-tree-meta-tree-settings.php:432
+#: admin/partials/genealogical-tree-meta-tree-settings.php:601
 msgid "Line Size"
 msgstr "حجم الخط"
 
-#: admin/partials/genealogical-tree-meta-tree-settings.php:758
+#: admin/partials/genealogical-tree-meta-tree-settings.php:927
 msgid "Left"
 msgstr "يسار"
 
-#: admin/partials/genealogical-tree-meta-tree-settings.php:759
+#: admin/partials/genealogical-tree-meta-tree-settings.php:928
 msgid "Center"
 msgstr "وسط"
 
-#: admin/partials/genealogical-tree-meta-tree-settings.php:760
+#: admin/partials/genealogical-tree-meta-tree-settings.php:929
 msgid "Right"
 msgstr "يمين"
 
@@ -1113,75 +1170,99 @@ msgstr "يمين"
 msgid "Your license is not active."
 msgstr "الترخيص الخاص بك غير نشط."
 
-#: public/Traits/traits-genealogical-tree-ind-style.php:75
-#: public/Traits/traits-genealogical-tree-single-member-info.php:88
+#: public/Traits/traits-genealogical-tree-ind-style.php:82
+#: public/Traits/traits-genealogical-tree-single-member-info.php:262
+#: public/Traits/traits-genealogical-tree-single-member-info.php:277
+#: public/Traits/traits-genealogical-tree-single-member-info.php:378
 msgid "Unknown"
 msgstr "غير معروف"
 
-#: public/Traits/traits-genealogical-tree-ind-style.php:150
+#: public/Traits/traits-genealogical-tree-ind-style.php:152
+#: public/class-genealogical-tree-public.php:136
+msgid "GEN:"
+msgstr "توليد:"
+
+#: public/Traits/traits-genealogical-tree-ind-style.php:174
 msgid "M"
-msgstr "M"
+msgstr "الذكر"
 
-#: public/Traits/traits-genealogical-tree-ind-style.php:153
+#: public/Traits/traits-genealogical-tree-ind-style.php:177
 msgid "F"
-msgstr "F"
+msgstr "أنثى"
 
-#: public/Traits/traits-genealogical-tree-ind-style.php:184
-#: public/Traits/traits-genealogical-tree-ind-style.php:187
+#: public/Traits/traits-genealogical-tree-ind-style.php:205
+#: public/Traits/traits-genealogical-tree-ind-style.php:208
 msgid "B"
-msgstr "B"
+msgstr "عيد الميلاد"
 
-#: public/Traits/traits-genealogical-tree-ind-style.php:195
+#: public/Traits/traits-genealogical-tree-ind-style.php:216
 msgid "D"
-msgstr "D"
+msgstr "الموت"
 
-#: public/Traits/traits-genealogical-tree-single-member-info.php:72
-msgid "Spouse"
-msgstr "الزوج"
-
-#: public/Traits/traits-genealogical-tree-single-member-info.php:97
-msgid "Date of Marriage"
-msgstr "تاريخ إنعقاد الزواج"
-
-#: public/Traits/traits-genealogical-tree-single-member-info.php:120
-msgid "Children"
-msgstr "الأطفال"
-
-#: public/Traits/traits-genealogical-tree-single-member-info.php:164
+#: public/Traits/traits-genealogical-tree-single-member-info.php:286
 msgid "Siblings"
 msgstr "الأشقاء"
 
-#: public/Traits/traits-genealogical-tree-single-member-info.php:212
+#: public/Traits/traits-genealogical-tree-single-member-info.php:386
+msgid "Children"
+msgstr "الأطفال"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:449
 msgid "Date of Birth"
 msgstr "تاريخ الميلاد"
 
-#: public/Traits/traits-genealogical-tree-single-member-info.php:226
+#: public/Traits/traits-genealogical-tree-single-member-info.php:463
 msgid "Place of Birth"
 msgstr "مكان الولادة"
 
-#: public/Traits/traits-genealogical-tree-single-member-info.php:277
+#: public/Traits/traits-genealogical-tree-single-member-info.php:514
 msgid "Date of death"
 msgstr "تاريخ الوفاة"
 
-#: public/Traits/traits-genealogical-tree-single-member-info.php:291
+#: public/Traits/traits-genealogical-tree-single-member-info.php:528
 msgid "Place of death"
 msgstr "مكان الوفاة"
 
-#: public/Traits/traits-genealogical-tree-single-member-info.php:313
+#: public/Traits/traits-genealogical-tree-single-member-info.php:550
 msgid "Location"
 msgstr "الموقع"
 
-#: public/Traits/traits-genealogical-tree-single-member-info.php:391
+#: public/Traits/traits-genealogical-tree-single-member-info.php:628
 msgid "Events"
 msgstr "الأحداث"
 
-#: public/Traits/traits-genealogical-tree-single-member-info.php:453
+#: public/Traits/traits-genealogical-tree-single-member-info.php:709
 msgid "Member Information"
 msgstr "معلومات العضو"
 
-#: public/Traits/traits-genealogical-tree-single-member-info.php:513
+#: public/Traits/traits-genealogical-tree-single-member-info.php:738
 msgid "Additional Information"
 msgstr "معلومة اضافية"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:785
+msgid "Request Use"
+msgstr "طلب استخدام"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:791
+#: public/Traits/traits-genealogical-tree-single-member-info.php:847
+msgid "Send Request"
+msgstr "ارسل طلب"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:832
+msgid "Request Merge With"
+msgstr "دمج الطلبات مع"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:871
+msgid "Suggest Information"
+msgstr "اقتراح المعلومات"
+
+#: public/Traits/traits-genealogical-tree-single-member-info.php:877
+msgid "Send Suggest"
+msgstr "إرسال اقتراح"
+
+#. Plugin Name of the plugin/theme
+msgid "Genealogical Tree Pro"
+msgstr "الأنساب شجرة برو"
 
 #. Plugin URI of the plugin/theme
 msgid "https://wordpress.org/plugins/genealogical-tree"
@@ -1201,6 +1282,57 @@ msgstr "ak devs"
 #. Author URI of the plugin/theme
 msgid "https://github.com/akdevsfr"
 msgstr "https://github.com/akdevsfr"
+
+#~ msgid "Family"
+#~ msgstr "أسرة"
+
+#~ msgid "All Families"
+#~ msgstr "جميع العائلات"
+
+#~ msgid "Additional Children / Siblings info"
+#~ msgstr "معلومات إضافية عن الأطفال / الأشقاء"
+
+#~ msgid "Leave empty if still alive"
+#~ msgstr "اتركها فارغة إذا كانت لا تزال على قيد الحياة"
+
+#~ msgid "Select Mother"
+#~ msgstr "اختر الأم"
+
+#~ msgid "Select Father"
+#~ msgstr "حدد الأب"
+
+#~ msgid "Wife"
+#~ msgstr "زوجة"
+
+#~ msgid "From"
+#~ msgstr "من"
+
+#~ msgid "To"
+#~ msgstr "إلى"
+
+#~ msgid "Select a Reason"
+#~ msgstr "تحديد سبب"
+
+#~ msgid "Husband"
+#~ msgstr "الزوج"
+
+#~ msgid "Select Husband"
+#~ msgstr "حدد الزوج"
+
+#~ msgid "Style Style 2"
+#~ msgstr "نمط النمط 2"
+
+#~ msgid "Style Style 2-Alt"
+#~ msgstr "نمط نمط 2-Alt"
+
+#~ msgid "Style Style 3"
+#~ msgstr "نمط 3"
+
+#~ msgid "Style Style 3-Alt"
+#~ msgstr "نمط نمط 3-Alt"
+
+#~ msgid "Date of Marriage"
+#~ msgstr "تاريخ إنعقاد الزواج"
 
 #~ msgid "Select Family:"
 #~ msgstr "اختر العائلة:"

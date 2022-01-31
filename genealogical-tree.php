@@ -105,7 +105,7 @@ if ( function_exists( 'gt_fs' ) ) {
     {
         \Genealogical_Tree\Includes\Genealogical_Tree_Deactivator::deactivate();
     }
-    
+        
     register_activation_hook( __FILE__, 'activate_genealogical_tree' );
     register_deactivation_hook( __FILE__, 'deactivate_genealogical_tree' );
     /**

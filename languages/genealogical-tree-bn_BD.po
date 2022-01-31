@@ -1,321 +1,312 @@
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Genealogical Tree\n"
+"Project-Id-Version: \n"
 "POT-Creation-Date: 2022-01-23 18:23+0600\n"
-"PO-Revision-Date: 2020-07-07 14:51+0600\n"
+"PO-Revision-Date: 2022-01-23 18:24+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: bn_BD\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "X-Generator: Poedit 2.4.3\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: genealogical-tree.php\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.min.js\n"
-"X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
 
 #: admin/class-genealogical-tree-admin.php:145
 msgctxt "post type general name"
 msgid "Members"
-msgstr ""
+msgstr "সদস্য"
 
 #: admin/class-genealogical-tree-admin.php:146
 msgctxt "post type singular name"
 msgid "Member"
-msgstr ""
+msgstr "সদস্য"
 
 #: admin/class-genealogical-tree-admin.php:147
 msgctxt "admin menu"
 msgid "Members"
-msgstr ""
+msgstr "সদস্য"
 
 #: admin/class-genealogical-tree-admin.php:148
 msgctxt "add new on admin bar"
 msgid "Member"
-msgstr ""
+msgstr "সদস্য"
 
 #: admin/class-genealogical-tree-admin.php:149
 msgctxt "member"
 msgid "Add New"
-msgstr ""
+msgstr "নতুন"
 
 #: admin/class-genealogical-tree-admin.php:150
 msgid "Add New Member"
-msgstr ""
+msgstr "নতুন আরেকটি সদস্য"
 
 #: admin/class-genealogical-tree-admin.php:151
 msgid "New Member"
-msgstr ""
+msgstr "নতুন আরেকটি"
 
 #: admin/class-genealogical-tree-admin.php:152
 msgid "Edit Member"
-msgstr ""
+msgstr "সদস্ পরিবর্তন"
 
 #: admin/class-genealogical-tree-admin.php:153
 msgid "View Member"
-msgstr ""
+msgstr "সদস্য দেখুন"
 
 #: admin/class-genealogical-tree-admin.php:154
 msgid "Members"
-msgstr ""
+msgstr "সদস্য"
 
 #: admin/class-genealogical-tree-admin.php:155
 msgid "Search Members"
-msgstr ""
+msgstr "সদস্যদের অনুসন্ধান করুন"
 
 #: admin/class-genealogical-tree-admin.php:156
 msgid "Parent Members:"
-msgstr ""
+msgstr "মূল সদস্য:"
 
 #: admin/class-genealogical-tree-admin.php:157
 msgid "No members found."
-msgstr ""
+msgstr "কোনও সদস্য খুঁজে পাওয়া যায়নি।"
 
 #: admin/class-genealogical-tree-admin.php:158
 msgid "No members found in Trash."
-msgstr ""
+msgstr "ট্র্যাশে কোনও সদস্য পাওয়া যায়নি।"
 
 #: admin/class-genealogical-tree-admin.php:171
 #: admin/class-genealogical-tree-admin.php:210
 #: admin/class-genealogical-tree-admin.php:253
 msgid "Description."
-msgstr ""
+msgstr "বর্ণনা।"
 
 #: admin/class-genealogical-tree-admin.php:190
 msgctxt "post type general name"
 msgid "Families"
-msgstr ""
+msgstr "পরিবার"
 
 #: admin/class-genealogical-tree-admin.php:191
 msgctxt "post type singular name"
 msgid "Family"
-msgstr ""
+msgstr "পরিবার"
 
 #: admin/class-genealogical-tree-admin.php:192
 msgctxt "admin menu"
 msgid "Families"
-msgstr ""
+msgstr "পরিবার"
 
 #: admin/class-genealogical-tree-admin.php:193
 msgctxt "add new on admin bar"
 msgid "Family"
-msgstr ""
+msgstr "পরিবার"
 
 #: admin/class-genealogical-tree-admin.php:194
 msgctxt "family"
 msgid "Add New"
-msgstr ""
+msgstr "নতুন"
 
 #: admin/class-genealogical-tree-admin.php:195
 msgid "Add New Family"
-msgstr ""
+msgstr "নতুন পরিবার যোগ করুন"
 
 #: admin/class-genealogical-tree-admin.php:196
 msgid "New Family"
-msgstr ""
+msgstr "নতুন পরিবার"
 
 #: admin/class-genealogical-tree-admin.php:197
 msgid "Edit Family"
-msgstr ""
+msgstr "পরিবার সম্পাদনা করুন"
 
 #: admin/class-genealogical-tree-admin.php:198
 msgid "View Family"
-msgstr ""
+msgstr "পরিবার দেখুন"
 
 #: admin/class-genealogical-tree-admin.php:199
 msgid "Families"
-msgstr ""
+msgstr "পরিবার"
 
 #: admin/class-genealogical-tree-admin.php:200
 msgid "Search Families"
-msgstr ""
+msgstr "পরিবার অনুসন্ধান করুন"
 
 #: admin/class-genealogical-tree-admin.php:201
 msgid "Parent Families:"
-msgstr ""
+msgstr "পিতামাতা পরিবার:"
 
 #: admin/class-genealogical-tree-admin.php:202
 msgid "No families found."
-msgstr ""
+msgstr "কোনও পরিবার খুঁজে পায়নি।"
 
 #: admin/class-genealogical-tree-admin.php:203
 msgid "No families found in Trash."
-msgstr ""
+msgstr "ট্র্যাশে কোনও পরিবার পাওয়া যায়নি।"
 
 #: admin/class-genealogical-tree-admin.php:233
 msgctxt "post type general name"
 msgid "Trees"
-msgstr ""
+msgstr "গাছ"
 
 #: admin/class-genealogical-tree-admin.php:234
 msgctxt "post type singular name"
 msgid "Tree"
-msgstr ""
+msgstr "ট্রি"
 
 #: admin/class-genealogical-tree-admin.php:235
 msgctxt "admin menu"
 msgid "Trees"
-msgstr ""
+msgstr "গাছ"
 
 #: admin/class-genealogical-tree-admin.php:236
 msgctxt "add new on admin bar"
 msgid "Tree"
-msgstr ""
+msgstr "ট্রি"
 
 #: admin/class-genealogical-tree-admin.php:237
 msgctxt "tree"
 msgid "Add New"
-msgstr ""
+msgstr "নতুন"
 
 #: admin/class-genealogical-tree-admin.php:238
 msgid "Add New Tree"
-msgstr ""
+msgstr "নতুন গাছ যোগ করুন"
 
 #: admin/class-genealogical-tree-admin.php:239
 msgid "New Tree"
-msgstr ""
+msgstr "নতুন গাছ"
 
 #: admin/class-genealogical-tree-admin.php:240
 msgid "Edit Tree"
-msgstr ""
+msgstr "গাছ সম্পাদনা করুন"
 
 #: admin/class-genealogical-tree-admin.php:241
 msgid "View Tree"
-msgstr ""
+msgstr "গাছ দেখুন"
 
 #: admin/class-genealogical-tree-admin.php:242
 msgid "Trees"
-msgstr ""
+msgstr "গাছ"
 
 #: admin/class-genealogical-tree-admin.php:243
 msgid "Search Trees"
-msgstr ""
+msgstr "গাছ অনুসন্ধান করুন"
 
 #: admin/class-genealogical-tree-admin.php:244
 msgid "Parent Trees:"
-msgstr ""
+msgstr "মূল গাছ:"
 
 #: admin/class-genealogical-tree-admin.php:245
 msgid "No trees found."
-msgstr ""
+msgstr "কোনও গাছ পাওয়া যায়নি।"
 
 #: admin/class-genealogical-tree-admin.php:246
 msgid "No trees found in Trash."
-msgstr ""
+msgstr "আবর্জনায় কোনও গাছ পাওয়া যায়নি।"
 
 #: admin/class-genealogical-tree-admin.php:272
 msgctxt "genealogical-tree"
 msgid "Family Groups"
-msgstr ""
+msgstr "পারিবারিক গ্রুপ"
 
 #: admin/class-genealogical-tree-admin.php:273
 msgctxt "taxonomy singular name"
 msgid "Family Group"
-msgstr ""
+msgstr "পারিবারিক গ্রুপ"
 
 #: admin/class-genealogical-tree-admin.php:274
 msgid "Search Family Groups"
-msgstr ""
+msgstr "পারিবারিক গোষ্ঠীগুলি অনুসন্ধান করুন"
 
 #: admin/class-genealogical-tree-admin.php:275
 msgid "Popular Family Groups"
-msgstr ""
+msgstr "জনপ্রিয় পারিবারিক গ্রুপ"
 
 #: admin/class-genealogical-tree-admin.php:276
 msgid "All Family Groups"
-msgstr ""
+msgstr "সকল পারিবারিক গ্রুপ"
 
 #: admin/class-genealogical-tree-admin.php:277
 #: admin/class-genealogical-tree-admin.php:278
 msgid "Parent Family Group"
-msgstr ""
+msgstr "পিতামাতা পরিবার গ্রুপ"
 
 #: admin/class-genealogical-tree-admin.php:279
 msgid "Edit Family Group"
-msgstr ""
+msgstr "পরিবার গোষ্ঠী সম্পাদনা করুন"
 
 #: admin/class-genealogical-tree-admin.php:280
 msgid "Update Family Group"
-msgstr ""
+msgstr "পরিবার গোষ্ঠী আপডেট করুন"
 
 #: admin/class-genealogical-tree-admin.php:281
 msgid "Add New Group"
-msgstr ""
+msgstr "নতুন গোষ্ঠী যুক্ত করুন"
 
 #: admin/class-genealogical-tree-admin.php:282
 msgid "New Group Name"
-msgstr ""
+msgstr "নতুন গ্রুপ নাম"
 
 #: admin/class-genealogical-tree-admin.php:283
 msgid "Separate family group with commas"
-msgstr ""
+msgstr "কমা সহ পৃথক পারিবারিক গোষ্ঠী"
 
 #: admin/class-genealogical-tree-admin.php:284
 msgid "Add or remove family group"
-msgstr ""
+msgstr "পারিবারিক গোষ্ঠী যোগ করুন বা অপসারণ করুন"
 
 #: admin/class-genealogical-tree-admin.php:285
 msgid "Choose from the most used family group"
-msgstr ""
+msgstr "সর্বাধিক ব্যবহৃত পারিবারিক গোষ্ঠী থেকে চয়ন করুন"
 
 #: admin/class-genealogical-tree-admin.php:286
 msgid "No family group found."
-msgstr ""
+msgstr "কোনও পারিবারিক দল খুঁজে পায়নি।"
 
 #: admin/class-genealogical-tree-admin.php:287
 msgid "Family Groups"
-msgstr ""
+msgstr "পারিবারিক গ্রুপ"
 
 #: admin/class-genealogical-tree-admin.php:310
 #: admin/class-genealogical-tree-admin.php:311
 msgid "Genealogical Tree"
-msgstr ""
+msgstr "বংশানুক্রমিক বৃক্ষ"
 
 #: admin/class-genealogical-tree-admin.php:321
 #: admin/class-genealogical-tree-admin.php:322
 msgid "Family Group"
-msgstr ""
+msgstr "পারিবারিক গ্রুপ"
 
 #: admin/class-genealogical-tree-admin.php:329
 #: admin/class-genealogical-tree-admin.php:330
 msgid "Version Upgrade"
-msgstr ""
+msgstr "সংস্করণ আপগ্রেড"
 
 #: admin/class-genealogical-tree-admin.php:340
 msgid "Collaboration "
-msgstr ""
+msgstr "যোগাযোগের তথ্য"
 
 #: admin/class-genealogical-tree-admin.php:341
 #: admin/class-genealogical-tree-admin.php:1604
 msgid "Collaboration"
-msgstr ""
+msgstr "যোগাযোগের তথ্য"
 
 #: admin/class-genealogical-tree-admin.php:349
 #: admin/class-genealogical-tree-admin.php:350
 msgid "Import .GED"
-msgstr ""
+msgstr "আমদানি। জিইডি"
 
 #: admin/class-genealogical-tree-admin.php:358
 #: admin/class-genealogical-tree-admin.php:359
 msgid "Export .GED"
-msgstr ""
+msgstr "রপ্তানি। জিইডি"
 
 #: admin/class-genealogical-tree-admin.php:438
 #: admin/partials/genealogical-tree-meta-member-info.php:32
 msgid "ID"
-msgstr ""
+msgstr "আইডি"
 
 #: admin/class-genealogical-tree-admin.php:439
 msgid "Born"
-msgstr ""
+msgstr "জন্ম"
 
 #: admin/class-genealogical-tree-admin.php:440
 #: admin/partials/genealogical-tree-meta-member-info.php:41
@@ -323,86 +314,86 @@ msgstr ""
 #: admin/partials/genealogical-tree-meta-tree-settings.php:243
 #: public/Traits/traits-genealogical-tree-single-member-info.php:372
 msgid "Name"
-msgstr ""
+msgstr "নাম"
 
 #: admin/class-genealogical-tree-admin.php:441
 #: admin/partials/genealogical-tree-meta-member-info.php:88
 #: public/Traits/traits-genealogical-tree-single-member-info.php:248
 msgid "Parents"
-msgstr ""
+msgstr "পিতামাতা"
 
 #: admin/class-genealogical-tree-admin.php:442
 #: admin/partials/genealogical-tree-meta-member-info.php:210
 msgid "Spouses"
-msgstr ""
+msgstr "স্বামী/স্ত্রী"
 
 #: admin/class-genealogical-tree-admin.php:443
 msgid "Author"
-msgstr ""
+msgstr "লেখক"
 
 #: admin/class-genealogical-tree-admin.php:488
 #: admin/partials/genealogical-tree-meta-member-info.php:139
 #: admin/partials/genealogical-tree-meta-member-info.php:144
 #: public/Traits/traits-genealogical-tree-single-member-info.php:271
 msgid "Father"
-msgstr ""
+msgstr "বাবা"
 
 #: admin/class-genealogical-tree-admin.php:492
 #: admin/partials/genealogical-tree-meta-member-info.php:125
 #: admin/partials/genealogical-tree-meta-member-info.php:130
 #: public/Traits/traits-genealogical-tree-single-member-info.php:256
 msgid "Mother"
-msgstr ""
+msgstr "মা"
 
 #: admin/class-genealogical-tree-admin.php:517
 msgid "Shortcode"
-msgstr ""
+msgstr "সর্টকোড"
 
 #: admin/class-genealogical-tree-admin.php:539
 #: admin/class-genealogical-tree-admin.php:1958
 msgid "Member info"
-msgstr ""
+msgstr "সদস্য তথ্য"
 
 #: admin/class-genealogical-tree-admin.php:551
 msgid "Additional Member info"
-msgstr ""
+msgstr "অতিরিক্ত সদস্য তথ্য"
 
 #: admin/class-genealogical-tree-admin.php:897
 #: admin/partials/genealogical-tree-admin-settings.php:5
 msgid "Tree Settings"
-msgstr ""
+msgstr "বৃক্ষ বিন্যাসন"
 
 #: admin/class-genealogical-tree-admin.php:919
 msgid "Dotted"
-msgstr ""
+msgstr "বিন্দুযুক্ত"
 
 #: admin/class-genealogical-tree-admin.php:920
 msgid "Dashed"
-msgstr ""
+msgstr "ড্যাশড"
 
 #: admin/class-genealogical-tree-admin.php:921
 msgid "Solid"
-msgstr ""
+msgstr "কঠিন"
 
 #: admin/class-genealogical-tree-admin.php:922
 msgid "Double"
-msgstr ""
+msgstr "দ্বিগুণ"
 
 #: admin/class-genealogical-tree-admin.php:923
 msgid "Groove"
-msgstr ""
+msgstr "গ্রুভ"
 
 #: admin/class-genealogical-tree-admin.php:924
 msgid "Ridge"
-msgstr ""
+msgstr "রিজ"
 
 #: admin/class-genealogical-tree-admin.php:925
 msgid "Inset"
-msgstr ""
+msgstr "অন্তর্যোজনা"
 
 #: admin/class-genealogical-tree-admin.php:926
 msgid "Outset"
-msgstr ""
+msgstr "সূচনা"
 
 #: admin/class-genealogical-tree-admin.php:927
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:282
@@ -412,15 +403,15 @@ msgstr ""
 #: admin/partials/genealogical-tree-meta-tree-settings.php:290
 #: admin/partials/genealogical-tree-meta-tree-settings.php:307
 msgid "None"
-msgstr ""
+msgstr "কোনটিই নয়"
 
 #: admin/class-genealogical-tree-admin.php:928
 msgid "Hidden"
-msgstr ""
+msgstr "লুক্কায়িত"
 
 #: admin/class-genealogical-tree-admin.php:1171
 msgid "Select"
-msgstr ""
+msgstr "নির্বাচন করুন"
 
 #: admin/class-genealogical-tree-admin.php:1172
 #: admin/partials/genealogical-tree-meta-member-info.php:81
@@ -432,7 +423,7 @@ msgstr ""
 #: admin/partials/genealogical-tree-meta-tree-settings.php:725
 #: public/Traits/traits-genealogical-tree-ind-style.php:185
 msgid "Female"
-msgstr ""
+msgstr "মহিলা"
 
 #: admin/class-genealogical-tree-admin.php:1180
 #: admin/partials/genealogical-tree-meta-member-info.php:80
@@ -444,7 +435,7 @@ msgstr ""
 #: admin/partials/genealogical-tree-meta-tree-settings.php:719
 #: public/Traits/traits-genealogical-tree-ind-style.php:182
 msgid "Male"
-msgstr ""
+msgstr "পুরুষ"
 
 #: admin/class-genealogical-tree-admin.php:1188
 #: public/Traits/traits-genealogical-tree-ind-style.php:82
@@ -452,325 +443,331 @@ msgstr ""
 #: public/Traits/traits-genealogical-tree-single-member-info.php:277
 #: public/Traits/traits-genealogical-tree-single-member-info.php:378
 msgid "Unknown"
-msgstr ""
+msgstr "অজানা"
 
 #: admin/class-genealogical-tree-admin.php:1414
 msgid "Import Ged"
-msgstr ""
+msgstr "আমদানি। জিইডি"
 
 #: admin/class-genealogical-tree-admin.php:1417
 msgid ""
-"You may see some warning on import process for some file, but no worry about "
-"that. But if any error, you can contact us."
+"You may see some warning on import process for some file, but no worry about that. "
+"But if any error, you can contact us."
 msgstr ""
+"আপনি কিছু ফাইলের জন্য আমদানি প্রক্রিয়া সম্পর্কে কিছু সতর্কতা দেখতে পারেন, তবে এটি নিয়ে "
+"কোনও চিন্তা নেই। কিন্তু যদি কোনও ত্রুটি হয়, আপনি আমাদের সাথে যোগাযোগ করতে পারেন।"
 
 #: admin/class-genealogical-tree-admin.php:1420
 msgid "Select file (.ged)"
-msgstr ""
+msgstr "ফাইল নির্বাচন করুন (.ged)"
 
 #: admin/class-genealogical-tree-admin.php:1425
 msgid "Import"
-msgstr ""
+msgstr "আমদানি"
 
 #: admin/class-genealogical-tree-admin.php:1434
 msgid "Imported successfully"
-msgstr ""
+msgstr "সফলভাবে আমদানি করা হয়েছে"
 
 #: admin/class-genealogical-tree-admin.php:1435
 msgid "Family Tree"
-msgstr ""
+msgstr "পারিবারিক গাছ"
 
 #: admin/class-genealogical-tree-admin.php:1435
 msgid "View Page"
-msgstr ""
+msgstr "পেজ দেখুন"
 
 #: admin/class-genealogical-tree-admin.php:1449
 #: admin/class-genealogical-tree-admin.php:1473
 msgid "Export"
-msgstr ""
+msgstr "রপ্তানি"
 
 #: admin/class-genealogical-tree-admin.php:1450
 msgid ""
-"This will export a Zip file for download, which contains a Gedcom (.ged) "
-"format (version 5.5) file of your data."
+"This will export a Zip file for download, which contains a Gedcom (.ged) format "
+"(version 5.5) file of your data."
 msgstr ""
+"এটি ডাউনলোডের জন্য একটি জিপ ফাইল রপ্তানি করবে, যা আপনার ডেটার একটি গেডকম (.ged) "
+"বিন্যাস (সংস্করণ 5.5) ফাইল ধারণ করে।"
 
 #: admin/class-genealogical-tree-admin.php:1455
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:61
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:65
 #: admin/partials/genealogical-tree-meta-tree-settings.php:63
 msgid "Select Family"
-msgstr ""
+msgstr "পরিবার নির্বাচন করুন"
 
 #: admin/class-genealogical-tree-admin.php:1498
 #: public/Traits/traits-genealogical-tree-single-member-info.php:576
 msgid "Burial"
-msgstr ""
+msgstr "কবর দেওয়া"
 
 #: admin/class-genealogical-tree-admin.php:1502
 #: public/Traits/traits-genealogical-tree-single-member-info.php:580
 msgid "Adoption"
-msgstr ""
+msgstr "দত্তক গ্রহণ"
 
 #: admin/class-genealogical-tree-admin.php:1506
 #: public/Traits/traits-genealogical-tree-single-member-info.php:584
 msgid "Engagement"
-msgstr ""
+msgstr "ব্যস্ততা"
 
 #: admin/class-genealogical-tree-admin.php:1510
 #: public/Traits/traits-genealogical-tree-single-member-info.php:588
 msgid "Marriage"
-msgstr ""
+msgstr "বিবাহ"
 
 #: admin/class-genealogical-tree-admin.php:1514
 #: public/Traits/traits-genealogical-tree-single-member-info.php:592
 msgid "Divorce"
-msgstr ""
+msgstr "বিবাহবিচ্ছেদ"
 
 #: admin/class-genealogical-tree-admin.php:1518
 #: public/Traits/traits-genealogical-tree-single-member-info.php:596
 msgid "Address (Other)"
-msgstr ""
+msgstr "ঠিকানা (অন্যান্য)"
 
 #: admin/class-genealogical-tree-admin.php:1522
 #: public/Traits/traits-genealogical-tree-single-member-info.php:600
 msgid "Baptism"
-msgstr ""
+msgstr "বাপ্তিস্ম"
 
 #: admin/class-genealogical-tree-admin.php:1526
 msgid "Christening"
-msgstr ""
+msgstr "নামকরণ"
 
 #: admin/class-genealogical-tree-admin.php:1530
 #: public/Traits/traits-genealogical-tree-single-member-info.php:604
 msgid "arms"
-msgstr ""
+msgstr "বাহু"
 
 #: admin/class-genealogical-tree-admin.php:1534
 msgid "BAR_MITZVAH"
-msgstr ""
+msgstr "BAR_MITZVAH"
 
 #: admin/class-genealogical-tree-admin.php:1538
 msgid "BLESSING"
-msgstr ""
+msgstr "আশীর্বাদ"
 
 #: admin/class-genealogical-tree-admin.php:1542
 msgid "CENSUS"
-msgstr ""
+msgstr "আদমশুমারি"
 
 #: admin/class-genealogical-tree-admin.php:1546
 msgid "CREMATION"
-msgstr ""
+msgstr "শ্মশান"
 
 #: admin/class-genealogical-tree-admin.php:1550
 msgid "EMIGRATION"
-msgstr ""
+msgstr "ইমাইগ্রেশন"
 
 #: admin/class-genealogical-tree-admin.php:1554
 msgid "GRADUATION"
-msgstr ""
+msgstr "স্নাতক"
 
 #: admin/class-genealogical-tree-admin.php:1558
 msgid "IMMIGRATION"
-msgstr ""
+msgstr "ইমিগ্রেশন"
 
 #: admin/class-genealogical-tree-admin.php:1562
 msgid "NATURALIZATION"
-msgstr ""
+msgstr "প্রাকৃতিককরণ"
 
 #: admin/class-genealogical-tree-admin.php:1566
 msgid "RETIREMENT"
-msgstr ""
+msgstr "অবসর"
 
 #: admin/class-genealogical-tree-admin.php:1570
 msgid "PROBATE"
-msgstr ""
+msgstr "প্রোবেট"
 
 #: admin/class-genealogical-tree-admin.php:1574
 msgid "WILL"
-msgstr ""
+msgstr "হবে"
 
 #: admin/class-genealogical-tree-admin.php:1578
 #: public/Traits/traits-genealogical-tree-single-member-info.php:608
 msgid "Occupation"
-msgstr ""
+msgstr "পেশা"
 
 #: admin/class-genealogical-tree-admin.php:1608
 msgid "Merge Request"
-msgstr ""
+msgstr "মার্জ অনুরোধের অনুমতি দিন"
 
 #: admin/class-genealogical-tree-admin.php:1611
 msgid "Use Request"
-msgstr ""
+msgstr "ব্যবহারের অনুরোধ মঞ্জুর করুন"
 
 #: admin/class-genealogical-tree-admin.php:1614
 msgid "Suggestions"
-msgstr ""
+msgstr "পরামর্শ ের অনুমতি দিন"
 
 #: admin/class-genealogical-tree-admin.php:1754
 msgid "Member"
-msgstr ""
+msgstr "সদস্য"
 
 #: admin/class-genealogical-tree-admin.php:1755
 #: admin/class-genealogical-tree-admin.php:1786
 msgid "Merge"
-msgstr ""
+msgstr "মার্জ"
 
 #: admin/class-genealogical-tree-admin.php:1798
 msgid "No merge request found."
-msgstr ""
+msgstr "কোনও সদস্য খুঁজে পাওয়া যায়নি।"
 
 #: admin/class-genealogical-tree-admin.php:1977
 msgid "Family info"
-msgstr ""
+msgstr "পারিবারিক তথ্য"
 
 #: admin/class-genealogical-tree-admin.php:2026
 #: admin/class-genealogical-tree-admin.php:2032
 msgid "Upgrade Fix"
-msgstr ""
+msgstr "এখন আপগ্রেড করুন!"
 
 #: admin/class-genealogical-tree-admin.php:2028
 msgid ""
-"If you are upgradeed from older version of 2.1.2. You may need to click "
-"upgrade database button."
+"If you are upgradeed from older version of 2.1.2. You may need to click upgrade "
+"database button."
 msgstr ""
+"যদি আপনি 2.1.2 এর পুরানো সংস্করণ থেকে আপগ্রেড হন। আপনাকে আপগ্রেড ডাটাবেস বোতামে ক্লিক "
+"করতে হতে পারে।"
 
 #: admin/class-genealogical-tree-admin.php:2030
-msgid ""
-"Please click Upgrade Fix button if your family tree not working properly."
+msgid "Please click Upgrade Fix button if your family tree not working properly."
 msgstr ""
+"আপনার পারিবারিক গাছ সঠিকভাবে কাজ না করলে অনুগ্রহ করে আপগ্রেড ফিক্স বোতামটি ক্লিক করুন।"
 
 #: admin/genealogical-tree-handel-export.php:6
 #: admin/genealogical-tree-handel-import.php:7
 msgid "You are not authorized to do this."
-msgstr ""
+msgstr "আপনি এটি করার জন্য অনুমোদিত নন।"
 
 #: admin/genealogical-tree-handel-import.php:14
 msgid "File required"
-msgstr ""
+msgstr "ফাইল আবশ্যক"
 
 #: admin/genealogical-tree-handel-import.php:30
 msgid "Family group  required"
-msgstr ""
+msgstr "পারিবারিক গোষ্ঠী প্রয়োজন"
 
 #: admin/inc/class-genealogical-tree-family.php:114
 msgid "Default Tree"
-msgstr ""
+msgstr "ডিফল্ট ট্রি"
 
 #: admin/inc/class-genealogical-tree-family.php:120
 msgid "Generate Default Tree"
-msgstr ""
+msgstr "ডিফল্ট ট্রি তৈরি করুন"
 
 #: admin/inc/class-genealogical-tree-family.php:125
 msgid "Select Default Tree"
-msgstr ""
+msgstr "ডিফল্ট ট্রি তৈরি করুন"
 
 #: admin/inc/class-genealogical-tree-family.php:142
 msgid "View Tree."
-msgstr ""
+msgstr "গাছ দেখুন"
 
 #: admin/inc/class-genealogical-tree-family.php:148
 msgid "Possible Roots"
-msgstr ""
+msgstr "সম্ভাব্য শিকড়"
 
 #: admin/inc/class-genealogical-tree-family.php:154
 msgid "To view possibles first generate default tree"
-msgstr ""
+msgstr "সম্ভাব্যগুলি দেখতে প্রথমে ডিফল্ট গাছ উৎপন্ন করুন"
 
 #: admin/inc/class-genealogical-tree-family.php:161
 msgid "Members Page"
-msgstr ""
+msgstr "সদস্য পৃষ্ঠা"
 
 #: admin/inc/class-genealogical-tree-family.php:164
 msgid "View Members Page."
-msgstr ""
+msgstr "সদস্যদের পৃষ্ঠা দেখুন।"
 
 #: admin/inc/class-genealogical-tree-family.php:171
 msgid "Allow Merge Request"
-msgstr ""
+msgstr "মার্জ অনুরোধের অনুমতি দিন"
 
 #: admin/inc/class-genealogical-tree-family.php:179
 msgid "Allow Use Request"
-msgstr ""
+msgstr "ব্যবহারের অনুরোধ মঞ্জুর করুন"
 
 #: admin/inc/class-genealogical-tree-family.php:187
 msgid "Allow Suggestion"
-msgstr ""
+msgstr "পরামর্শ ের অনুমতি দিন"
 
 #: admin/inc/class-genealogical-tree-family.php:195
 msgid "Allow Use By"
-msgstr ""
+msgstr "দ্বারা ব্যবহারের অনুমতি দিন"
 
 #: admin/inc/class-genealogical-tree-family.php:202
 msgid "Select User Tree"
-msgstr ""
+msgstr "লিঙ্গ নির্বাচন করুন"
 
 #: admin/inc/class-genealogical-tree-family.php:344
 #: admin/partials/genealogical-tree-admin-settings.php:13
 msgid "Upgrade Now!"
-msgstr ""
+msgstr "এখন আপগ্রেড করুন!"
 
 #: admin/partials/genealogical-tree-admin-settings.php:4
 msgid "General Settings"
-msgstr ""
+msgstr "সাধারণ সেটিংস"
 
 #: admin/partials/genealogical-tree-admin-settings.php:11
 msgid "You are using Free plan, To get premium features"
-msgstr ""
+msgstr "আপনি বিনামূল্যে পরিকল্পনা ব্যবহার করছেন, প্রিমিয়াম বৈশিষ্ট্যগুলি পেতে"
 
 #: admin/partials/genealogical-tree-admin-settings.php:23
 msgid "Enable Import (.ged)"
-msgstr ""
+msgstr "আমদানি সক্ষম করুন (.ged)"
 
 #: admin/partials/genealogical-tree-admin-settings.php:24
 msgid "It will allow you to import members from a ged formated file."
-msgstr ""
+msgstr "এটি আপনাকে একটি Gt বিন্যাসফাইল থেকে সদস্য আমদানি করতে অনুমতি দেবে।"
 
 #: admin/partials/genealogical-tree-admin-settings.php:34
 msgid "Enable Export (.ged)"
-msgstr ""
+msgstr "রপ্তানি সক্ষম করুন (.ged)"
 
 #: admin/partials/genealogical-tree-admin-settings.php:35
 msgid "It will allow you to export members and family to a ged formated file."
-msgstr ""
+msgstr "এটি আপনাকে একটি গেড ফরম্যাটের ফাইলে সদস্য এবং পরিবারকে রপ্তানি করার অনুমতি দেবে।"
 
 #: admin/partials/genealogical-tree-admin-settings.php:44
 msgid "Hide Credit Text"
-msgstr ""
+msgstr "ক্রেডিট টেক্সট লুকান"
 
 #: admin/partials/genealogical-tree-admin-settings.php:45
 msgid "This will Credit Text"
-msgstr ""
+msgstr "এটি ক্রেডিট টেক্সট করবে"
 
 #: admin/partials/genealogical-tree-admin-settings.php:63
 msgid "Tree Style 1"
-msgstr ""
+msgstr "গাছের স্টাইল 1"
 
 #: admin/partials/genealogical-tree-admin-settings.php:66
 msgid "Tree Style 2"
-msgstr ""
+msgstr "গাছের শৈলী 2"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:46
 #: public/Traits/traits-genealogical-tree-single-member-info.php:694
 msgid "Full Name"
-msgstr ""
+msgstr "নাম"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:54
 msgid "Given Name"
-msgstr ""
+msgstr "প্রদত্ত নাম"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:62
 msgid "Surname"
-msgstr ""
+msgstr "পদবি"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:70
 #: admin/partials/genealogical-tree-meta-member-info.php:75
 msgid "Gender"
-msgstr ""
+msgstr "জেন্ডার"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:79
 msgid "Select Gender"
-msgstr ""
+msgstr "লিঙ্গ নির্বাচন করুন"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:109
 #: admin/partials/genealogical-tree-meta-member-info.php:240
@@ -781,7 +778,7 @@ msgstr ""
 #: admin/partials/genealogical-tree-meta-member-info.php:540
 #: admin/partials/genealogical-tree-meta-member-info.php:557
 msgid "Add"
-msgstr ""
+msgstr "যোগ করুন"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:111
 #: admin/partials/genealogical-tree-meta-member-info.php:242
@@ -792,220 +789,220 @@ msgstr ""
 #: admin/partials/genealogical-tree-meta-member-info.php:542
 #: admin/partials/genealogical-tree-meta-member-info.php:559
 msgid "Delete"
-msgstr ""
+msgstr "মুছে ফেলুন"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:116
 #: admin/partials/genealogical-tree-meta-member-info.php:247
 msgid "REF #"
-msgstr ""
+msgstr "রেফ #"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:154
 msgid "Family Relation"
-msgstr ""
+msgstr "পারিবারিক তথ্য"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:173
 #: public/Traits/traits-genealogical-tree-single-member-info.php:286
 msgid "Siblings"
-msgstr ""
+msgstr "ভাইবোন"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:256
 #: admin/partials/genealogical-tree-meta-member-info.php:261
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:225
 #: public/Traits/traits-genealogical-tree-single-member-info.php:364
 msgid "Spouse"
-msgstr ""
+msgstr "স্বামী/স্ত্রী"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:270
 msgid "Marriage Date"
-msgstr ""
+msgstr "বিবাহ"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:274
 msgid "Marriage Place"
-msgstr ""
+msgstr "বিবাহ"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:278
 msgid "Chills"
-msgstr ""
+msgstr "চিল"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:317
 #: public/Traits/traits-genealogical-tree-single-member-info.php:435
 msgid "Birth"
-msgstr ""
+msgstr "জন্ম"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:343
 #: admin/partials/genealogical-tree-meta-member-info.php:392
 msgid "REF"
-msgstr ""
+msgstr "রেফ"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:345
 #: admin/partials/genealogical-tree-meta-member-info.php:394
 #: admin/partials/genealogical-tree-meta-member-info.php:485
 #: public/Traits/traits-genealogical-tree-single-member-info.php:653
 msgid "Date"
-msgstr ""
+msgstr "তারিখ"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:349
 #: admin/partials/genealogical-tree-meta-member-info.php:398
 #: admin/partials/genealogical-tree-meta-member-info.php:489
 #: public/Traits/traits-genealogical-tree-single-member-info.php:663
 msgid "Place"
-msgstr ""
+msgstr "স্থান"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:366
 #: public/Traits/traits-genealogical-tree-single-member-info.php:500
 msgid "Death"
-msgstr ""
+msgstr "মৃত্যু"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:435
 msgid "Additional Events"
-msgstr ""
+msgstr "অতিরিক্ত ঘটনা"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:459
 msgid "Select an Event"
-msgstr ""
+msgstr "একটি ঘটনা নির্বাচন করুন"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:512
 msgid "Contact Information"
-msgstr ""
+msgstr "যোগাযোগের তথ্য"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:517
 msgid "Phone"
-msgstr ""
+msgstr "মোবাইল"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:534
 msgid "Email"
-msgstr ""
+msgstr "ইমেইল"
 
 #: admin/partials/genealogical-tree-meta-member-info.php:551
 msgid "Address"
-msgstr ""
+msgstr "ঠিকানা"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:56
 #: admin/partials/genealogical-tree-meta-tree-settings.php:58
 msgid "General Setting"
-msgstr ""
+msgstr "সাধারণ সেটিং"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:80
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:109
 #: admin/partials/genealogical-tree-meta-tree-settings.php:83
 #: admin/partials/genealogical-tree-meta-tree-settings.php:87
 msgid "Select Root"
-msgstr ""
+msgstr "রুট নির্বাচন করুন"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:126
 #: admin/partials/genealogical-tree-meta-tree-settings.php:112
 msgid "Highlight Root"
-msgstr ""
+msgstr "মূল হাইলাইট করুন"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:135
 #: admin/partials/genealogical-tree-meta-tree-settings.php:120
 msgid "Select Style"
-msgstr ""
+msgstr "শৈলী নির্বাচন করুন"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:139
 #: admin/partials/genealogical-tree-meta-tree-settings.php:124
 msgid "Style 1"
-msgstr ""
+msgstr "শৈলী 1"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:140
 #: admin/partials/genealogical-tree-meta-tree-settings.php:125
 msgid "Style 2"
-msgstr ""
+msgstr "শৈলী 2"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:141
 #: admin/partials/genealogical-tree-meta-tree-settings.php:126
 msgid "Style 2-Alt"
-msgstr ""
+msgstr "স্টাইল 2-অল্ট"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:142
 #: admin/partials/genealogical-tree-meta-tree-settings.php:127
 msgid "Style 3"
-msgstr ""
+msgstr "স্টাইল 3"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:143
 #: admin/partials/genealogical-tree-meta-tree-settings.php:128
 msgid "Style 3-Alt"
-msgstr ""
+msgstr "স্টাইল 3-অল্ট"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:144
 #: admin/partials/genealogical-tree-meta-tree-settings.php:129
 msgid "Style 4"
-msgstr ""
+msgstr "শৈলী 1"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:145
 #: admin/partials/genealogical-tree-meta-tree-settings.php:130
 msgid "Style 5"
-msgstr ""
+msgstr "শৈলী 1"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:153
 msgid "Style 1, Style 4 and Style 5 support separate child for separate spouse"
-msgstr ""
+msgstr "স্টাইল 1, স্টাইল 4 এবং স্টাইল 5 পৃথক পত্নী জন্য পৃথক শিশু সমর্থন"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:160
 #: admin/partials/genealogical-tree-meta-tree-settings.php:145
 msgid "Select Layout"
-msgstr ""
+msgstr "লেআউট নির্বাচন করুন"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:164
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:500
 #: admin/partials/genealogical-tree-meta-tree-settings.php:149
 #: admin/partials/genealogical-tree-meta-tree-settings.php:489
 msgid "Vertical"
-msgstr ""
+msgstr "উলম্ব"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:165
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:501
 #: admin/partials/genealogical-tree-meta-tree-settings.php:150
 #: admin/partials/genealogical-tree-meta-tree-settings.php:490
 msgid "Horizontal"
-msgstr ""
+msgstr "অনুভূমিক"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:172
 #: admin/partials/genealogical-tree-meta-tree-settings.php:157
 msgid "Enable Ajax"
-msgstr ""
+msgstr "আয়াক্স সক্ষম করুন"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:182
 #: admin/partials/genealogical-tree-meta-tree-settings.php:168
 msgid "Enable Popup"
-msgstr ""
+msgstr "আয়াক্স সক্ষম করুন"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:191
 #: admin/partials/genealogical-tree-meta-tree-settings.php:177
 msgid "Hide Female Tree"
-msgstr ""
+msgstr "স্ত্রী গাছ লুকান"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:201
 #: admin/partials/genealogical-tree-meta-tree-settings.php:187
 msgid "Hide Spouse"
-msgstr ""
+msgstr "স্বামী/স্ত্রী"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:205
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:215
 msgid "For Style 2, Style 3, Style 2-Alt, Style 3-Alt"
-msgstr ""
+msgstr "স্টাইল 2 এর জন্য, শৈলী 3, শৈলী 2-Alt, শৈলী 3-Alt"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:211
 #: admin/partials/genealogical-tree-meta-tree-settings.php:198
 msgid "Hide Unknown Spouse"
-msgstr ""
+msgstr "অজানা স্বামী/স্ত্রী লুকান"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:221
 #: admin/partials/genealogical-tree-meta-tree-settings.php:208
 msgid "Collapsible Family"
-msgstr ""
+msgstr "পরিবার দেখুন"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:224
 msgid "Root"
-msgstr ""
+msgstr "রুট"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:230
 msgid "Collaps Onload"
-msgstr ""
+msgstr "অনলোড সঙ্কুচিত করুন"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:237
 msgid "Spouse option not for: Style 3, Style 3-Alt, Style 2, Style 2-Alt"
-msgstr ""
+msgstr "পত্নী বিকল্পের জন্য নয়: শৈলী 3, শৈলী 3-Alt, শৈলী 2, শৈলী 2-Alt"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:242
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:404
@@ -1014,20 +1011,20 @@ msgstr ""
 #: admin/partials/genealogical-tree-meta-tree-settings.php:392
 #: admin/partials/genealogical-tree-meta-tree-settings.php:504
 msgid "Background Color"
-msgstr ""
+msgstr "পটভূমির রঙ"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:246
 msgid "HEX/RGB/RGBA"
-msgstr ""
+msgstr "হেক্স/আরজিবি/আরজিবিএ"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:253
 #: admin/partials/genealogical-tree-meta-tree-settings.php:238
 msgid "Visibility Setting"
-msgstr ""
+msgstr "দৃশ্যমানতা সেটিং"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:261
 msgid "Title"
-msgstr ""
+msgstr "খেতাব"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:265
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:276
@@ -1038,54 +1035,54 @@ msgstr ""
 #: admin/partials/genealogical-tree-meta-tree-settings.php:284
 #: admin/partials/genealogical-tree-meta-tree-settings.php:301
 msgid "Full"
-msgstr ""
+msgstr "পূর্ণ"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:268
 #: admin/partials/genealogical-tree-meta-tree-settings.php:249
 msgid "First"
-msgstr ""
+msgstr "প্রথম"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:273
 #: admin/partials/genealogical-tree-meta-tree-settings.php:254
 msgid "Birth Day"
-msgstr ""
+msgstr "জন্ম দিবস"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:279
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:302
 #: admin/partials/genealogical-tree-meta-tree-settings.php:260
 #: admin/partials/genealogical-tree-meta-tree-settings.php:287
 msgid "Year"
-msgstr ""
+msgstr "বছর"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:288
 #: admin/partials/genealogical-tree-meta-tree-settings.php:269
 msgid "Hide Birth Day Who Alive"
-msgstr ""
+msgstr "জন্ম দিবস কে জীবিত লুকিয়ে রাখুন"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:296
 #: admin/partials/genealogical-tree-meta-tree-settings.php:281
 msgid "Died"
-msgstr ""
+msgstr "মৃত্যু"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:310
 #: admin/partials/genealogical-tree-meta-tree-settings.php:295
 msgid "Show Gender"
-msgstr ""
+msgstr "লিঙ্গ দেখান"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:313
 #: admin/partials/genealogical-tree-meta-tree-settings.php:298
 msgid "Icon"
-msgstr ""
+msgstr "আইকন"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:319
 #: admin/partials/genealogical-tree-meta-tree-settings.php:304
 msgid "Short"
-msgstr ""
+msgstr "ছোট"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:328
 #: admin/partials/genealogical-tree-meta-tree-settings.php:313
 msgid "Sibling Order"
-msgstr ""
+msgstr "ভাইবোনের আদেশ"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:332
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:784
@@ -1093,53 +1090,53 @@ msgstr ""
 #: admin/partials/genealogical-tree-meta-tree-settings.php:774
 #: admin/partials/genealogical-tree-meta-tree-settings.php:858
 msgid "Default"
-msgstr ""
+msgstr "ডিফল্ট"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:333
 msgid "Oldest"
-msgstr ""
+msgstr "প্রাচীনতম"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:334
 msgid "Youngest"
-msgstr ""
+msgstr "সর্বকনিষ্ঠ"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:341
 #: admin/partials/genealogical-tree-meta-tree-settings.php:325
 msgid "Show Generation"
-msgstr ""
+msgstr "প্রজন্ম দেখান"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:349
 #: admin/partials/genealogical-tree-meta-tree-settings.php:335
 msgid "Number Of Generation"
-msgstr ""
+msgstr "প্রজন্মের সংখ্যা"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:359
 msgid "\"-1\" is for unlimited generation."
-msgstr ""
+msgstr "\"-1\" সীমাহীন প্রজন্মের জন্য।"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:365
 #: admin/partials/genealogical-tree-meta-tree-settings.php:351
 msgid "Show Ancestor"
-msgstr ""
+msgstr "পূর্বপুরুষ দেখান"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:373
 #: admin/partials/genealogical-tree-meta-tree-settings.php:359
 msgid "Number Of Ancestor Generation"
-msgstr ""
+msgstr "পূর্বপুরুষ প্রজন্মের সংখ্যা"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:383
 msgid "If Show Ancestor is Enabled. \"-1\" is for unlimited generation."
-msgstr ""
+msgstr "যদি পূর্বপুরুষ দেখান সক্ষম থাকে। \"-1\" সীমাহীন প্রজন্মের জন্য।"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:389
 #: admin/partials/genealogical-tree-meta-tree-settings.php:377
 msgid "Show Tree Link"
-msgstr ""
+msgstr "ট্রি লিঙ্ক দেখান"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:399
 #: admin/partials/genealogical-tree-meta-tree-settings.php:387
 msgid "Container Setting"
-msgstr ""
+msgstr "ধারক সেটিং"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:412
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:537
@@ -1148,7 +1145,7 @@ msgstr ""
 #: admin/partials/genealogical-tree-meta-tree-settings.php:525
 #: admin/partials/genealogical-tree-meta-tree-settings.php:684
 msgid "Border Width"
-msgstr ""
+msgstr "সীমান্ত প্রস্থ"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:429
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:554
@@ -1157,7 +1154,7 @@ msgstr ""
 #: admin/partials/genealogical-tree-meta-tree-settings.php:542
 #: admin/partials/genealogical-tree-meta-tree-settings.php:701
 msgid "Border Style"
-msgstr ""
+msgstr "বর্ডার স্টাইল"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:445
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:570
@@ -1166,7 +1163,7 @@ msgstr ""
 #: admin/partials/genealogical-tree-meta-tree-settings.php:558
 #: admin/partials/genealogical-tree-meta-tree-settings.php:717
 msgid "Border Color"
-msgstr ""
+msgstr "সীমানা রঙ"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:453
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:591
@@ -1175,42 +1172,42 @@ msgstr ""
 #: admin/partials/genealogical-tree-meta-tree-settings.php:579
 #: admin/partials/genealogical-tree-meta-tree-settings.php:738
 msgid "Border Radius"
-msgstr ""
+msgstr "সীমান্ত ব্যাসার্ধ"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:471
 #: admin/partials/genealogical-tree-meta-tree-settings.php:458
 msgid "Background Image"
-msgstr ""
+msgstr "পটভূমির রঙ"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:475
 msgid "(css linear-gradient)"
-msgstr ""
+msgstr "(CSS রৈখিক-গ্রেডিয়েন্ট)"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:481
 #: admin/partials/genealogical-tree-meta-tree-settings.php:468
 msgid "Background Size"
-msgstr ""
+msgstr "পটভূমির রঙ"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:491
 #: admin/partials/genealogical-tree-meta-tree-settings.php:480
 msgid "Box Setting"
-msgstr ""
+msgstr "বাক্স সেটিং"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:496
 #: admin/partials/genealogical-tree-meta-tree-settings.php:485
 msgid "Layout"
-msgstr ""
+msgstr "লেআউট"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:506
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:690
 #: admin/partials/genealogical-tree-meta-tree-settings.php:495
 #: admin/partials/genealogical-tree-meta-tree-settings.php:677
 msgid "Width"
-msgstr ""
+msgstr "প্রস্থ"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:510
 msgid "If Layout is Horizontal, Width is  'auto' is recommended."
-msgstr ""
+msgstr "বিন্যাস অনুভূমিক হলে প্রস্থ 'স্বতঃ' সুপারিশ করা হয়।"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:530
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:584
@@ -1219,215 +1216,268 @@ msgstr ""
 #: admin/partials/genealogical-tree-meta-tree-settings.php:572
 #: admin/partials/genealogical-tree-meta-tree-settings.php:731
 msgid "Other"
-msgstr ""
+msgstr "অন্যান্য"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:611
 #: admin/partials/genealogical-tree-meta-tree-settings.php:596
 msgid "Line Setting"
-msgstr ""
+msgstr "লাইন সেটিং"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:616
 #: admin/partials/genealogical-tree-meta-tree-settings.php:601
 msgid "Line Size"
-msgstr ""
+msgstr "লাইন আকার"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:634
 #: admin/partials/genealogical-tree-meta-tree-settings.php:619
 msgid "Line Style"
-msgstr ""
+msgstr "লাইন শৈলী"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:651
 #: admin/partials/genealogical-tree-meta-tree-settings.php:637
 msgid "Line Corner Radius"
-msgstr ""
+msgstr "লাইন কর্নার ব্যাসার্ধ"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:669
 #: admin/partials/genealogical-tree-meta-tree-settings.php:656
 msgid "Line Color"
-msgstr ""
+msgstr "লাইন রঙ"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:677
 #: admin/partials/genealogical-tree-meta-tree-settings.php:664
 msgid "Image Setting"
-msgstr ""
+msgstr "চিত্র বিন্যাসন"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:682
 #: admin/partials/genealogical-tree-meta-tree-settings.php:669
 msgid "Show Image"
-msgstr ""
+msgstr "চিত্র প্রদর্শন করুন"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:770
 #: admin/partials/genealogical-tree-meta-tree-settings.php:760
 msgid "Name Text Setting"
-msgstr ""
+msgstr "নাম পাঠ্য সেটিং"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:775
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:887
 #: admin/partials/genealogical-tree-meta-tree-settings.php:765
 #: admin/partials/genealogical-tree-meta-tree-settings.php:848
 msgid "Font Family"
-msgstr ""
+msgstr "ফন্ট পরিবার"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:826
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:941
 #: admin/partials/genealogical-tree-meta-tree-settings.php:787
 #: admin/partials/genealogical-tree-meta-tree-settings.php:875
 msgid "Font Size"
-msgstr ""
+msgstr "ফন্ট সাইজ"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:840
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:956
 #: admin/partials/genealogical-tree-meta-tree-settings.php:801
 #: admin/partials/genealogical-tree-meta-tree-settings.php:889
 msgid "Font Weight"
-msgstr ""
+msgstr "ফন্টওজন"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:850
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:966
 #: admin/partials/genealogical-tree-meta-tree-settings.php:811
 #: admin/partials/genealogical-tree-meta-tree-settings.php:899
 msgid "Font Style"
-msgstr ""
+msgstr "ফন্ট শৈলী"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:859
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:976
 #: admin/partials/genealogical-tree-meta-tree-settings.php:820
 #: admin/partials/genealogical-tree-meta-tree-settings.php:909
 msgid "Font Color"
-msgstr ""
+msgstr "ফন্টের রঙ"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:867
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:987
 #: admin/partials/genealogical-tree-meta-tree-settings.php:828
 #: admin/partials/genealogical-tree-meta-tree-settings.php:920
 msgid "Text Align"
-msgstr ""
+msgstr "পাঠ্য সারিবদ্ধ করুন"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:882
 #: admin/partials/genealogical-tree-meta-tree-settings.php:843
 msgid "Other Text Setting"
-msgstr ""
+msgstr "অন্যান্য পাঠ্য সেটিং"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:994
 #: admin/partials/genealogical-tree-meta-tree-settings.php:927
 msgid "Left"
-msgstr ""
+msgstr "বাম"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:995
 #: admin/partials/genealogical-tree-meta-tree-settings.php:928
 msgid "Center"
-msgstr ""
+msgstr "মাঝখান"
 
 #: admin/partials/genealogical-tree-meta-tree-settings-premium.php:996
 #: admin/partials/genealogical-tree-meta-tree-settings.php:929
 msgid "Right"
-msgstr ""
+msgstr "ডান"
 
 #: admin/partials/genealogical-tree-meta-tree-settings.php:499
 msgid "If Layout is Horizontal, Width is recommended to set auto."
-msgstr ""
+msgstr "লেআউটটি যদি অনুভূমিক হয় তবে প্রস্থটি 'অটো' বাঞ্ছনীয়."
 
 #: public/Traits/traits-genealogical-tree-ind-style.php:24
 msgid "Your license is not active."
-msgstr ""
+msgstr "আপনার লাইসেন্স সক্রিয় নেই।"
 
 #: public/Traits/traits-genealogical-tree-ind-style.php:152
 #: public/class-genealogical-tree-public.php:136
 msgid "GEN:"
-msgstr ""
+msgstr "প্রজন্ম"
 
 #: public/Traits/traits-genealogical-tree-ind-style.php:174
 msgid "M"
-msgstr ""
+msgstr "পুরুষ"
 
 #: public/Traits/traits-genealogical-tree-ind-style.php:177
 msgid "F"
-msgstr ""
+msgstr "মহিলা"
 
 #: public/Traits/traits-genealogical-tree-ind-style.php:205
 #: public/Traits/traits-genealogical-tree-ind-style.php:208
 msgid "B"
-msgstr ""
+msgstr "জন্ম"
 
 #: public/Traits/traits-genealogical-tree-ind-style.php:216
 msgid "D"
-msgstr ""
+msgstr "মৃত্যু"
 
 #: public/Traits/traits-genealogical-tree-single-member-info.php:386
 msgid "Children"
-msgstr ""
+msgstr "শিশুরা"
 
 #: public/Traits/traits-genealogical-tree-single-member-info.php:449
 msgid "Date of Birth"
-msgstr ""
+msgstr "জন্মতারিখ"
 
 #: public/Traits/traits-genealogical-tree-single-member-info.php:463
 msgid "Place of Birth"
-msgstr ""
+msgstr "জন্মস্থান"
 
 #: public/Traits/traits-genealogical-tree-single-member-info.php:514
 msgid "Date of death"
-msgstr ""
+msgstr "মৃত্যুর তারিখ"
 
 #: public/Traits/traits-genealogical-tree-single-member-info.php:528
 msgid "Place of death"
-msgstr ""
+msgstr "মৃত্যুর স্থান"
 
 #: public/Traits/traits-genealogical-tree-single-member-info.php:550
 msgid "Location"
-msgstr ""
+msgstr "অবস্থান"
 
 #: public/Traits/traits-genealogical-tree-single-member-info.php:628
 msgid "Events"
-msgstr ""
+msgstr "আয়োজন"
 
 #: public/Traits/traits-genealogical-tree-single-member-info.php:709
 msgid "Member Information"
-msgstr ""
+msgstr "সদস্য তথ্য"
 
 #: public/Traits/traits-genealogical-tree-single-member-info.php:738
 msgid "Additional Information"
-msgstr ""
+msgstr "অন্যান্যা তথ্যা"
 
 #: public/Traits/traits-genealogical-tree-single-member-info.php:785
 msgid "Request Use"
-msgstr ""
+msgstr "অনুরোধ ব্যবহার"
 
 #: public/Traits/traits-genealogical-tree-single-member-info.php:791
 #: public/Traits/traits-genealogical-tree-single-member-info.php:847
 msgid "Send Request"
-msgstr ""
+msgstr "অনুরোধ পাঠান"
 
 #: public/Traits/traits-genealogical-tree-single-member-info.php:832
 msgid "Request Merge With"
-msgstr ""
+msgstr "অনুরোধ মার্জ সঙ্গে"
 
 #: public/Traits/traits-genealogical-tree-single-member-info.php:871
 msgid "Suggest Information"
-msgstr ""
+msgstr "তথ্য পরামর্শ দিন"
 
 #: public/Traits/traits-genealogical-tree-single-member-info.php:877
 msgid "Send Suggest"
-msgstr ""
+msgstr "পরামর্শ পাঠান"
 
 #. Plugin Name of the plugin/theme
 msgid "Genealogical Tree Pro"
-msgstr ""
+msgstr "বংশানুক্রমিক বৃক্ষ"
 
 #. Plugin URI of the plugin/theme
 msgid "https://wordpress.org/plugins/genealogical-tree"
-msgstr ""
+msgstr "https://wordpress.org/plugins/genealogical-tree"
 
 #. Description of the plugin/theme
 msgid ""
-"Genealogical Tree is a ultimate solution for creating and displaying family "
-"trees, family history on WordPress."
+"Genealogical Tree is a ultimate solution for creating and displaying family trees, "
+"family history on WordPress."
 msgstr ""
+"বংশানুক্রমিক গাছ ওয়ার্ডপ্রেসে পারিবারিক গাছ, পারিবারিক ইতিহাস তৈরি এবং প্রদর্শনের জন্য "
+"একটি চূড়ান্ত সমাধান।"
 
 #. Author of the plugin/theme
 msgid "ak devs"
-msgstr ""
+msgstr "ak devs"
 
 #. Author URI of the plugin/theme
 msgid "https://github.com/akdevsfr"
-msgstr ""
+msgstr "https://github.com/akdevsfr"
+
+#~ msgid "Family"
+#~ msgstr "পরিবার"
+
+#~ msgid "All Families"
+#~ msgstr "সকল পরিবার"
+
+#~ msgid "Additional Children / Siblings info"
+#~ msgstr "অতিরিক্ত শিশু / ভাইবোনের তথ্য"
+
+#~ msgid "Leave empty if still alive"
+#~ msgstr "বেঁচে থাকলে খালি রেখে দিন"
+
+#~ msgid "Select Mother"
+#~ msgstr "মা নির্বাচন করুন"
+
+#~ msgid "Select Father"
+#~ msgstr "পিতা নির্বাচন করুন"
+
+#~ msgid "Wife"
+#~ msgstr "স্ত্রী"
+
+#~ msgid "From"
+#~ msgstr "থেকে"
+
+#~ msgid "To"
+#~ msgstr "করতে"
+
+#~ msgid "Select a Reason"
+#~ msgstr "একটি কারণ নির্বাচন করুন"
+
+#~ msgid "Husband"
+#~ msgstr "স্বামী"
+
+#~ msgid "Select Husband"
+#~ msgstr "স্বামী নির্বাচন করুন"
+
+#~ msgid "Style Style 2"
+#~ msgstr "গাছের স্টাইল 2"
+
+#~ msgid "Style Style 2-Alt"
+#~ msgstr "গাছের স্টাইল 2-বিকল্প"
+
+#~ msgid "Style Style 3"
+#~ msgstr "গাছের স্টাইল 3"
+
+#~ msgid "Style Style 3-Alt"
+#~ msgstr "গাছের স্টাইল 3-বিকল্প"
+
+#~ msgid "Date of Marriage"
+#~ msgstr "বিয়ের তারিখ"

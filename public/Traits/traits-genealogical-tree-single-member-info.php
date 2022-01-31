@@ -719,6 +719,7 @@ trait Genealogical_Tree_Single_Member_info
             </tr>';
         }
         $html .= '<h3>' . __( 'Member Information', 'genealogical-tree' ) . '</h3>';
+        /*print_r(get_query_var( 'tab'));*/
         $html .= '
 		<table class="table table-hover table-condensed indi genealogical-tree-member">
 			<tbody>
@@ -734,7 +735,6 @@ trait Genealogical_Tree_Single_Member_info
                 ' . $birt_html . '
                 ' . $parent_html . '
 				' . $spouse_html . '
-
 				' . $deat_html . '
 				' . $address_html . '
 				' . $events_html . '

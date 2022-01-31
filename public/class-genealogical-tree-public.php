@@ -129,6 +129,7 @@ class Genealogical_Tree_Public
             'gt_rest_url' => rest_url(),
             'gt_ajax_url' => admin_url( 'admin-ajax.php' ),
             'gt_plan'     => $gt_plan,
+            'GEN'         => __( 'GEN:', 'genealogical-tree' ),
         );
         if ( defined( 'GENEALOGICAL_DEV' ) && GENEALOGICAL_DEV ) {
             $gtObj['dev'] = true;
@@ -872,6 +873,48 @@ class Genealogical_Tree_Public
             'post__in'       => $family_ids,
         ) );
         return $query->posts;
+    }
+    
+    /**
+     * Find families
+     *
+     * @since    2.1.1
+     */
+    public function add_lost_password_link()
+    {
+        return '<a href="' . wp_lostpassword_url() . '">' . __( 'Forgot Your Password?', 'genealogical-tree' ) . '</a>';
+    }
+    
+    /**
+     * Find families
+     *
+     * @since    2.1.1
+     */
+    public function gt_user_login()
+    {
+        $args = array(
+            'echo'           => true,
+            'remember'       => true,
+            'redirect'       => (( is_ssl() ? 'https://' : 'http://' )) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'],
+            'form_id'        => 'loginform',
+            'id_username'    => 'user_login',
+            'id_password'    => 'user_pass',
+            'id_remember'    => 'rememberme',
+            'id_submit'      => 'wp-submit',
+            'label_username' => __( 'Username or Email Address' ),
+            'label_password' => __( 'Password' ),
+            'label_remember' => __( 'Remember Me' ),
+            'label_log_in'   => __( 'Log In' ),
+            'value_username' => '',
+            'value_remember' => false,
+        );
+        
+        if ( !is_user_logged_in() ) {
+            wp_login_form( $args );
+        } else {
+            echo  '<center>' . __( 'Already logged in.', 'genealogical-tree' ) . ' <a href="' . admin_url() . '">' . __( 'Dashboard', 'genealogical-tree' ) . '</a> | <a href="' . wp_logout_url( home_url() ) . '">' . __( 'Logout', 'genealogical-tree' ) . '</a></center>' ;
+        }
+    
     }
 
 }

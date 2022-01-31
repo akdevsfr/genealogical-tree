@@ -213,6 +213,9 @@ trait Genealogical_Tree_Ind_Style
             
             }
             
+            $html .= '<div class="            
+            }
+            
             $html .= '<div class="gt-collapse-family ' . $gtCollapsed . '">' . $sign . '</div>';
         }
         

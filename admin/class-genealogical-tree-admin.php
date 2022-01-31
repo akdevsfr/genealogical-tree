@@ -306,6 +306,17 @@ class Genealogical_Tree_Admin
         register_taxonomy( 'gt-family-group', array( 'gt-member', 'gt-family' ), $args );
     }
     
+    public function add_rewrite_rule_init()
+    {
+        add_rewrite_rule( 'gt-member/([A-Za-z0-9\\-\\_]+)/tab/([A-Za-z0-9\\-\\_]+)', 'index.php?gt-member=$matches[1]&tab=$matches[2]', 'top' );
+    }
+    
+    public function query_vars_tab( $query_vars )
+    {
+        $query_vars[] = 'tab';
+        return $query_vars;
+    }
+    
     /**
      * Register theavaScript for the admin area.
      *
@@ -466,11 +477,11 @@ class Genealogical_Tree_Admin
                 foreach ( $famc as $key => $value ) {
                     $father_id = get_post_meta( $value, 'father', true );
                     if ( $father_id && get_post( $father_id ) ) {
-                        echo  '<b>Father : </b><a href="' . get_edit_post_link( $father_id ) . '">' . get_the_title( $father_id ) . '</a>' ;
+                        echo  '<div><b>' . __( 'Father', 'genealogical-tree' ) . ' : </b><a href="' . get_edit_post_link( $father_id ) . '">' . get_the_title( $father_id ) . '</a></div>' ;
                     }
                     $mother_id = get_post_meta( $value, 'mother', true );
                     if ( $mother_id && get_post( $mother_id ) ) {
-                        echo  '<br><b>Mother : </b><a href="' . get_edit_post_link( $mother_id ) . '">' . get_the_title( $mother_id ) . '</a>' ;
+                        echo  '<div><b>' . __( 'Mother', 'genealogical-tree' ) . ' : </b><a href="' . get_edit_post_link( $mother_id ) . '">' . get_the_title( $mother_id ) . '</a></div>' ;
                     }
                 }
                 break;
@@ -792,15 +803,18 @@ class Genealogical_Tree_Admin
         foreach ( $spouses as $key => $spouse ) {
             $sex = ( get_post_meta( $post_id, 'sex', true ) ? get_post_meta( $post_id, 'sex', true ) : null );
             $spouse_id = $spouse['id'];
-        
-            $motherOrFather = $this->isFatherOrMother( $post_id, $spouse_id );
-            $mother = $motherOrFather['mother'];
-            $father = $motherOrFather['father'];
-            if ( $mother || $father ) {
-                $family_id = $this->findOrCreateFamily( $mother, $father, array() );
+            $chills = ( isset( $spouse['chills'] ) ? $spouse['chills'] : array() );
+            
+            if ( $spouse_id || !empty($chills) ) {
+                $motherOrFather = $this->isFatherOrMother( $post_id, $spouse_id );
+                $mother = $motherOrFather['mother'];
+                $father = $motherOrFather['father'];
+                if ( $mother || $father ) {
+                    $family_id = $this->findOrCreateFamily( $mother, $father, $chills );
+                }
+                array_push( $indis, $mother );
+                array_push( $indis, $father );
             }
-            array_push( $indis, $mother );
-            array_push( $indis, $father );
         
         }
         $famc = get_post_meta( $post_id, 'famc' );
@@ -844,16 +858,16 @@ class Genealogical_Tree_Admin
     {
         $data = $this->tree_default_meta();
         $bd_style = array(
-            'dotted',
-            'dashed',
-            'solid',
-            'double',
-            'groove',
-            'ridge',
-            'inset',
-            'outset',
-            'none',
-            'hidden'
+            'dotted' => __( 'Dotted', 'genealogical-tree' ),
+            'dashed' => __( 'Dashed', 'genealogical-tree' ),
+            'solid'  => __( 'Solid', 'genealogical-tree' ),
+            'double' => __( 'Double', 'genealogical-tree' ),
+            'groove' => __( 'Groove', 'genealogical-tree' ),
+            'ridge'  => __( 'Ridge', 'genealogical-tree' ),
+            'inset'  => __( 'Inset', 'genealogical-tree' ),
+            'outset' => __( 'Outset', 'genealogical-tree' ),
+            'none'   => __( 'None', 'genealogical-tree' ),
+            'hidden' => __( 'Hidden', 'genealogical-tree' ),
         );
         $data_saved = get_post_meta( $post->ID, 'tree', true );
         foreach ( $data as $key => $value ) {
@@ -1076,7 +1090,9 @@ class Genealogical_Tree_Admin
         ?> <?php 
         echo  $name ;
         ?></option>
-			<optgroup label="Female">
+			<optgroup label="<?php 
+        _e( 'Female', 'genealogical-tree' );
+        ?>">
 				<?php 
         foreach ( $females as $key => $female ) {
             ?>
@@ -1098,7 +1114,9 @@ class Genealogical_Tree_Admin
         }
         ?>
 			</optgroup>
-			<optgroup label="Male">
+			<optgroup label="<?php 
+        _e( 'Male', 'genealogical-tree' );
+        ?>">
 				<?php 
         foreach ( $males as $key => $male ) {
             ?>
@@ -1120,7 +1138,9 @@ class Genealogical_Tree_Admin
         }
         ?>
 			</optgroup>
-			<optgroup label="Unknown">
+			<optgroup label="<?php 
+        _e( 'Unknown', 'genealogical-tree' );
+        ?>">
 				<?php 
         foreach ( $unknowns as $key => $unknown ) {
             ?>
@@ -1345,6 +1365,10 @@ class Genealogical_Tree_Admin
     public function get_aditionals_events()
     {
         return array(
+            'name'            => array(
+            'type'  => 'name',
+            'title' => __( 'Name', 'genealogical-tree' ),
+        ),
             'buri'            => array(
             'type'  => 'buri',
             'title' => __( 'Burial', 'genealogical-tree' ),
@@ -1435,11 +1459,14 @@ class Genealogical_Tree_Admin
     /**
      * 
      */
-    public function gt_update_db_check() {
-        if ( ! get_site_option( '_gt_version_fixed' ) ) {
+    public function gt_update_db_check()
+    {
+        
+        if ( !get_site_option( '_gt_version_fixed' ) ) {
             $this->fix_ver_upgrade_ajax();
             add_site_option( '_gt_version_fixed', time() );
         }
+    
     }
     
     /**
@@ -1513,13 +1540,21 @@ class Genealogical_Tree_Admin
     {
         ?>
 		<div class="wrap">
-			<h1> Upgrade Fix </h1>
+			<h1>  <?php 
+        _e( 'Upgrade Fix', 'genealogical-tree' );
+        ?> </h1>
 			<p>
-				<b>If you are upgradeed from older version of 2.1.2. You may need to click upgrade database button.</b>
+				<b><?php 
+        _e( 'If you are upgradeed from older version of 2.1.2. You may need to click upgrade database button.', 'genealogical-tree' );
+        ?> </b>
 			</p>
-			<p>Please click Upgrade Fix button if your family tree not working properly.</p>
+			<p><?php 
+        _e( 'Please click Upgrade Fix button if your family tree not working properly.', 'genealogical-tree' );
+        ?> </p>
 			<p>
-				<button class="button fix_ver_upgrade" type="button"> Upgrade Fix </button>
+				<button class="button fix_ver_upgrade" type="button"> <?php 
+        _e( 'Upgrade Fix', 'genealogical-tree' );
+        ?> </button>
 			</p>
 		</div>
 		<?php 

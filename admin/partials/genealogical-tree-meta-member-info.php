@@ -127,7 +127,7 @@
 												<td width="100%">
 													<select class="select2" id="mother" name="gt[parents][<?php echo $z; ?>][mother]">
 													<?php 
-													$this->select_member_html($females, $males, $unknowns, $z, 'Mother', $mother); 
+													$this->select_member_html($females, $males, $unknowns, $z, __('Mother', 'genealogical-tree'), $mother); 
 													?>
 													</select>
 													<a class="no-copy"  href="<?php echo get_edit_post_link($mother); ?>"> Edit <?php //echo $mother; ?></a> 
@@ -141,7 +141,7 @@
 												<td>
 													<select class="select2" id="mother" name="gt[parents][<?php echo $z; ?>][father]">
 													<?php 
-													$this->select_member_html($females, $males, $unknowns, $z, 'Father', $father); 
+													$this->select_member_html($females, $males, $unknowns, $z, __('Father', 'genealogical-tree'), $father); 
 													?>
 													</select>
 													<a class="no-copy"  href="<?php echo get_edit_post_link($father); ?>"> Edit <?php // echo $father; ?></a> 
@@ -170,7 +170,7 @@
 												</td>
 											</tr> -->
 											<tr class="no-copy">
-												<td>Siblings</td>
+												<td><?php _e('Siblings', 'genealogical-tree'); ?> </td>
 												<td>
 													<?php 
 													$chills = get_post_meta($fam, 'chills') ? get_post_meta($fam, 'chills') : array();
@@ -258,7 +258,7 @@
 												<td width="100%">
 													<select class="select2" id="mother" name="gt[spouses][<?php echo $y; ?>][id]">
 													<?php 
-														$this->select_member_html($females, $males, $unknowns, $y, 'Spouse', $spouse); 
+														$this->select_member_html($females, $males, $unknowns, $y, __('Spouse', 'genealogical-tree'), $spouse); 
 													?>
 													</select>
 													<?php if( $spouse ) { ?>
@@ -275,11 +275,14 @@
 												<td colspan="3"><input type="text" name="gt[spouses][<?php echo $y; ?>][place]" value="<?php echo $spouse_place; ?>"> </td>
 											</tr>
 											<tr class="no-copy">
-												<td>Chills</td>
+												<td><?php _e('Chills', 'genealogical-tree'); ?> </td>
 												<td colspan="3">
 													<?php 
 													$chills = get_post_meta($fam, 'chills') ? get_post_meta($fam, 'chills') : array();
 													foreach ($chills as $key => $chi) {
+														?>
+														<input type="hidden" readonly  name="gt[spouses][<?php echo $y; ?>][chills][]" value="<?php echo $chi; ?>">
+														<?php 
 														$gender = '<span class="gt-gender-emoji">⚥</span>';
 								                        if (get_post_meta($chi, 'sex', true) === 'M') {
 								                            $gender = '<span class="gt-gender-emoji">♂️</span>';

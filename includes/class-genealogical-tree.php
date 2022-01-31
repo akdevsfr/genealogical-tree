@@ -123,6 +123,14 @@ class Genealogical_Tree
         $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
         $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
         $this->loader->add_action( 'init', $plugin_admin, 'init_post_type_and_taxonomy' );
+        $this->loader->add_action( 'init', $plugin_admin, 'add_rewrite_rule_init' );
+        $this->loader->add_filter(
+            'query_vars',
+            $plugin_admin,
+            'query_vars_tab',
+            10,
+            1
+        );
         $this->loader->add_action( 'admin_menu', $plugin_admin, 'admin_menu' );
         $this->loader->add_action( 'admin_menu', $plugin_admin, 'admin_menu__remove_items' );
         $this->loader->add_action( 'user_register', $plugin_admin, 'gt_admin_as_gt_member' );
@@ -239,12 +247,14 @@ class Genealogical_Tree
         $this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
         $this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
         $this->loader->add_filter( 'the_content', $plugin_public, 'data_in_single_page' );
+        $this->loader->add_action( 'login_form_middle', $plugin_public, 'add_lost_password_link' );
         add_shortcode( 'tree', array( $plugin_public, 'display_formated_tree' ) );
         add_shortcode( 'gt-tree', array( $plugin_public, 'display_tree' ) );
         add_shortcode( 'gt-tree-list', array( $plugin_public, 'display_tree_list' ) );
         add_shortcode( 'gt-member', array( $plugin_public, 'display_member' ) );
         add_shortcode( 'gt-members', array( $plugin_public, 'display_members' ) );
         add_shortcode( 'gt-user-registration', array( $plugin_public, 'gt_user_registration' ) );
+        add_shortcode( 'gt-user-login', array( $plugin_public, 'gt_user_login' ) );
     }
     
     /**

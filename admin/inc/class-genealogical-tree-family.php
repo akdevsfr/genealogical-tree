@@ -96,9 +96,11 @@ class Genealogical_Tree_Admin_Family
         ?>
 		<tr class="form-field">
 			<th scope="row" valign="top">
-				<label for="tree_page"><?php 
+				<label for="tree_page">
+					<?php 
         _e( 'Default Tree', 'genealogical-tree' );
-        ?></label>
+        ?>
+				</label>
 			</th>
 			<td>
 			<?php 
@@ -107,9 +109,11 @@ class Genealogical_Tree_Admin_Family
             ?>
 				<button data-id="<?php 
             echo  $term->term_id ;
-            ?>" class="button generate_default_tree"><?php 
+            ?>" class="button generate_default_tree">
+					<?php 
             _e( 'Generate Default Tree', 'genealogical-tree' );
-            ?></button> 
+            ?>
+				</button> 
 			<?php 
         }
         
@@ -119,7 +123,9 @@ class Genealogical_Tree_Admin_Family
         if ( $tree_pages ) {
             ?>
 			<select name="tree_page">
-				<option value>Select Default Tree</option>
+				<option value> <?php 
+            _e( 'Select Default Tree', 'genealogical-tree' );
+            ?> </option>
 				<?php 
             foreach ( $tree_pages as $key => $page ) {
                 $tree = get_post_meta( $page->ID, 'tree', true );
@@ -153,9 +159,11 @@ class Genealogical_Tree_Admin_Family
             ?>
 				<a target="_blank" class="button" href="<?php 
             echo  ( esc_attr( get_the_permalink( $tree_page ) ) ? esc_attr( get_the_permalink( $tree_page ) ) : '' ) ;
-            ?>"><?php 
+            ?>">
+					<?php 
             _e( 'View Tree.', 'genealogical-tree' );
-            ?></a> 
+            ?>
+				</a> 
 			<?php 
         }
         
@@ -187,9 +195,12 @@ class Genealogical_Tree_Admin_Family
 			<td>
 				<a class="button" target="_blank" href="<?php 
         echo  esc_attr( get_term_link( $term, 'gt-family-group' ) ) ;
-        ?>">View Members Page.</a></p>
+        ?>"><?php 
+        _e( 'View Members Page.', 'genealogical-tree' );
+        ?>  </a></p>
 			</td>
 		</tr>
+
 		<?php 
         ?>
 		<?php 
