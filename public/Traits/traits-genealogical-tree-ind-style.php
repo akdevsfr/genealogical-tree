@@ -222,7 +222,7 @@ trait Genealogical_Tree_Ind_Style
             
             ?>
 			<div class="image">
-				<div class="image-cont">';
+				<div class="image-cont">
 					<img src="<?php 
             echo  esc_attr( $image_url ) ;
             ?>">

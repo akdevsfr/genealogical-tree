@@ -13,7 +13,7 @@
  * @package           Genealogical_Tree
  *
  * @wordpress-plugin
- * Plugin Name: Genealogical Tree Pro
+ * Plugin Name: Genealogical Tree
  * Plugin URI:        https://wordpress.org/plugins/genealogical-tree
  * Description:       Genealogical Tree is a ultimate solution for creating and displaying family trees, family history on WordPress.
  * Version:           2.2.0.1
