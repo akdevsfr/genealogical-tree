@@ -3,7 +3,7 @@ Contributors: akdevs, freemius
 Tags: Family Tree, Genealogy, Ancestry, Family History, GED, Pedigree
 Requires at least: 4.4
 Tested up to: 6.1
-Stable tag: 2.2.0
+Stable tag: 2.2.0.1
 License: GPLv2
 
 Genealogical Tree is a ultimate solution for creating and displaying family trees, family history, builds ancestor profiles on WordPress.
@@ -96,6 +96,10 @@ Search for “Genealogical Tree” under “Plugins” → “Add New” in your
 15. Import GED Success (Pro)
 
 == Changelog ==
+= 2.2.0.1 - 29 November 2022 =
+ * This update may break your genealogy data. Please keep backup you data before update.
+ * Bug fix
+
 = 2.2.0 - 29 November 2022 =
  * This update may break your genealogy data. Please keep backup you data before update.
  * Bug fix
@@ -179,6 +183,10 @@ Search for “Genealogical Tree” under “Plugins” → “Add New” in your
  * First Release
 
 == Upgrade Notice ==
+= 2.2.0.1 - 29 November 2022 =
+ * This update may break your genealogy data. Please keep backup you data before update.
+ * Bug fix
+ 
 = 2.2.0 - 29 November 2022 =
  * This update may break your genealogy data. Please keep backup you data before update.
  * Bug fix

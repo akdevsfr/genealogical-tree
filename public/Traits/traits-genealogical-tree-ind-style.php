@@ -261,7 +261,7 @@ trait Genealogical_Tree_Ind_Style
                 ?>">
 						<img style="width:20px;display:block;" src="<?php 
                 echo  esc_attr( GENEALOGICAL_TREE_DIR_URL ) ;
-                ?> 'public/img/family-tree.svg">
+                ?>public/img/family-tree.svg">
 					</a>
 				</div>
 				<?php 

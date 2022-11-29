@@ -625,7 +625,7 @@ class Genealogical_Tree_Helper {
 			if ( is_array( $value ) ) {
 				$base[ $key ] = $this->tree_merge( $value, $input[ $key ] ? $input[ $key ] : array() );
 			} else {
-				$base[ $key ] = $input[ $key ] ? $input[ $key ] : '';
+				$base[ $key ] = ( isset( $input[ $key ] ) && $input[ $key ] ) ? $input[ $key ] : '';
 			}
 		}
 		return $base;
