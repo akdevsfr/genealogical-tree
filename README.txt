@@ -2,8 +2,8 @@
 Contributors: akdevs, freemius
 Tags: Family Tree, Genealogy, Ancestry, Family History, GED, Pedigree
 Requires at least: 4.4
-Tested up to: 5.8
-Stable tag: 2.1.5
+Tested up to: 6.1
+Stable tag: 2.2.0
 License: GPLv2
 
 Genealogical Tree is a ultimate solution for creating and displaying family trees, family history, builds ancestor profiles on WordPress.
@@ -29,7 +29,7 @@ Genealogical Tree is a plugin for display family trees and create Ancestor Profi
 * Export Gedcom format (.ged) files.
 * Create unlimited family groups.
 * Create unlimited family trees.
-* Extra 6 Tree layout with many customizable options
+* Total 7 Tree layout with many customizable options
 * Horizontal and Vertical view of each layout.
 * Showing member image into tree.
 * Showing member image into member page.
@@ -45,6 +45,7 @@ Genealogical Tree is a plugin for display family trees and create Ancestor Profi
 * Collaboration / Contribution to build family tree / history.
 * Option to add multiple contact information.
 * Option to add multiple life event information.
+* Display pedigree tree.
 
 == Contribute ==
 
@@ -94,21 +95,40 @@ Search for “Genealogical Tree” under “Plugins” → “Add New” in your
 14. Import GED (Pro)
 15. Import GED Success (Pro)
 
-
 == Changelog ==
+= 2.2.0 - 29 November 2022 =
+ * This update may break your genealogy data. Please keep backup you data before update.
+ * Bug fix
+ * Core rewrite
+
+= 2.1.9 - 29 May 2022 =
+ * Bug fix
+
+= 2.1.8 - 28 May 2022 =
+ * New Features
+ * Bug fix
+
+= 2.1.7 - 8 March 2022 =
+ * New Features
+ * Bug fix
+
+= 2.1.6 - 3 March 2022 =
+ * New Features
+ * Bug fix
+
 = 2.1.5 - 1 Febuary 2022 =
- * Few Features
+ * New Features
  * Bug fix
 
 = 2.1.4 - 21 January 2022 =
  * Bug fix
 
 = 2.1.3 - 06 January 2022 =
- * Few Features
+ * New Features
  * Bug fix
 
 = 2.0.0 - 09 Jun 2021 =
- * Few Features
+ * New Features
  * Bug fix
 
 = 1.9.0 - 09 January 2021 =
@@ -159,19 +179,39 @@ Search for “Genealogical Tree” under “Plugins” → “Add New” in your
  * First Release
 
 == Upgrade Notice ==
+= 2.2.0 - 29 November 2022 =
+ * This update may break your genealogy data. Please keep backup you data before update.
+ * Bug fix
+ * Core rewrite
+ 
+= 2.1.9 - 29 May 2022 =
+ * Bug fix
+ 
+= 2.1.8 - 28 May 2022 =
+ * New Features
+ * Bug fix
+ 
+= 2.1.7 - 8 March 2022 =
+ * New Features
+ * Bug fix
+
+= 2.1.6 - 3 March 2022 =
+ * New Features
+ * Bug fix
+
 = 2.1.5 - 1 Febuary 2022 =
- * Few Features
+ * New Features
  * Bug fix
  
 = 2.1.4 - 21 January 2022 =
  * Bug fix
 
 = 2.1.3 - 06 January 2022 =
- * Few Features
+ * New Features
  * Bug fix
 
 = 2..0 - 09 Jun 2021 =
- * Few Features
+ * New Features
  * Bug fix
 
 = 1.9.0 - 09 January 2021 =

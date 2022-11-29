@@ -89,7 +89,8 @@ $fonts = json_decode($fonts)->items;
 				$args = array(
 					'numberposts' => -1,
 					'post_type'   => 'gt-member',
-					'fields' => 'ids, post_title'
+					'fields' => 'ids, post_title',
+					'order_by' => 'ID',
 				); 
 				$members = get_posts( $args ); 
 				if($members){
@@ -128,6 +129,7 @@ $fonts = json_decode($fonts)->items;
 					<option disabled><?php _e('Style 3-Alt', 'genealogical-tree'); ?></option>
 					<option disabled><?php _e('Style 4', 'genealogical-tree'); ?></option>
 					<option disabled><?php _e('Style 5', 'genealogical-tree'); ?></option>
+					<option disabled><?php _e('Style Special 1', 'genealogical-tree'); ?></option>
 				</select>
 			</td>
 		</tr>
@@ -231,6 +233,14 @@ $fonts = json_decode($fonts)->items;
 			<td colspan="4">
 				<input type="text" disabled id="container_background_color" value="<?php echo $data['background']['color']; ?>"><br>
 				<i>HEX/RGB/RGBA</i>
+			</td>
+		</tr>
+		<tr class="pro">
+			<td valign="top" style="vertical-align:top;">
+				<label for="marr_icon"><?php _e('Marriage Icon', 'genealogical-tree'); ?> </label>
+			</td>
+			<td colspan="4">
+				<input type="text" disabled id="marr_icon" value="<?php echo $data['marr_icon']; ?>" name="tree[marr_icon]"><br>
 			</td>
 		</tr>
 		<tr>
@@ -362,6 +372,16 @@ $fonts = json_decode($fonts)->items;
 				<input type="number" id="generation_number_ancestor" disabled value="<?php echo $data['generation_number_ancestor']; ?>">
 			</td>
 		</tr>
+
+		<tr class="pro">
+			<td>
+				<label for="generation_number"><?php _e('Generation Start From', 'genealogical-tree'); ?></label>
+			</td>
+			<td colspan="4">
+				<input type="number" id="generation_start_from" disabled value="<?php echo $data['generation_start_from']; ?>">
+			</td>
+		</tr>
+
 		<tr>
 			<td>
 			</td>
@@ -420,7 +440,7 @@ $fonts = json_decode($fonts)->items;
 				<select name="tree[container][border][style]">
 					<?php 
 					$container_border_style = $data['container']['border']['style'];
-					foreach ($bd_style as $key => $value) {
+					foreach ($border_style as $key => $value) {
 						?>
 						<option <?php if($container_border_style==$value) { echo 'selected'; } ?> value="<?php echo $value; ?>"><?php echo ucfirst($value); ?></option>
 						<?php 
@@ -545,7 +565,7 @@ $fonts = json_decode($fonts)->items;
 				<select disabled>
 					<?php 
 					$box_border_style = $data['box']['border']['style'];
-					foreach ($bd_style as $key => $value) {
+					foreach ($border_style as $key => $value) {
 						?>
 						<option <?php if($box_border_style==$value) { echo 'selected'; } ?> value="<?php echo $value; ?>"><?php echo ucfirst($value); ?></option>
 						<?php 
@@ -623,7 +643,7 @@ $fonts = json_decode($fonts)->items;
 					<?php 
 					$line_border_style = $data['line']['border']['style'];
 					
-					foreach ($bd_style as $key => $value) {
+					foreach ($border_style as $key => $value) {
 						?>
 						<option <?php if($line_border_style==$value) { echo 'selected'; } ?> value="<?php echo $value; ?>"><?php echo ucfirst($value); ?></option>
 						<?php 
@@ -704,7 +724,7 @@ $fonts = json_decode($fonts)->items;
 				<select disabled>
 					<?php 
 					$thumb_border_style = $data['thumb']['border']['style'];
-					foreach ($bd_style as $key => $value) {
+					foreach ($border_style as $key => $value) {
 						?>
 						<option <?php if($thumb_border_style==$value) { echo 'selected'; } ?> value="<?php echo $value; ?>"><?php echo ucfirst($value); ?></option>
 						<?php 

@@ -1,196 +1,689 @@
 <?php
 
 /**
-* Provide a admin area view for the plugin
-*
-* This file is used to markup the admin-facing aspects of the plugin.
-*
-* @link       https://wordpress.org/plugins/genealogical-tree
-* @since      1.0.0
-*
-* @package    Genealogical_Tree
-* @subpackage Genealogical_Tree/admin/partials
-*/
+ * Provide a admin area view for the plugin
+ *
+ * This file is used to markup the admin-facing aspects of the plugin.
+ *
+ * @link       https://wordpress.org/plugins/genealogical-tree
+ * @since      1.0.0
+ *
+ * @package    Genealogical_Tree
+ * @subpackage Genealogical_Tree/admin/partials
+ */
 ?>
-		
-<?php if (gt_fs()->is_not_paying() && !gt_fs()->is_trial()) { ?>
+
+<?php 
+if ( gt_fs()->is_not_paying() && !gt_fs()->is_trial() ) {
+    ?>
 <style type="text/css">
-	.gta-table .repetead-field {
-		padding-right: 0px; 
-	}
 	.gta-table .repetead-field .clone,
 	.gta-table .repetead-field .delete {
 		display: none;
 	}
 </style>
-<?php } ?>
+<?php 
+}
+$ref_id = ( get_post_meta( get_the_ID(), 'ref_id', true ) ? get_post_meta( get_the_ID(), 'ref_id', true ) : 'I' . get_the_ID() );
+$name = current( $names );
+$family_events = $this->plugin->helper->get_family_events();
+$useable_members = $this->get_useable_members( $post );
+$males = $useable_members['males'];
+$females = $useable_members['females'];
+$unknowns = $useable_members['unknowns'];
+?>
 <div class="gta-container">
-	<?php wp_nonce_field( 'update_member_info_nonce', '_nonce_update_member_info_nonce' ); ?>
+	<?php 
+wp_nonce_field( 'update_member_info_nonce', '_nonce_update_member_info_nonce' );
+?>
 	<table class="gta-table">
 		<tr>
 			<td>
-				<h4 style="display: inline;background: #0085ba;padding: 0px 0px;color: #fff;"><?php _e('ID', 'genealogical-tree'); ?>: <?php echo get_the_ID();; ?></h4>
+				<h4 style="display: inline;background: #0085ba;padding: 0px 0px;color: #fff;">
+					<?php 
+esc_html_e( 'ID', 'genealogical-tree' );
+?>: <?php 
+echo  get_the_ID() ;
+?> 
+					| 
+					<?php 
+esc_html_e( 'REF ID', 'genealogical-tree' );
+?>: <?php 
+echo  esc_html( $ref_id ) ;
+?>
+				</h4>
 			</td>
 		</tr>
-	</table>	
+	</table>
+
 	<div class="gta-row">
-		<div class="gta-col-3 coll-one">
+		<div class="gta-col-2 coll-one">
 			<table class="gta-table">
 				<tr>
-					<td colspan="2" style="padding:0px;">
-						<h4><?php _e('Name', 'genealogical-tree'); ?></h4>
+					<td colspan="4" style="padding:0px;">
+						<h4>
+							<?php 
+esc_html_e( 'Name', 'genealogical-tree' );
+?>
+						</h4>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<label style="width:169px;" for="full-name"><?php _e('Full Name', 'genealogical-tree'); ?></label>
+						<label style="width:169px;" for="name">
+							<?php 
+esc_html_e( 'Full Name', 'genealogical-tree' );
+?>
+						</label>
 					</td>
-					<td>
-						<input id="full-name" type="text" name="gt[full_name]" value="<?php echo $full_name; ?>">
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label for="given-name"><?php _e('Given Name', 'genealogical-tree'); ?></label>
-					</td>
-					<td>
-						<input id="given-name" type="text" name="gt[given_name]" value="<?php echo $given_name; ?>">
+					<td colspan="4">
+						<input id="name" type="text" name="gt[names][0][name]" value="<?php 
+echo  esc_attr( $name['name'] ) ;
+?>">
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<label for="sur-name"><?php _e('Surname', 'genealogical-tree'); ?></label>
+						<label for="npfx">
+							<?php 
+esc_html_e( 'Name Prefix', 'genealogical-tree' );
+?>
+						</label>
 					</td>
 					<td>
-						<input id="surname" type="text" name="gt[surname]" value="<?php echo $surname; ?>">
+						<input id="npfx" type="text" name="gt[names][0][npfx]" value="<?php 
+echo  esc_attr( $name['npfx'] ) ;
+?>">
+					</td>
+					<td>
+						<label for="nsfx">
+							<?php 
+esc_html_e( 'Name Suffix', 'genealogical-tree' );
+?>
+						</label>
+					</td>
+					<td>
+						<input id="nsfx" type="text" name="gt[names][0][nsfx]" value="<?php 
+echo  esc_attr( $name['nsfx'] ) ;
+?>">
 					</td>
 				</tr>
 				<tr>
-					<td colspan="2" style="padding:0px;">
-						<h4><?php _e('Gender', 'genealogical-tree'); ?></h4>
+					<td>
+						<label for="givn">
+							<?php 
+esc_html_e( 'Given Name', 'genealogical-tree' );
+?>
+						</label>
+					</td>
+					<td>
+						<input id="givn" type="text" name="gt[names][0][givn]" value="<?php 
+echo  esc_attr( $name['givn'] ) ;
+?>">
+					</td>
+					<td>
+						<label for="nick">
+							<?php 
+esc_html_e( 'Nickname', 'genealogical-tree' );
+?>
+						</label>
+					</td>
+					<td>
+						<input id="nick" type="text" name="gt[names][0][nick]" value="<?php 
+echo  esc_attr( $name['nick'] ) ;
+?>">
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<label for="birth-sex"><?php _e('Gender', 'genealogical-tree'); ?></label>
+						<label for="spfx">
+							<?php 
+esc_html_e( 'Surname Prefix', 'genealogical-tree' );
+?>
+						</label>
 					</td>
 					<td>
-						<select id="birth-sex" name="gt[sex]">
-							<option value=""><?php _e('Select Gender', 'genealogical-tree'); ?></option>
-							<option value="M" <?php echo ($sex==='M') ? 'selected' : '' ; ?>><?php _e('Male', 'genealogical-tree'); ?></option>
-							<option value="F" <?php echo ($sex==='F') ? 'selected' : '' ; ?>><?php _e('Female', 'genealogical-tree'); ?></option>
+						<input id="spfx" type="text" name="gt[names][0][spfx]" value="<?php 
+echo  esc_attr( $name['spfx'] ) ;
+?>">
+					</td>
+					<td>
+						<label for="surn">
+							<?php 
+esc_html_e( 'Surname', 'genealogical-tree' );
+?>
+						</label>
+					</td>
+					<td>
+						<input id="surn" type="text" name="gt[names][0][surn]" value="<?php 
+echo  esc_attr( $name['surn'] ) ;
+?>">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" style="padding:0px;">
+						<h4><?php 
+esc_html_e( 'Gender', 'genealogical-tree' );
+?></h4>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="sex"><?php 
+esc_html_e( 'Gender', 'genealogical-tree' );
+?></label>
+					</td>
+					<td colspan="3">
+						<select id="sex" name="gt[sex]">
+							<option value="">
+								<?php 
+esc_html_e( 'Select Gender', 'genealogical-tree' );
+?>
+							</option>
+							<option value="M" <?php 
+echo  esc_attr( ( 'M' === $sex ? 'selected' : '' ) ) ;
+?>>
+								<?php 
+esc_html_e( 'Male', 'genealogical-tree' );
+?>
+							</option>
+							<option value="F" <?php 
+echo  esc_attr( ( 'F' === $sex ? 'selected' : '' ) ) ;
+?>>
+								<?php 
+esc_html_e( 'Female', 'genealogical-tree' );
+?>
+							</option>
 						</select>
 					</td>
 				</tr>
+
 				<tr>
-					<td colspan="2" style="padding:0px;">
-						<h4>
-							<?php _e('Parents', 'genealogical-tree'); ?>
-						</h4>
-						<?php 
-						$famc = get_post_meta( $post->ID, 'famc' ) ? get_post_meta( $post->ID, 'famc' ) : array( );
-						$famc = array_unique( $famc );
-						if( empty( $famc ) ) {
-							$famc = array( '' );
-						}
-						?>
+					<td colspan="4" style="padding:0px;">
+						<h4><?php 
+esc_html_e( 'Birth', 'genealogical-tree' );
+?></h4>
 					</td>
 				</tr>
 				<tr>
-					<td colspan="2" style="padding:0px;">
+					<td colspan="4" style="padding:0px;">
+
 						<?php 
-						$z = 0; 
-						foreach ($famc as $key => $fam) {
-							$father = get_post_meta($fam, 'father', true);
-							$mother = get_post_meta($fam, 'mother', true);
-						?>
+$bc = 0;
+foreach ( $birt as $key => $value ) {
+    ?>
+						<div class="repetead-field rep-birt-deat-event">
+							<?php 
+    $this->clone_delete( $bc );
+    ?>
+							<table class="gta-table">
+								<tr>
+									<td colspan="4" width="1%">
+										<label style="width: 150px;">
+											<?php 
+    esc_html_e( 'REF', 'genealogical-tree' );
+    ?>  #<span data-ref-c="<?php 
+    echo  esc_attr( $bc ) ;
+    ?>"><?php 
+    echo  esc_attr( $bc + 1 ) ;
+    ?> </span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td width="1%">
+										<label style="width: 96px;" for="birt-date">
+											<?php 
+    esc_html_e( 'Tag', 'genealogical-tree' );
+    ?>
+										</label>
+									</td>
+									<td>
+										<div style=" width: 150px;" >
+											<input id="birt-date" type="text" readonly name="gt[even][BIRT][<?php 
+    echo  esc_attr( $key ) ;
+    ?>][tag]"  value="<?php 
+    echo  esc_attr( $value['tag'] ) ;
+    ?>">
+										</div>
+									</td>
+									<td>
+										<div style=" width: 50px;" >
+											<input type="checkbox" name="gt[even][BIRT][<?php 
+    echo  esc_attr( $key ) ;
+    ?>][tag_check]" <?php 
+    checked( $value['tag_check'], 'on' );
+    ?>>
+										</div>
+									</td>
+									<td width="100%"></td>
+								</tr>
+								<tr>
+									<td width="1%">
+										<label style="width: 96px;" for="birt-date">
+											<?php 
+    esc_html_e( 'Type', 'genealogical-tree' );
+    ?>
+										</label>
+									</td>
+									<td colspan="3" width="100%">
+										<input id="birt-date" type="text" name="gt[even][BIRT][<?php 
+    echo  esc_attr( $key ) ;
+    ?>][type]"  value="<?php 
+    echo  esc_attr( $value['type'] ) ;
+    ?>">
+									</td>
+								</tr>
+								<tr>
+									<td width="1%">
+										<label style="width: 96px;" for="birt-date">
+											<?php 
+    esc_html_e( 'Date', 'genealogical-tree' );
+    ?>
+										</label>
+									</td>
+									<td colspan="3" width="100%">
+										<input id="birt-date" type="text" name="gt[even][BIRT][<?php 
+    echo  esc_attr( $key ) ;
+    ?>][date]"  value="<?php 
+    echo  esc_attr( $value['date'] ) ;
+    ?>">
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label style="width: 96px;">
+											<?php 
+    esc_html_e( ' Place', 'genealogical-tree' );
+    ?>
+										</label>
+									</td>
+									<td colspan="3">
+										<input id="birt-place" type="text" name="gt[even][BIRT][<?php 
+    echo  esc_attr( $key ) ;
+    ?>][plac]" value="<?php 
+    echo  esc_attr( ( isset( $value['plac'] ) ? $value['plac'] : '' ) ) ;
+    ?>">
+									</td>
+								</tr>
+							</table>
+						</div>
+						<?php 
+    $bc++;
+}
+?>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" style="padding:0px;">
+						<h4>
+							<?php 
+esc_html_e( ' Death', 'genealogical-tree' );
+?>
+						</h4>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" style="padding:0px;">
+
+					<?php 
+$dc = 0;
+foreach ( $deat as $key => $value ) {
+    ?>
+					<div class="repetead-field rep-birt-deat-event">
+						<?php 
+    $this->clone_delete( $dc );
+    ?>
+						<table class="gta-table">
+							<tr>
+								<td colspan="4" width="1%">
+									<label style="width: 150px;">
+										<?php 
+    esc_html_e( ' REF', 'genealogical-tree' );
+    ?> #<span data-ref-c="<?php 
+    echo  esc_attr( $dc ) ;
+    ?>"> <?php 
+    echo  esc_attr( $dc + 1 ) ;
+    ?> </span>
+									</label>
+								</td>
+							</tr>
+							<tr>
+								<td width="1%">
+									<label style="width: 96px;" for="deat-date">
+										<?php 
+    esc_html_e( ' Tag', 'genealogical-tree' );
+    ?>
+									</label>
+								</td>
+								<td>
+									<div style="width: 150px;">
+										<input id="deat-date" readonly type="text" name="gt[even][DEAT][<?php 
+    echo  esc_attr( $key ) ;
+    ?>][tag]"  value="<?php 
+    echo  esc_attr( $value['tag'] ) ;
+    ?>">
+									</div>
+								</td>
+								<td>
+									<div style="width: 50px;">
+										<input type="checkbox" name="gt[even][DEAT][<?php 
+    echo  esc_attr( $key ) ;
+    ?>][tag_check]" <?php 
+    checked( $value['tag_check'], 'on' );
+    ?>>
+									</div>
+								</td>
+								<td width="100%">
+								</td>
+							</tr>
+							<tr>
+								<td width="1%">
+									<label style="width: 96px;" for="deat-date">
+										<?php 
+    esc_html_e( ' Type', 'genealogical-tree' );
+    ?>
+									</label>
+								</td>
+								<td colspan="3" width="100%">
+									<input id="deat-date" type="text" name="gt[even][DEAT][<?php 
+    echo  esc_attr( $key ) ;
+    ?>][type]"  value="<?php 
+    echo  esc_attr( $value['type'] ) ;
+    ?>">
+								</td>
+							</tr>
+							<tr>
+								<td width="1%">
+									<label style="width: 96px;" for="deat-date">
+										<?php 
+    esc_html_e( ' Date', 'genealogical-tree' );
+    ?>
+									</label>
+								</td>
+								<td colspan="3" width="100%">
+									<input id="deat-date" type="text" name="gt[even][DEAT][<?php 
+    echo  esc_attr( $key ) ;
+    ?>][date]"  value="<?php 
+    echo  esc_attr( $value['date'] ) ;
+    ?>">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label style="width: 96px;">
+										<?php 
+    esc_html_e( ' Place', 'genealogical-tree' );
+    ?>
+									</label>
+								</td>
+								<td colspan="3">
+									<input id="deat-place" type="text" name="gt[even][DEAT][<?php 
+    echo  esc_attr( $key ) ;
+    ?>][plac]" value="<?php 
+    echo  esc_attr( ( isset( $value['plac'] ) ? $value['plac'] : '' ) ) ;
+    ?>">
+								</td>
+							</tr>
+						</table>
+					</div>
+					<?php 
+    $dc++;
+}
+?>
+					</td>
+				</tr>
+
+				<?php 
+?>
+
+			</table>
+		</div>
+
+		<div class="gta-col-2 coll-two">
+
+			<table class="gta-table">
+								<tr>
+					<td colspan="4" style="padding:0px;">
+						<h4>
+							<?php 
+esc_html_e( ' Families (Parents)', 'genealogical-tree' );
+?>
+						</h4>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" style="padding:0px;">
+						<?php 
+$famc_count = 0;
+foreach ( $famc as $key => $fam ) {
+    ?>
 						<div class="repetead-field">
-							<?php if ($z===0){ ?>
-								<span class="clone"><?php _e('Add', 'genealogical-tree'); ?></span>
-							<?php } if ($z > 0){ ?>
-								<span class="delete"><?php _e('Delete', 'genealogical-tree'); ?></span>
-							<?php }  ?>
+							<?php 
+    $this->clone_delete( $famc_count );
+    ?>
 							<table class="gta-table">
 								<tr>
 									<td width="1%">
-										<label style="width: 70px;"><?php _e('REF #', 'genealogical-tree'); ?> 
-											<a class="no-copy" href="<?php echo get_edit_post_link($fam); ?>"> <?php echo $fam; ?> </a> 
+										<label style="width: 100px;">
+											<?php 
+    esc_html_e( ' REF #', 'genealogical-tree' );
+    ?>
+											<a class="no-copy" href="<?php 
+    echo  esc_html( get_edit_post_link( $fam['famc'] ) ) ;
+    ?>">
+												<?php 
+    echo  esc_html( $fam['famc'] ) ;
+    ?>
+											</a>
 										</label>
 									</td>
 									<td width="100%" style="padding:0px;">
-										<input type="hidden"  name="gt[parents][<?php echo $z; ?>][ref]" value="<?php echo $fam; ?>">
 										<table class="gta-table">
 											<tr>
 												<td width="1%">
-													<label style="width: 95px;" for="mother"><?php _e('Mother', 'genealogical-tree'); ?></label>
+													<label style="width: 95px;" for="wife">
+														<?php 
+    esc_html_e( ' Mother', 'genealogical-tree' );
+    ?>
+													</label>
 												</td>
-												<td width="100%">
-													<select class="select2" id="mother" name="gt[parents][<?php echo $z; ?>][mother]">
-													<?php 
-													$this->select_member_html($females, $males, $unknowns, $z, __('Mother', 'genealogical-tree'), $mother); 
-													?>
+												<td width="100%" colspan="2">
+													<select class="select2" id="wife" name="gt[family][parents][<?php 
+    echo  esc_attr( $famc_count ) ;
+    ?>][wife]">
+														<?php 
+    $this->select_member_html(
+        $females,
+        $males,
+        $unknowns,
+        __( 'Mother', 'genealogical-tree' ),
+        $fam['wife']
+    );
+    ?>
 													</select>
-													<a class="no-copy"  href="<?php echo get_edit_post_link($mother); ?>"> Edit <?php //echo $mother; ?></a> 
+													<?php 
+    
+    if ( $fam['wife'] ) {
+        ?>
+													<a class="no-copy" href="<?php 
+        echo  esc_attr( get_edit_post_link( $fam['wife'] ) ) ;
+        ?>"> Edit </a>
+													<?php 
+    }
+    
+    ?>
 												</td>
-
 											</tr>
 											<tr>
 												<td>
-													<label for="father"><?php _e('Father', 'genealogical-tree'); ?></label>
+													<label for="husb"><?php 
+    esc_html_e( ' Father', 'genealogical-tree' );
+    ?></label>
 												</td>
-												<td>
-													<select class="select2" id="mother" name="gt[parents][<?php echo $z; ?>][father]">
-													<?php 
-													$this->select_member_html($females, $males, $unknowns, $z, __('Father', 'genealogical-tree'), $father); 
-													?>
+												<td colspan="2">
+													<select class="select2" id="wife" name="gt[family][parents][<?php 
+    echo  esc_attr( $famc_count ) ;
+    ?>][husb]">
+														<?php 
+    $this->select_member_html(
+        $females,
+        $males,
+        $unknowns,
+        __( 'Father', 'genealogical-tree' ),
+        $fam['husb']
+    );
+    ?>
 													</select>
-													<a class="no-copy"  href="<?php echo get_edit_post_link($father); ?>"> Edit <?php // echo $father; ?></a> 
-												</td>
-
-											</tr>
-<!-- 											<tr>
-
-												<td>
-													<label style="width: 95px;" for="mother"><?php _e('Family Relation', 'genealogical-tree'); ?></label>
-													
-												</td>
-												<td>
-													<div>
-														<select> 
-															<option>Select Relation</option>
-															<option value="adopted">Adopted</option>
-															<option value="birth">Birth</option>
-															<option value="foster">Foster</option>
-															<option value="sealing">Sealing</option>
-															<option value="other">Other</option>
-														</select>
-													</div>
-
-													
-												</td>
-											</tr> -->
-											<tr class="no-copy">
-												<td><?php _e('Siblings', 'genealogical-tree'); ?> </td>
-												<td>
 													<?php 
-													$chills = get_post_meta($fam, 'chills') ? get_post_meta($fam, 'chills') : array();
-													foreach ($chills as $key => $chi) {
-														if ( $chi != get_the_ID() ) {
+    
+    if ( $fam['husb'] ) {
+        ?>
+													<a class="no-copy"  href="<?php 
+        echo  esc_attr( get_edit_post_link( $fam['husb'] ) ) ;
+        ?>"> Edit </a>
+													<?php 
+    }
+    
+    ?>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<label for="husb"><?php 
+    esc_html_e( ' Pedigree', 'genealogical-tree' );
+    ?></label>
+												</td>
+												<td colspan="2">
+													<select class="select2" name="gt[family][parents][<?php 
+    echo  esc_attr( $famc_count ) ;
+    ?>][pedi]">
+														<option <?php 
+    selected( $fam['pedi'], '' );
+    ?> value="">
+															<?php 
+    esc_html_e( ' Relation By', 'genealogical-tree' );
+    ?>
+														</option>
+														<option <?php 
+    selected( $fam['pedi'], 'BIRTH' );
+    ?> value="BIRTH">
+															<?php 
+    esc_html_e( ' BIRTH', 'genealogical-tree' );
+    ?>
+														</option>
+														<option <?php 
+    selected( $fam['pedi'], 'ADOPTED' );
+    ?> value="ADOPTED">
+															<?php 
+    esc_html_e( ' ADOPTED', 'genealogical-tree' );
+    ?>
+														</option>
+														<option <?php 
+    selected( $fam['pedi'], 'FOSTER' );
+    ?> value="FOSTER">
+															<?php 
+    esc_html_e( ' FOSTER', 'genealogical-tree' );
+    ?>
+														</option>
+														<option <?php 
+    selected( $fam['pedi'], 'SEALING' );
+    ?> value="SEALING">
+															<?php 
+    esc_html_e( ' SEALING', 'genealogical-tree' );
+    ?>
+														</option>
+														<option <?php 
+    selected( $fam['pedi'], 'OTHER' );
+    ?> value="OTHER">
+															<?php 
+    esc_html_e( ' OTHER', 'genealogical-tree' );
+    ?>
+														</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<label>
+														<?php 
+    esc_html_e( ' Sealed P (LDS)', 'genealogical-tree' );
+    ?>
+													</label>
+													<input type="radio" name="gt[slgc][slgc_check]" value="<?php 
+    echo  esc_attr( $famc_count ) ;
+    ?>" <?php 
+    checked( $fam['slgc']['famc'], $fam['famc'] );
+    ?>>
+												</td>
+												<td colspan="2">
+													<table>
+														<tr>
+															<td>
+																<label style="width: 56px;">
+																	<?php 
+    esc_html_e( ' Date', 'genealogical-tree' );
+    ?>
+																</label>
+															</td>
+															<td>
+																<input value="<?php 
+    echo  esc_attr( $fam['slgc']['date'] ) ;
+    ?>" type="text" name="gt[slgc][<?php 
+    echo  esc_attr( $famc_count ) ;
+    ?>][date]">
+															</td>
+														</tr>
+														<tr>
+															<td>
+																<label style="width: 56px;">
+																	<?php 
+    esc_html_e( ' Place (Temple)', 'genealogical-tree' );
+    ?>
+																</label>
+															</td>
+															<td>
+																<input value="<?php 
+    echo  esc_attr( $fam['slgc']['plac'] ) ;
+    ?>" type="text" name="gt[slgc][<?php 
+    echo  esc_attr( $famc_count ) ;
+    ?>][plac]">
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
 
-															$gender = '<span class="gt-gender-emoji">⚥</span>';
 
-									                        if (get_post_meta($chi, 'sex', true) === 'M') {
-									                            $gender = '<span class="gt-gender-emoji">♂️</span>';
-									                        }
-
-									                        if (get_post_meta($chi, 'sex', true) === 'F') {
-									                            $gender = '<span class="gt-gender-emoji">♀️</span>';
-									                        }
-
-															echo ' <a  href="'.get_edit_post_link($chi).'">'.$gender.' '.get_post_meta($chi, 'full_name', true).'</a>';
-														}
-													}
-													?>
+											<tr class="no-copy">
+												<td>
+													<label>
+														<?php 
+    esc_html_e( ' Siblings', 'genealogical-tree' );
+    ?>
+													</label>
+												</td>
+												<td colspan="2">
+													<?php 
+    $chils = array_unique( $fam['chil'] );
+    foreach ( $chils as $key => $chil ) {
+        
+        if ( get_the_ID() !== (int) $chil ) {
+            $gender = '⚥';
+            if ( 'M' === (string) get_post_meta( $chil, 'sex', true ) ) {
+                $gender = '♂️';
+            }
+            if ( 'F' === (string) get_post_meta( $chil, 'sex', true ) ) {
+                $gender = '♀️';
+            }
+            echo  '
+															<a style="display:block;" href="' . esc_attr( get_edit_post_link( $chil ) ) . '">
+																<span class="gt-gender-emoji">' . esc_html( $gender ) . '</span> ' . esc_html( $this->plugin->helper->get_full_name( $chil ) ) . '
+															</a>' ;
+        }
+    
+    }
+    ?>
 												</td>
 											</tr>
 
@@ -199,368 +692,270 @@
 								</tr>
 							</table>
 						</div>
-						<?php 
-						$z++;
-						}
-						?>
+							<?php 
+    $famc_count++;
+}
+?>
 					</td>
 				</tr>
 				<tr>
-					<td colspan="2" style="padding:0px;">
-						<h4><?php _e('Spouses', 'genealogical-tree'); ?></h4>
+					<td colspan="4" style="padding:0px;">
+						<h4>
+							<?php 
+esc_html_e( ' Families (Spouses)', 'genealogical-tree' );
+?>
+						</h4>
 					</td>
 				</tr>
 				<tr>
-					<td colspan="2" style="padding:0px;">
+					<td colspan="4" style="padding:0px;">
 						<?php 
-						
-						$fams = get_post_meta( $post->ID, 'fams' ) ? get_post_meta( $post->ID, 'fams' ) : array( );
-						
-						$fams = array_unique( $fams );
-						
-						if( empty( $fams ) ) {
-							$fams = array( '' );
-						}
-
-						$y = 0; 
-
-						foreach ($fams as $key => $fam) {
-
-							$father = get_post_meta($fam, 'father', true);
-							$mother = get_post_meta($fam, 'mother', true);
-
-							$spouse = ( $father == $post->ID ) ? $mother : $father;
-
-							$spouse_date = '';
-							$spouse_place = '';
-
-							?>
-						<div class="repetead-field"> 
-							<?php if ($y===0){ ?>
-								<span class="clone"><?php _e('Add', 'genealogical-tree'); ?></span>
-							<?php } if ($y > 0){ ?>
-								<span class="delete"><?php _e('Delete', 'genealogical-tree'); ?></span>
-							<?php }  ?>
+$y = 0;
+foreach ( $fams as $key => $fam ) {
+    ?>
+						<div class="repetead-field">
+							<?php 
+    $this->clone_delete( $y );
+    ?>
 							<table class="gta-table">
 								<tr>
 									<td width="1%">
-										<label style="width: 70px;"> <?php _e('REF #', 'genealogical-tree'); ?> 
-											<a class="no-copy" href="<?php echo get_edit_post_link($fam); ?>"> <?php echo $fam; ?> </a>  
+										<label style="width: 100px;">
+											<?php 
+    esc_html_e( ' REF #', 'genealogical-tree' );
+    ?>
+											<a class="no-copy" href="<?php 
+    echo  esc_attr( get_edit_post_link( $fam['fams'] ) ) ;
+    ?>">
+												<?php 
+    echo  esc_html( $fam['fams'] ) ;
+    ?>
+											</a><br>
+											<?php 
+    esc_html_e( 'Order:', 'genealogical-tree' );
+    ?>
+											<input class="gt-spouse-order" value="<?php 
+    echo  esc_attr( ( isset( $fam['order'] ) && $fam['order'] ? $fam['order'] : '0' ) ) ;
+    ?>" name="gt[family][spouses][<?php 
+    echo  esc_attr( $y ) ;
+    ?>][order]" type="text">
 										</label>
 									</td>
 									<td width="100%" style="padding:0px;">
-										<input type="hidden" readonly  name="gt[spouses][<?php echo $y; ?>][ref]" value="<?php echo $fam; ?>">
 										<table class="gta-table">
 											<tr>
 												<td width="1%">
-													<label style="width: 95px;" for="spouse"><?php _e('Spouse', 'genealogical-tree'); ?></label>
+													<label style="width: 95px;" for="spouse"><?php 
+    esc_html_e( ' Spouse', 'genealogical-tree' );
+    ?></label>
 												</td>
 												<td width="100%">
-													<select class="select2" id="mother" name="gt[spouses][<?php echo $y; ?>][id]">
-													<?php 
-														$this->select_member_html($females, $males, $unknowns, $y, __('Spouse', 'genealogical-tree'), $spouse); 
-													?>
+													<select class="select2" id="wife" name="gt[family][spouses][<?php 
+    echo  esc_attr( $y ) ;
+    ?>][id]">
+														<?php 
+    $this->select_member_html(
+        $females,
+        $males,
+        $unknowns,
+        __( 'Spouse', 'genealogical-tree' ),
+        $fam['spouse']
+    );
+    ?>
 													</select>
-													<?php if( $spouse ) { ?>
-													<a class="no-copy"  href="<?php echo get_edit_post_link($spouse); ?>"> Edit <?php //echo $spouse; ?></a> 
-												<?php } ?>
+													<?php 
+    
+    if ( $fam['spouse'] ) {
+        ?>
+													<a class="no-copy"  href="<?php 
+        echo  esc_attr( get_edit_post_link( $fam['spouse'] ) ) ;
+        ?>"> Edit </a>
+													<?php 
+    }
+    
+    ?>
+												</td>
+											</tr>
+
+											<tr>
+												<td colspan="2">
+													<strong><?php 
+    esc_html_e( ' Events', 'genealogical-tree' );
+    ?> </strong>
 												</td>
 											</tr>
 											<tr>
-												<td style="width: 100px;"><label for="father"><?php _e('Marriage Date', 'genealogical-tree'); ?></label></td>
-												<td colspan="3"><input type="text" name="gt[spouses][<?php echo $y; ?>][date]" value="<?php echo $spouse_date; ?>"> </td>
-											</tr>
-											<tr>
-												<td style="width: 100px;"><label for="father"><?php _e('Marriage Place', 'genealogical-tree'); ?></label></td>
-												<td colspan="3"><input type="text" name="gt[spouses][<?php echo $y; ?>][place]" value="<?php echo $spouse_place; ?>"> </td>
+												<td colspan="2" style="padding:0px;">
+													<?php 
+    $yc = 0;
+    foreach ( $fam['event'] as $key => $event ) {
+        ?>
+													<div class="repetead-field rep-birt-deat-event <?php 
+        echo  esc_attr( ( $yc > 0 ? 'no-copy' : '' ) ) ;
+        ?>">
+														<?php 
+        $this->clone_delete( $yc );
+        ?>
+														<table class="gta-table">
+															<tr>
+																<td>
+																	<label style="width: 56px;">
+																		<?php 
+        esc_html_e( ' Tag', 'genealogical-tree' );
+        ?>
+																	</label>
+																</td>
+																<td>
+																	<div style="width: 150px;">
+																		<select name="gt[family][spouses][<?php 
+        echo  esc_attr( $y ) ;
+        ?>][even][<?php 
+        echo  esc_attr( $yc ) ;
+        ?>][tag]">
+																			<option value=""><?php 
+        esc_html_e( ' Select an Event', 'genealogical-tree' );
+        ?></option>
+																			<?php 
+        foreach ( $family_events as $keye => $valuee ) {
+            ?>
+																				<option <?php 
+            selected( $valuee['type'], $event['tag'] );
+            ?> value="<?php 
+            echo  esc_attr( $valuee['type'] ) ;
+            ?>" >
+																					(<?php 
+            echo  esc_html( $valuee['type'] ) ;
+            ?>) <?php 
+            echo  esc_html( $valuee['title'] ) ;
+            ?>
+																				</option>
+																				<?php 
+        }
+        ?>
+																		</select>
+																	</div>
+																</td>
+																<td>
+																	<div style="width: 50px;">
+																		<input type="checkbox" <?php 
+        checked( $event['tag_check'], 'on' );
+        ?> name="gt[family][spouses][<?php 
+        echo  esc_attr( $y ) ;
+        ?>][even][<?php 
+        echo  esc_attr( $yc ) ;
+        ?>][tag_check]">
+																	</div>
+																</td>
+																<td width="100%"></td>
+															</tr>
+															<tr>
+																<td width="1%">
+																	<label style="width: 56px;">
+																		<?php 
+        esc_html_e( ' Type', 'genealogical-tree' );
+        ?>
+																	</label>
+																</td>
+																<td  colspan="3" width="100%">
+																	<input type="text"  value="<?php 
+        echo  esc_attr( $event['type'] ) ;
+        ?>" name="gt[family][spouses][<?php 
+        echo  esc_attr( $y ) ;
+        ?>][even][<?php 
+        echo  esc_attr( $yc ) ;
+        ?>][type]">
+																</td>
+															</tr>
+															<tr>
+																<td width="1%">
+																	<label style="width: 56px;">
+																		<?php 
+        esc_html_e( ' Date', 'genealogical-tree' );
+        ?>
+																	</label>
+																</td>
+																<td  colspan="3" width="100%">
+																	<input type="text"  value="<?php 
+        echo  esc_attr( $event['date'] ) ;
+        ?>" name="gt[family][spouses][<?php 
+        echo  esc_attr( $y ) ;
+        ?>][even][<?php 
+        echo  esc_attr( $yc ) ;
+        ?>][date]">
+																</td>
+															</tr>
+															<tr>
+																<td>
+																	<label style="width: 56px;">
+																		<?php 
+        esc_html_e( ' Place', 'genealogical-tree' );
+        ?>
+																	</label>
+																</td>
+																<td colspan="3">
+																	<input type="text" value="<?php 
+        echo  esc_attr( ( isset( $event['plac'] ) ? $event['plac'] : '' ) ) ;
+        ?>" name="gt[family][spouses][<?php 
+        echo  esc_attr( $y ) ;
+        ?>][even][<?php 
+        echo  esc_attr( $yc ) ;
+        ?>][plac]">
+																</td>
+															</tr>
+														</table>
+													</div>
+													<?php 
+        $yc++;
+    }
+    ?>
+												</td>
 											</tr>
 											<tr class="no-copy">
-												<td><?php _e('Chills', 'genealogical-tree'); ?> </td>
-												<td colspan="3">
+												<td><?php 
+    esc_html_e( ' Chills', 'genealogical-tree' );
+    ?> </td>
+												<td>
+													<input type="hidden" readonly  name="gt[family][spouses][<?php 
+    echo  esc_attr( $y ) ;
+    ?>][chil][]" value="">
 													<?php 
-													$chills = get_post_meta($fam, 'chills') ? get_post_meta($fam, 'chills') : array();
-													foreach ($chills as $key => $chi) {
-														?>
-														<input type="hidden" readonly  name="gt[spouses][<?php echo $y; ?>][chills][]" value="<?php echo $chi; ?>">
-														<?php 
-														$gender = '<span class="gt-gender-emoji">⚥</span>';
-								                        if (get_post_meta($chi, 'sex', true) === 'M') {
-								                            $gender = '<span class="gt-gender-emoji">♂️</span>';
-								                        }
-								                        if (get_post_meta($chi, 'sex', true) === 'F') {
-								                            $gender = '<span class="gt-gender-emoji">♀️</span>';
-								                        }
-														echo ' <a  href="'.get_edit_post_link($chi).'"> '.$gender.' '.get_post_meta($chi, 'full_name', true).'</a>';
-													}
-													?>
+    foreach ( $fam['chil'] as $key => $chil ) {
+        
+        if ( $chil ) {
+            ?>
+															<input type="hidden" readonly  name="gt[family][spouses][<?php 
+            echo  esc_attr( $y ) ;
+            ?>][chil][]" value="<?php 
+            echo  esc_attr( $chil ) ;
+            ?>">
+															<?php 
+            $gender = '⚥';
+            if ( 'M' === (string) get_post_meta( $chil, 'sex', true ) ) {
+                $gender = '♂️';
+            }
+            if ( 'F' === (string) get_post_meta( $chil, 'sex', true ) ) {
+                $gender = '♀️';
+            }
+            echo  '<a style="display:block;" href="' . esc_attr( get_edit_post_link( $chil ) ) . '"> 
+															<span class="gt-gender-emoji">' . esc_html( $gender ) . '</span> ' . esc_html( $this->plugin->helper->get_full_name( $chil ) ) . '
+															</a>' ;
+        }
+    
+    }
+    ?>
 												</td>
 											</tr>
 										</table>
 										<?php 
-										$y++;
-										?>
+    $y++;
+    ?>
 									</td>
 								</tr>
 							</table>
 						</div>
 						<?php 
-						}
-						?>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<div class="gta-col-3 coll-two">
-			<table class="gta-table">
-				<tr>
-					<td colspan="2" style="padding:0px;">
-						<h4><?php _e('Birth', 'genealogical-tree'); ?></h4>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2" style="padding:0px;">			
-						<?php 
-						$bc = 0; 
-						if(!isset($event['birt'])) {
-							$event['birt'] = array(array(
-								'date' => '',
-								'place' => '',
-								'ref' => '',
-								'type' => 'birt'
-							));
-						}
-						foreach ($event['birt'] as $key => $value) {
-							?>
-							<div class="repetead-field rep-birt-deat-event" style="margin-left: -3px; margin-right: -3px;">
-								<?php if ($bc===0){ ?>
-									<span class="clone"><?php _e('Add', 'genealogical-tree'); ?></span>
-								<?php } if ($bc > 0){ ?>
-									<span class="delete"><?php _e('Delete', 'genealogical-tree'); ?></span>
-								<?php }  ?>
-								<table class="gta-table">
-									<tr>
-										<td rowspan="2" width="1%">
-											<label style="width: 70px;"><?php _e('REF', 'genealogical-tree'); ?>  #<span data-ref-c="<?php echo $bc; ?>"><?php echo $bc+1; ?></span> </label>
-										</td>
-										<td  width="1%"><label style="width: 96px;" for="birt-date"><?php _e('Date', 'genealogical-tree'); ?></label></td>
-										<td  width="100%"><input id="birt-date" type="text" name="gt[event][birt][<?php echo $key; ?>][date]"  value="<?php echo $value['date']; ?>"></td>
-									</tr>
-									<tr>
-										<td><label for="birt-place"><?php _e('Place', 'genealogical-tree'); ?></label></td>
-										<td>
-											<input id="birt-place" type="text" name="gt[event][birt][<?php echo $key; ?>][place]" value="<?php echo isset($value['place']) ? $value['place'] : ''; ?>">
-											<input id="birt-ref" type="hidden" name="gt[event][birt][<?php echo $key; ?>][ref]" >
-											<input id="birt-ref" type="hidden" name="gt[event][birt][<?php echo $key; ?>][type]" value="birt">
-										</td>
-									</tr>
-								</table>
-							</div>
-							<?php 
-							$bc++; 
-						} 
-						?>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2" style="padding:0px;">
-						<h4><?php _e('Death', 'genealogical-tree'); ?></h4>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2" style="padding:0px;">				
-					<?php 
-					$dc = 0; 
-					if(!isset($event['deat'])) {
-						$event['deat'] = array(array(
-							'date' => '',
-							'place' => '',
-							'ref' => '',
-							'type' => 'deat'
-						));
-					}
-					foreach ($event['deat'] as $key => $value) { 
-						?>
-						<div class="repetead-field rep-deat-deat-event" style="margin-left: -3px; margin-right: -3px;">
-							<?php if ($dc===0){ ?>
-								<span class="clone"><?php _e('Add', 'genealogical-tree'); ?></span>
-							<?php } if ($dc > 0){ ?>
-								<span class="delete"><?php _e('Delete', 'genealogical-tree'); ?></span>
-							<?php }  ?>
-							<table class="gta-table">
-								<tr>
-									<td rowspan="2" width="1%">
-										<label style="width: 70px;"><?php _e('REF', 'genealogical-tree'); ?>  #<span data-ref-c="<?php echo $dc; ?>"><?php echo $dc+1; ?></span> </label>
-									</td>
-									<td width="1%"><label style="width: 96px;" for="deat-date"><?php _e('Date', 'genealogical-tree'); ?></label></td>
-									<td width="100%"><input id="deat-date" type="text" name="gt[event][deat][<?php echo $key; ?>][date]"  value="<?php echo $value['date']; ?>"></td>
-								</tr>
-								<tr>
-									<td><label for="deat-place"><?php _e('Place', 'genealogical-tree'); ?></label></td>
-									<td>
-										<input id="deat-place" type="text" name="gt[event][deat][<?php echo $key; ?>][place]" value="<?php echo isset($value['place']) ? $value['place'] : ''; ?>">
-										<input id="deat-ref" type="hidden" name="gt[event][deat][<?php echo $key; ?>][ref]" >
-										<input id="deat-ref" type="hidden" name="gt[event][deat][<?php echo $key; ?>][type]" value="deat">
-									</td>
-								</tr>
-							</table>
-						</div>
-						<?php  
-						$dc++; 
-					} 
-					?>
-					</td>
-				</tr>	
-			</table>
-		</div>
-
-		<?php 
-		unset($event['birt']);
-		unset($event['deat']);
-
-		if(empty($event)){
-			$event[0][0] = array(
-				'date' => '', 
-				'place' => '',
-				'type' => ''
-			);
-		}
-
-		$aditionals_events = $this->get_aditionals_events();
-
-		?>
-		<div class="gta-col-3 coll-three">
-			<table class="gta-table">
-				<tr>
-					<td colspan="2">
-						<h4><?php _e('Additional Events', 'genealogical-tree'); ?></h4>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2">					
-						<?php 
-						$yc = 0; 
-						foreach ($event as $key => $event_single_group) {  
-						$xc = 0; 
-						?>
-						<?php				
-						foreach ($event_single_group as $keyx => $value) {
-						?>
-						<div class="repetead-field rep-birt-deat-event"> 
-							<?php if ($yc===0){ ?>
-								<span class="clone"><?php _e('Add', 'genealogical-tree'); ?></span>
-							<?php } if ($yc>0){ ?>
-								<span class="delete"><?php _e('Delete', 'genealogical-tree'); ?></span>
-							<?php }  ?>
-							<table class="gta-table">
-								<tr>
-									<td style="width: 150px;">
-										<label style="padding-right: 20px;" for="schooling">
-											<select name="gt[event][<?php echo $yc; ?>][<?php echo $xc; ?>][type]">
-												<option value="0"><?php _e('Select an Event', 'genealogical-tree'); ?></option>
-												<?php 
-												foreach ($aditionals_events as $keye => $valuee) { 
-													if (!isset($aditionals_events[$key]['type'])) {
-														if($event_single_group[$keyx]['type']){
-															$aditionals_events[$event_single_group[$keyx]['type']] = array(
-																'type' => $event_single_group[$keyx]['type'],
-																'title' => ucfirst(str_replace('_', ' ', $event_single_group[$keyx]['type'])),
-															);
-														}
-													}
-												}
-												foreach ($aditionals_events as $keye => $valuee) { 
-													?>
-													<option value="<?php echo $valuee['type']; ?>" <?php if($event[$key][$keyx]['type']===$valuee['type']) {echo "selected";}   ?> > 
-														<?php echo ucfirst(strtolower($valuee['title'])); ?>
-													</option>
-													<?php 
-												} 
-												?>
-											</select>
-										</label>
-									</td>
-									<td>
-										<table class="gta-table">
-											<tr>
-												<td><?php _e('Date', 'genealogical-tree'); ?></td>
-												<td><input type="text" id="schooling" value="<?php echo $value['date']; ?>" name="gt[event][<?php echo $yc; ?>][<?php echo $xc; ?>][date]"></td>
-											</tr>
-											<tr>
-												<td><?php _e('Place', 'genealogical-tree'); ?></td>
-												<td>
-													<input type="text" id="schooling" value="<?php echo isset($value['place']) ? $value['place'] : ''; ?>" name="gt[event][<?php echo $yc; ?>][<?php echo $xc; ?>][place]">
-													<input type="hidden" id="schooling" name="gt[event][<?php echo $yc; ?>][<?php echo $xc; ?>][ref]">
-												</td>
-											</tr>
-										</table>
-									</td>
-								</tr>
-							</table>
-						</div>
-						<?php 
-						$xc++;
-						}
-						?>
-						<?php
-						$yc++;
-						} 
-						?>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2" style="padding:0px;">
-						<h4><?php _e('Contact Information', 'genealogical-tree'); ?></h4>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label style="width:171px;" for="phone"><?php _e('Phone', 'genealogical-tree'); ?></label>
-					</td>
-					<td>
-						<?php foreach ($phone as $key => $phon) { ?>
-							<div class="repetead-field"> 
-							<?php if ($key===0){ ?>
-								<span class="clone"><?php _e('Add', 'genealogical-tree'); ?></span>
-							<?php } if ($key > 0){ ?>
-								<span class="delete"><?php _e('Delete', 'genealogical-tree'); ?></span>
-							<?php }  ?>
-								<input type="text" id="phone" name="gt[phone][<?php echo $key; ?>]" value="<?php echo $phon; ?>">
-							</div>
-						<?php } ?>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label for="email"><?php _e('Email', 'genealogical-tree'); ?></label>
-					</td>
-					<td>
-						<?php foreach ($email as $key => $emai) { ?>
-						<div class="repetead-field"> 
-							<?php if ($key===0){ ?>
-								<span class="clone"><?php _e('Add', 'genealogical-tree'); ?></span>
-							<?php } if ($key > 0){ ?>
-								<span class="delete"><?php _e('Delete', 'genealogical-tree'); ?></span>
-							<?php }  ?>
-							<input type="text" id="email" name="gt[email][<?php echo $key; ?>]"  value="<?php echo $emai; ?>">
-						</div>
-						<?php } ?>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<label for="address"><?php _e('Address', 'genealogical-tree'); ?></label>
-					</td>
-					<td>
-						<?php foreach ($address as $key => $addr) { ?>
-						<div class="repetead-field"> 
-							<?php if ($key===0){ ?>
-								<span class="clone"><?php _e('Add', 'genealogical-tree'); ?></span>
-							<?php } if ($key > 0){ ?>
-								<span class="delete"><?php _e('Delete', 'genealogical-tree'); ?></span>
-							<?php }  ?>
-							<input type="text" id="address" name="gt[address][<?php echo $key; ?>]"  value="<?php echo $addr; ?>">
-						</div>
-						<?php } ?>
+}
+?>
 					</td>
 				</tr>
 			</table>

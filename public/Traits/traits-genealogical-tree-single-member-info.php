@@ -1,754 +1,1215 @@
 <?php
 
-namespace Genealogical_Tree\Genealogical_Tree_Public\Traits;
+/**
+ * The admin-specific functionality of the plugin.
+ *
+ * @link       https://wordpress.org/plugins/genealogical-tree
+ * @since      1.0.0
+ *
+ * @package    Genealogical_Tree
+ * @subpackage Genealogical_Tree/admin
+ */
+namespace Zqe\Traits;
 
-trait Genealogical_Tree_Single_Member_info
+trait Genealogical_Tree_Single_Member_Info
 {
-    public function misha_gallery_images( $name, $value = '' )
-    {
-        $html = '
-        <div>
-            <ul class="misha_gallery_mtb">';
-        $hidden = array();
-        if ( $images = get_posts( array(
-            'post_type'      => 'attachment',
-            'orderby'        => 'post__in',
-            'order'          => 'ASC',
-            'post__in'       => explode( ',', $value ),
-            'numberposts'    => -1,
-            'post_mime_type' => 'image',
-        ) ) ) {
-            foreach ( $images as $image ) {
-                $hidden[] = $image->ID;
-                $image_src = wp_get_attachment_image_src( $image->ID, array( 80, 80 ) );
-                $html .= '<li data-id="' . $image->ID . '">
-                <span>
-                <img src="' . $image_src[0] . '">
-                </span>
-                </li>';
-            }
-        }
-        $html .= '</ul><div style="clear:both"></div></div>';
-        return $html;
-    }
-    
     /**
-     * Get childrens by father ID and mother ID
+     * Function for `single_member_info`
+     *
+     * @param  mixed $post_id post_id.
+     * @param  mixed $html html.
+     *
+     * @return mixed
      *
      * @since    1.0.0
      */
-    public function get_childrens( $root, $spouse )
+    public function single_member_info( $post_id, $html = '' )
     {
-        $chill = array();
-        $query = new \WP_Query( array(
-            'post_type'      => 'gt-family',
-            'posts_per_page' => 1,
-            'meta_query'     => array(
-            'relation' => 'AND',
-            array(
-            'key'     => 'father',
-            'value'   => $root,
-            'compare' => '=',
-        ),
-            array(
-            'key'     => 'mother',
-            'value'   => $spouse,
-            'compare' => '=',
-        ),
-        ),
-        ) );
-        if ( !$spouse ) {
-            $query = new \WP_Query( array(
-                'post_type'      => 'gt-family',
-                'posts_per_page' => 1,
-                'meta_query'     => array(
-                'relation' => 'AND',
-                array(
-                'key'     => 'father',
-                'value'   => $root,
-                'compare' => '=',
-            ),
-                array(
-                'key'     => 'spouse',
-                'compare' => 'NOT EXISTS',
-            ),
-            ),
-            ) );
-        }
-        
-        if ( $query->posts ) {
-            $family = current( $query->posts );
-            $chill = get_post_meta( $family->ID, 'chills' );
-        }
-        
-        if ( $chill ) {
-            foreach ( $chill as $key => $value ) {
-                if ( !get_post( $value ) ) {
-                    unset( $chill[$key] );
-                }
-            }
-        }
-        return $chill;
-    }
-    
-    /**
-     * Get children by father ID or mother ID
-     *
-     * @since    1.0.0
-     */
-    public function check_unknown_spouses( $root )
-    {
-        $spouses = array();
-        $query = new \WP_Query( array(
-            'post_type'      => 'gt-family',
-            'posts_per_page' => -1,
-            'meta_query'     => array(
-            'relation' => 'AND',
-            array(
-            'key'     => 'root',
-            'value'   => $root,
-            'compare' => '=',
-        ),
-            array(
-            'key'     => 'spouse',
-            'compare' => 'NOT EXISTS',
-        ),
-        ),
-        ) );
-        if ( $query->posts ) {
-            foreach ( $query->posts as $key => $family ) {
-                $chill = get_post_meta( $family->ID, 'chill', true );
-                if ( $chill ) {
-                    array_push( $spouses, $family->ID );
-                }
-            }
-        }
-        return $query->posts;
-    }
-    
-    /**
-     * Get siblings by ID
-     *
-     * @since    1.0.0
-     */
-    public function get_parent_families( $post_id )
-    {
-        return $this->findParentFamilyNew( $post_id );
-    }
-    
-    /**
-     * Get siblings by ID
-     *
-     * @since    1.0.0
-     */
-    public function get_families( $post_id )
-    {
-        return $this->findFamilyNew( $post_id );
-    }
-    
-    /**
-     * Member information By ID
-     *
-     * @since    1.0.0
-     */
-    public function single_member_info( $post_id )
-    {
-        $premium = false;
-        $through_import = get_post_meta( $post_id, 'through_import', true );
-        if ( $through_import && !$premium ) {
-            return;
-        }
-        $html = '';
+        /**
+         * Post id.
+         *
+         * @since
+         */
         if ( !$post_id ) {
             return $html;
         }
+        /**
+         * Post.
+         *
+         * @since
+         */
         if ( !get_post( $post_id ) ) {
             return $html;
         }
-        $gt_family_group = get_the_terms( $post_id, 'gt-family-group' );
-        $tree_link = '';
-        if ( $gt_family_group && !is_wp_error( $gt_family_group ) ) {
-            if ( $gt_family_group ) {
-                foreach ( $gt_family_group as $key => $term ) {
-                    $tree_link .= '
-                    <a class="tree_link" title="Family Tree – ' . $term->name . '" href="' . get_the_permalink( get_term_meta( $term->term_id, 'tree_page', true ) ) . '?root=' . $post_id . '"> 
-                        <img style="display:block; width: 20px;" src="' . GENEALOGICAL_TREE_DIR_URL . 'public/img/family-tree.svg">
-                    </a>
-                    ';
-                }
-            }
+        /**
+         * Through import.
+         *
+         * @since
+         */
+        $through_import = get_post_meta( $post_id, 'through_import', true );
+        /**
+         * Premium.
+         *
+         * @since
+         */
+        $premium = false;
+        if ( $through_import && !$premium ) {
+            return;
         }
-        $full_name = get_post_meta( $post_id, 'full_name', true );
-        $event = get_post_meta( $post_id, 'event', true );
-        $parent_html = '';
-        $parents = $this->findFamilyNew( $post_id, 'famc' );
-        
-        if ( $parents ) {
-            $row_count = 0;
-            foreach ( $parents as $key => $spouse ) {
-                $childrens = get_post_meta( $spouse->ID, 'chills' );
-                $mother = get_post_meta( $spouse->ID, 'mother', true );
-                $father = get_post_meta( $spouse->ID, 'father', true );
-                $parents[$key]->row_count = 0;
-                $childrens = get_post_meta( $spouse->ID, 'chills' );
-                $row_count++;
-                $parents[$key]->row_count++;
-                $row_count++;
-                $parents[$key]->row_count++;
-                
-                if ( $childrens ) {
-                    $row_count++;
-                    $parents[$key]->row_count++;
-                }
+        /**
+         * Even.
+         *
+         * @since
+         */
+        $even_array = ( get_post_meta( $post_id, 'even' ) ? get_post_meta( $post_id, 'even' ) : array() );
+        /**
+         * Fix even tag to uppercase.
+         *
+         * @since
+         */
+        foreach ( $even_array as $key => $value ) {
+            $even_array[$key]['tag'] = strtoupper( $even_array[$key]['tag'] );
+        }
+        $event = array();
+        $event['EVEN'] = array();
+        foreach ( $even_array as $key => $value ) {
             
+            if ( 'BIRT' === $value['tag'] ) {
+                $event['BIRT'][$key] = $value;
+            } elseif ( 'DEAT' === $value['tag'] ) {
+                $event['DEAT'][$key] = $value;
+            } else {
+                $event[$value['tag']][$key] = $value;
+            }
+        
+        }
+        $birt = ( isset( $event['BIRT'] ) && !empty($event['BIRT']) ? current( $event['BIRT'] ) : array(
+            'date' => '',
+            'plac' => '',
+        ) );
+        $chr = ( isset( $event['CHR'] ) && !empty($event['CHR']) ? current( $event['CHR'] ) : array(
+            'date' => '',
+            'plac' => '',
+        ) );
+        $deat = ( isset( $event['DEAT'] ) && !empty($event['DEAT']) ? current( $event['DEAT'] ) : array(
+            'date' => '',
+            'plac' => '',
+        ) );
+        $buri = ( isset( $event['BURI'] ) && !empty($event['BURI']) ? current( $event['BURI'] ) : array(
+            'date' => '',
+            'plac' => '',
+        ) );
+        $bapl = ( get_post_meta( $post_id, 'bapl', true ) ? get_post_meta( $post_id, 'bapl', true ) : array(
+            'date' => '',
+            'plac' => '',
+        ) );
+        $endl = ( get_post_meta( $post_id, 'endl', true ) ? get_post_meta( $post_id, 'endl', true ) : array(
+            'date' => '',
+            'plac' => '',
+        ) );
+        /**
+         * Note.
+         *
+         * @since
+         */
+        $note = ( get_post_meta( $post_id, 'note' ) ? get_post_meta( $post_id, 'note' ) : array() );
+        foreach ( $note as $key => $value ) {
+            if ( !isset( $value['note'] ) || isset( $value['note'] ) && !$value['note'] ) {
+                unset( $note[$key] );
             }
         }
-        
-        
-        if ( $parents ) {
-            $parent_html .= '<tr>';
-            $parent_html .= '<td colspan="4"></td>';
-            $parent_html .= '</tr>';
-            $sp = 1;
-            foreach ( $parents as $key => $spouse ) {
-                $childrens = get_post_meta( $spouse->ID, 'chills' );
-                $mother = get_post_meta( $spouse->ID, 'mother', true );
-                $father = get_post_meta( $spouse->ID, 'father', true );
-                
-                if ( $mother || $father ) {
-                    $parent_html .= '<tr>';
-                    
-                    if ( $sp === 1 ) {
-                        $parent_html .= '<td valign="top" rowspan="' . $row_count . '">';
-                        $parent_html .= __( 'Parents', 'genealogical-tree' );
-                        $parent_html .= '</td>';
-                    }
-                    
-                    $parent_html .= '<td  width="50" valign="top" rowspan="' . $parents[$key]->row_count . '">';
-                    $parent_html .= '#' . $sp;
-                    $sp++;
-                    $parent_html .= '</td>';
-                    $parent_html .= '<td  width="200">';
-                    $parent_html .= __( 'Mother', 'genealogical-tree' );
-                    $parent_html .= '</td>';
-                    $parent_html .= '<td>';
-                    
-                    if ( $mother ) {
-                        $parent_html .= '<a href="' . get_the_permalink( $mother ) . '">' . get_post_meta( $mother, 'full_name', true ) . '</a>';
-                    } else {
-                        $parent_html .= __( 'Unknown', 'genealogical-tree' );
-                    }
-                    
-                    $parent_html .= '</td>';
-                    $parent_html .= '</tr>';
-                    $parent_html .= '<tr>';
-                    $parent_html .= '<td  width="200">';
-                    $parent_html .= __( 'Father', 'genealogical-tree' );
-                    $parent_html .= '</td>';
-                    $parent_html .= '<td>';
-                    
-                    if ( $father ) {
-                        $parent_html .= '<a href="' . get_the_permalink( $father ) . '">' . get_post_meta( $father, 'full_name', true ) . '</a>';
-                    } else {
-                        $parent_html .= __( 'Unknown', 'genealogical-tree' );
-                    }
-                    
-                    $parent_html .= '</td>';
-                    $parent_html .= '</tr>';
-                    
-                    if ( $childrens ) {
-                        $parent_html .= '<tr>';
-                        $parent_html .= '<td valign="top">';
-                        $parent_html .= __( 'Siblings', 'genealogical-tree' );
-                        $parent_html .= '</td>';
-                        $parent_html .= '<td>';
-                        $children_html = array();
-                        foreach ( $childrens as $key => $children ) {
-                            
-                            if ( $children != $post_id ) {
-                                $gender = 'U';
-                                if ( get_post_meta( $children, 'sex', true ) === 'M' ) {
-                                    $gender = '<span class="gt-gender-emoji">♂️</span>';
-                                }
-                                if ( get_post_meta( $children, 'sex', true ) === 'F' ) {
-                                    $gender = '<span class="gt-gender-emoji">♀️</span>';
-                                }
-                                array_push( $children_html, ' <a href="' . get_the_permalink( $children ) . '">' . $gender . ' ' . get_post_meta( $children, 'full_name', true ) . '</a>' );
-                            }
-                        
-                        }
-                        $parent_html .= implode( ', ', $children_html );
-                        if ( empty($children_html) ) {
-                            $parent_html .= 'N/A';
-                        }
-                        $parent_html .= '</td>';
-                        $parent_html .= '</tr>';
-                    }
-                
-                }
-            
-            }
-        }
-        
-        $spouse_html = '';
-        $spouses = $this->findFamilyNew( $post_id, 'fams' );
-        
-        if ( $spouses ) {
-            $row_count = 0;
-            foreach ( $spouses as $key => $spouse ) {
-                $childrens = get_post_meta( $spouse->ID, 'chills' );
-                $mother = get_post_meta( $spouse->ID, 'mother', true );
-                $father = get_post_meta( $spouse->ID, 'father', true );
-                $spouse_id = ( $post_id == $father ? $mother : (( $post_id == $mother ? $father : NULL )) );
-                $spouses[$key]->row_count = 0;
-                $childrens = get_post_meta( $spouse->ID, 'chills' );
-                
-                if ( $spouse_id ) {
-                    $row_count++;
-                    $spouses[$key]->row_count++;
-                }
-                
-                
-                if ( $childrens ) {
-                    $row_count++;
-                    $spouses[$key]->row_count++;
-                }
-                
-                
-                if ( !$spouse_id && $childrens ) {
-                    $row_count++;
-                    $spouses[$key]->row_count++;
-                }
-            
-            }
-        }
-        
-        
-        if ( $spouses ) {
-            $spouse_html .= '<tr>';
-            $spouse_html .= '<td colspan="4"></td>';
-            $spouse_html .= '</tr>';
-            $sp = 1;
-            foreach ( $spouses as $key => $spouse ) {
-                $childrens = get_post_meta( $spouse->ID, 'chills' );
-                $mother = get_post_meta( $spouse->ID, 'mother', true );
-                $father = get_post_meta( $spouse->ID, 'father', true );
-                $date = get_post_meta( $spouse->ID, 'date', true );
-                $place = get_post_meta( $spouse->ID, 'place', true );
-                $spouse_id = ( $post_id == $father ? $mother : (( $post_id == $mother ? $father : NULL )) );
-                
-                if ( $spouse_id || !$spouse_id && $childrens ) {
-                    $spouse_html .= '<tr>';
-                    
-                    if ( $sp === 1 ) {
-                        $spouse_html .= '<td valign="top" rowspan="' . $row_count . '">';
-                        $spouse_html .= __( 'Spouse', 'genealogical-tree' );
-                        $spouse_html .= '</td>';
-                    }
-                    
-                    $spouse_html .= '<td  width="50" valign="top" rowspan="' . $spouses[$key]->row_count . '">';
-                    $spouse_html .= '#' . $sp;
-                    $sp++;
-                    $spouse_html .= '</td>';
-                    $spouse_html .= '<td  width="200">';
-                    $spouse_html .= __( 'Name', 'genealogical-tree' );
-                    $spouse_html .= '</td>';
-                    $spouse_html .= '<td>';
-                    
-                    if ( $spouse_id ) {
-                        $spouse_html .= '<a href="' . get_the_permalink( $spouse_id ) . '">' . get_post_meta( $spouse_id, 'full_name', true ) . '</a>';
-                    } else {
-                        $spouse_html .= __( 'Unknown', 'genealogical-tree' );
-                    }
-                    
-                    $spouse_html .= '</td>';
-                    $spouse_html .= '</tr>';
-                    
-                    if ( $childrens ) {
-                        $spouse_html .= '<tr>';
-                        $spouse_html .= '<td valign="top">';
-                        $spouse_html .= __( 'Children', 'genealogical-tree' );
-                        $spouse_html .= '</td>';
-                        $spouse_html .= '<td>';
-                        $children_html = array();
-                        foreach ( $childrens as $key => $children ) {
-                            $gender = 'U';
-                            if ( get_post_meta( $children, 'sex', true ) === 'M' ) {
-                                $gender = '<span class="gt-gender-emoji">♂️</span>';
-                            }
-                            if ( get_post_meta( $children, 'sex', true ) === 'F' ) {
-                                $gender = '<span class="gt-gender-emoji">♀️</span>';
-                            }
-                            array_push( $children_html, ' <a href="' . get_the_permalink( $children ) . '">' . $gender . ' ' . get_post_meta( $children, 'full_name', true ) . '</a>' );
-                        }
-                        $spouse_html .= implode( ', ', $children_html );
-                        $spouse_html .= '</td>';
-                        $spouse_html .= '</tr>';
-                    }
-                
-                }
-            
-            }
-        }
-        
-        $birt_html = '';
-        if ( isset( $event['birt'] ) && $event['birt'] ) {
-            foreach ( $event['birt'] as $key => $birt ) {
-                if ( !isset( $birt['place'] ) ) {
-                    $birt['place'] = '';
-                }
-                if ( !$birt['date'] && !$birt['place'] ) {
-                    unset( $event['birt'][$key] );
-                }
-            }
-        }
-        
-        if ( isset( $event['birt'] ) && $event['birt'] ) {
-            $row_count = 0;
-            foreach ( $event['birt'] as $key => $birt ) {
-                if ( isset( $birt['date'] ) && $birt['date'] ) {
-                    $row_count++;
-                }
-                if ( isset( $birt['place'] ) && $birt['place'] ) {
-                    $row_count++;
-                }
-            }
-            $ref = 1;
-            foreach ( $event['birt'] as $key => $birt ) {
-                $birt_html .= '<tr>';
-                
-                if ( $ref === 1 ) {
-                    $birt_html .= '<td valign="top" colspan="1" rowspan="' . $row_count . '">';
-                    $birt_html .= __( 'Birth', 'genealogical-tree' );
-                    $birt_html .= '</td>';
-                }
-                
-                
-                if ( isset( $birt['date'] ) || isset( $birt['place'] ) ) {
-                    $inner_row_count = 1;
-                    if ( isset( $birt['date'] ) && $birt['date'] && isset( $birt['place'] ) && $birt['place'] ) {
-                        $inner_row_count = 2;
-                    }
-                    $birt_html .= '<td valign="top" width="50" rowspan="' . $inner_row_count . '">';
-                    $birt_html .= '#' . $ref;
-                    $ref++;
-                    $birt_html .= '</td>';
-                    
-                    if ( isset( $birt['date'] ) && $birt['date'] ) {
-                        $birt_html .= '<td>';
-                        $birt_html .= __( 'Date of Birth', 'genealogical-tree' );
-                        $birt_html .= '</td>';
-                        $birt_html .= '<td>';
-                        $birt_html .= $birt['date'];
-                        $birt_html .= '</td>';
-                    }
-                    
-                    if ( isset( $birt['date'] ) && $birt['date'] ) {
-                        $birt_html .= '</tr>';
-                    }
-                    
-                    if ( isset( $birt['place'] ) && $birt['place'] ) {
-                        if ( isset( $birt['date'] ) && $birt['date'] ) {
-                            $birt_html .= '<tr>';
-                        }
-                        $birt_html .= '<td>';
-                        $birt_html .= __( 'Place of Birth', 'genealogical-tree' );
-                        $birt_html .= '</td>';
-                        $birt_html .= '<td>';
-                        $birt_html .= $birt['place'];
-                        $birt_html .= '</td>';
-                        $birt_html .= '</tr>';
-                    }
-                
-                }
-                
-                $birt_html .= '</tr>';
-            }
-        }
-        
-        $deat_html = '';
-        if ( isset( $event['deat'] ) && $event['deat'] ) {
-            foreach ( $event['deat'] as $key => $deat ) {
-                if ( !isset( $deat['place'] ) ) {
-                    $deat['place'] = '';
-                }
-                if ( !$deat['date'] && !$deat['place'] ) {
-                    unset( $event['deat'][$key] );
-                }
-            }
-        }
-        
-        if ( isset( $event['deat'] ) && $event['deat'] ) {
-            $row_count = 0;
-            foreach ( $event['deat'] as $key => $deat ) {
-                if ( isset( $deat['date'] ) && $deat['date'] ) {
-                    $row_count++;
-                }
-                if ( isset( $deat['place'] ) && $deat['place'] ) {
-                    $row_count++;
-                }
-            }
-            $ref = 1;
-            foreach ( $event['deat'] as $key => $deat ) {
-                $deat_html .= '<tr>';
-                
-                if ( $ref === 1 ) {
-                    $deat_html .= '<td valign="top" colspan="1" rowspan="' . $row_count . '">';
-                    $deat_html .= __( 'Death', 'genealogical-tree' );
-                    $deat_html .= '</td>';
-                }
-                
-                
-                if ( isset( $deat['date'] ) || isset( $deat['place'] ) ) {
-                    $inner_row_count = 1;
-                    if ( isset( $deat['date'] ) && $deat['date'] && isset( $deat['place'] ) && $deat['place'] ) {
-                        $inner_row_count = 2;
-                    }
-                    $deat_html .= '<td valign="top" rowspan="' . $inner_row_count . '">';
-                    $deat_html .= '#' . $ref;
-                    $ref++;
-                    $deat_html .= '</td>';
-                    
-                    if ( isset( $deat['date'] ) && $deat['date'] ) {
-                        $deat_html .= '<td>';
-                        $deat_html .= __( 'Date of death', 'genealogical-tree' );
-                        $deat_html .= '</td>';
-                        $deat_html .= '<td>';
-                        $deat_html .= $deat['date'];
-                        $deat_html .= '</td>';
-                    }
-                    
-                    if ( isset( $deat['date'] ) && $deat['date'] ) {
-                        $deat_html .= '</tr>';
-                    }
-                    
-                    if ( isset( $deat['place'] ) && $deat['place'] ) {
-                        if ( isset( $deat['date'] ) && $deat['date'] ) {
-                            $deat_html .= '<tr>';
-                        }
-                        $deat_html .= '<td>';
-                        $deat_html .= __( 'Place of death', 'genealogical-tree' );
-                        $deat_html .= '</td>';
-                        $deat_html .= '<td>';
-                        $deat_html .= $deat['place'];
-                        $deat_html .= '</td>';
-                        $deat_html .= '</tr>';
-                    }
-                
-                }
-                
-                $deat_html .= '</tr>';
-            }
-        }
-        
-        $address_html = '';
-        
-        if ( isset( $event['address_(other)'] ) ) {
-            $address_html .= '<tr>';
-            $address_html .= '<td colspan="4"></td>';
-            $address_html .= '</tr>';
-            $address = array();
-            foreach ( $event['address_(other)'] as $keya => $value ) {
-                array_push( $address, $value );
-            }
-            $address_html .= '<tr>';
-            $address_html .= '<td valign="top" rowspan="' . (count( $address ) + 1) . '">';
-            $address_html .= __( 'Location', 'genealogical-tree' );
-            $address_html .= '</td>';
-            $ref = 1;
-            if ( $address ) {
-                foreach ( $address as $keyas => $address_single ) {
-                    
-                    if ( isset( $address_single['place'] ) && $address_single['place'] ) {
-                        $address_html .= '<tr>';
-                        $address_html .= '<td>';
-                        $address_html .= '#' . $ref;
-                        $ref++;
-                        $address_html .= '</td>';
-                        $address_html .= '<td colspan="2">';
-                        $address_html .= $address_single['place'];
-                        if ( isset( $address_single['date'] ) && $address_single['date'] ) {
-                            $address_html .= ' (' . $address_single['date'] . ') ';
-                        }
-                        $address_html .= '</td>';
-                        $address_html .= '</tr>';
-                    }
-                
-                }
-            }
-            $address_html .= '</tr>';
-        }
-        
-        $aditionals_events = array(
-            'buri'            => array(
-            'type'  => 'buri',
-            'title' => __( 'Burial', 'genealogical-tree' ),
-        ),
-            'adop'            => array(
-            'type'  => 'adop',
-            'title' => __( 'Adoption', 'genealogical-tree' ),
-        ),
-            'enga'            => array(
-            'type'  => 'enga',
-            'title' => __( 'Engagement', 'genealogical-tree' ),
-        ),
-            'marr'            => array(
-            'type'  => 'marr',
-            'title' => __( 'Marriage', 'genealogical-tree' ),
-        ),
-            'div'             => array(
-            'type'  => 'div',
-            'title' => __( 'Divorce', 'genealogical-tree' ),
-        ),
-            'address_(other)' => array(
-            'type'  => 'address_(other)',
-            'title' => __( 'Address (Other)', 'genealogical-tree' ),
-        ),
-            'bapm'            => array(
-            'type'  => 'bapm',
-            'title' => __( 'Baptism', 'genealogical-tree' ),
-        ),
-            'arms'            => array(
-            'type'  => 'arms',
-            'title' => __( 'arms', 'genealogical-tree' ),
-        ),
-            'occupation_1'    => array(
-            'type'  => 'occupation_1',
-            'title' => __( 'Occupation', 'genealogical-tree' ),
-        ),
-        );
-        if ( isset( $event['birt'] ) ) {
-            unset( $event['birt'] );
-        }
-        if ( isset( $event['deat'] ) ) {
-            unset( $event['deat'] );
-        }
-        if ( isset( $event['address_(other)'] ) ) {
-            unset( $event['address_(other)'] );
-        }
-        $events_html = '';
-        
-        if ( $event ) {
-            $events_html .= '<tr>';
-            $events_html .= '<td colspan="4"></td>';
-            $events_html .= '</tr>';
-            $events_html .= '<tr>';
-            $events_html .= '<td valign="top" colspan="4">';
-            $events_html .= __( 'Events', 'genealogical-tree' );
-            $events_html .= '</td>';
-            $events_html .= '</tr>';
-            $events_html .= '<tr>';
-            foreach ( $event as $key => $ev ) {
-                
-                if ( $key != 'birt' && $key != 'deat' && $key != 'address_(other)' ) {
-                    $ref = 1;
-                    if ( $ev ) {
-                        foreach ( $ev as $keyx => $evs ) {
-                            $events_html .= '<tr>';
-                            
-                            if ( $ref == 1 ) {
-                                $events_html .= '<td  valign="top" rowspan="2">';
-                                
-                                if ( isset( $aditionals_events[$key] ) ) {
-                                    $events_html .= $aditionals_events[$key]['title'];
-                                } else {
-                                    $events_html .= ucfirst( str_replace( '_', ' ', $key ) );
-                                }
-                                
-                                $events_html .= '</td>';
-                            }
-                            
-                            $events_html .= '<td  valign="top" rowspan="2">';
-                            $events_html .= ' #' . $ref;
-                            $ref++;
-                            $events_html .= '</td>';
-                            
-                            if ( isset( $evs['date'] ) && $evs['date'] ) {
-                                $events_html .= '<td  valign="top">';
-                                $events_html .= __( 'Date', 'genealogical-tree' );
-                                $events_html .= '</td>';
-                                $events_html .= '<td>';
-                                $events_html .= $evs['date'];
-                                $events_html .= '</td>';
-                                $events_html .= '</tr>';
-                            }
-                            
-                            
-                            if ( isset( $evs['place'] ) && $evs['place'] ) {
-                                $events_html .= '<tr>';
-                                $events_html .= '<td>';
-                                $events_html .= __( 'Place', 'genealogical-tree' );
-                                $events_html .= '</td>';
-                                $events_html .= '<td>';
-                                $events_html .= $evs['place'];
-                                $events_html .= '</td>';
-                                $events_html .= '</tr>';
-                            }
-                            
-                            $events_html .= '</tr>';
-                        }
-                    }
-                }
-            
-            }
-            $events_html .= '</tr>';
-        }
-        
+        /**
+         * Gender.
+         *
+         * @since
+         */
         $gender = 'U';
         if ( get_post_meta( $post_id, 'sex', true ) === 'M' ) {
-            $gender = '<span class="gt-gender-emoji">♂️</span>';
+            $gender = esc_html__( '♂️ Male', 'genealogical-tree' );
         }
         if ( get_post_meta( $post_id, 'sex', true ) === 'F' ) {
-            $gender = '<span class="gt-gender-emoji">♀️</span>';
+            $gender = esc_html__( '♀️ Female', 'genealogical-tree' );
         }
-        if ( is_single() ) {
-            $featured_img_url = get_the_post_thumbnail_url( $post_id, 'full' );
+        /**
+         * Slgc.
+         *
+         * @since
+         */
+        $slgcs = ( get_post_meta( $post_id, 'slgc' ) ? get_post_meta( $post_id, 'slgc' ) : array( array(
+            'famc' => '',
+            'date' => '',
+            'plac' => '',
+        ) ) );
+        /**
+         * To do make it done with array_filter.
+         *
+         * @since
+         */
+        $famc_array = ( get_post_meta( $post_id, 'famc' ) ? get_post_meta( $post_id, 'famc' ) : array( array(
+            'famc' => '',
+        ) ) );
+        $is_duplicate_famc_array = array();
+        foreach ( $famc_array as $key => $famc ) {
+            if ( !isset( $famc['famc'] ) ) {
+                unset( $famc_array[$key] );
+            }
+            
+            if ( is_array( $famc ) ) {
+                if ( in_array( $famc['famc'], $is_duplicate_famc_array, true ) ) {
+                    unset( $famc_array[$key] );
+                }
+                array_push( $is_duplicate_famc_array, $famc['famc'] );
+            }
+        
         }
-        $name_html = '
-        <tr>
-            <td colspan="1">' . __( 'Full Name', 'genealogical-tree' ) . '</td>
-            <td colspan="3"> <a href="' . get_the_permalink( $post_id ) . '"> ' . $full_name . '</a> - ' . $tree_link . '</td>
-        </tr>';
-        $featured_img_html = '';
-        if ( isset( $featured_img_url ) && $featured_img_url ) {
-            $featured_img_html .= '
-            <tr>
-                <td colspan="4">
-                    <img src="' . $featured_img_url . '">
-                </td>
-            </tr>';
+        $parents = array();
+        foreach ( $famc_array as $key => $famc ) {
+            if ( isset( $famc['famc'] ) && $famc['famc'] && is_array( $famc['famc'] ) ) {
+                $famc['famc'] = $famc['famc']['famc'];
+            }
+            
+            if ( $famc['famc'] ) {
+                $parents[$key]['family_id'] = $famc['famc'];
+                $parents[$key]['father_id'] = ( get_post_meta( $famc['famc'], 'husb', true ) ? get_post_meta( $famc['famc'], 'husb', true ) : null );
+                $parents[$key]['mother_id'] = ( get_post_meta( $famc['famc'], 'wife', true ) ? get_post_meta( $famc['famc'], 'wife', true ) : null );
+                $parents[$key]['chil'] = ( get_post_meta( $famc['famc'], 'chil' ) ? get_post_meta( $famc['famc'], 'chil' ) : array() );
+                $i = array_search( $post_id, $parents[$key]['chil'], true );
+                if ( false !== $i ) {
+                    unset( $parents[$key]['chil'][$i] );
+                }
+                $parents[$key]['even'] = array();
+                $famc_even_array = ( get_post_meta( $famc['famc'], 'even' ) ? get_post_meta( $famc['famc'], 'even' ) : array() );
+                foreach ( $famc_even_array as $even_key => $even ) {
+                    $parents[$key]['even'][strtoupper( $even['tag'] )][$even_key] = $even;
+                }
+                $parents[$key]['SLGC'] = array(
+                    'famc' => '',
+                    'date' => '',
+                    'plac' => '',
+                );
+                foreach ( $slgcs as $key => $value ) {
+                    if ( $famc['famc'] === $value['famc'] ) {
+                        $parents[$key]['SLGC'] = $value;
+                    }
+                }
+                $parents[$key]['MARR'] = ( isset( $parents[$key]['even']['MARR'] ) && !empty($parents[$key]['even']['MARR']) ? current( $parents[$key]['even']['MARR'] ) : array(
+                    'date' => '',
+                    'plac' => '',
+                ) );
+            }
+        
         }
-        $html .= '<h3>' . __( 'Member Information', 'genealogical-tree' ) . '</h3>';
-        /*print_r(get_query_var( 'tab'));*/
-        $html .= '
-		<table class="table table-hover table-condensed indi genealogical-tree-member">
-			<tbody>
-			<tr style="visibility: collapse;">
-			<td width="100"><div style="width:100px;"></div></td>
-			<td width="40"><div style="width:40px;"></div></td>
-			<td width="100"><div style="width:100px;"></div></td>
-			<td width="100%"></td>
-			</tr>';
-        $html .= '
-                ' . $featured_img_html . '
-                ' . $name_html . '
-                ' . $birt_html . '
-                ' . $parent_html . '
-				' . $spouse_html . '
-				' . $deat_html . '
-				' . $address_html . '
-				' . $events_html . '
-			</tbody>
+        /**
+         * To do make it done with array_filter.
+         *
+         * @since
+         */
+        $fams_array = ( get_post_meta( $post_id, 'fams' ) ? get_post_meta( $post_id, 'fams' ) : array() );
+        foreach ( $fams_array as $key => $fams ) {
+            if ( !isset( $fams['fams'] ) ) {
+                unset( $fams_array[$key] );
+            }
+        }
+        $spouses = array();
+        foreach ( $fams_array as $key => $fams ) {
+            if ( isset( $fams['fams'] ) && $fams['fams'] && is_array( $fams['fams'] ) ) {
+                $fams['fams'] = $fams['fams']['fams'];
+            }
+            
+            if ( $fams['fams'] ) {
+                $husb = ( get_post_meta( $fams['fams'], 'husb', true ) ? get_post_meta( $fams['fams'], 'husb', true ) : null );
+                $wife = ( get_post_meta( $fams['fams'], 'wife', true ) ? get_post_meta( $fams['fams'], 'wife', true ) : null );
+                $fams_even_array = ( get_post_meta( $fams['fams'], 'even' ) ? get_post_meta( $fams['fams'], 'even' ) : array() );
+                $spouses[$key]['family_id'] = $fams['fams'];
+                $spouses[$key]['spouse'] = ( $husb === $post_id ? $wife : $husb );
+                $spouses[$key]['even'] = array();
+                foreach ( $fams_even_array as $even_key => $even ) {
+                    $spouses[$key]['even'][$even['tag']][$even_key] = $even;
+                }
+                $spouses[$key]['MARR'] = ( isset( $spouses[$key]['even']['MARR'] ) && !empty($spouses[$key]['even']['MARR']) ? current( $spouses[$key]['even']['MARR'] ) : array(
+                    'date' => '',
+                    'plac' => '',
+                ) );
+                $spouses[$key]['SLGS'] = ( get_post_meta( $fams['fams'], 'slgs' ) ? current( get_post_meta( $fams['fams'], 'slgs' ) ) : array(
+                    'date' => '',
+                    'plac' => '',
+                ) );
+                $spouses[$key]['chil'] = ( get_post_meta( $fams['fams'], 'chil' ) ? get_post_meta( $fams['fams'], 'chil' ) : array() );
+            }
+        
+        }
+        /**
+         * Additional fields.
+         *
+         * @since
+         */
+        $additional_fields = ( get_post_meta( $post_id, 'additional_fields' ) ? get_post_meta( $post_id, 'additional_fields' ) : array() );
+        /**
+         * Phone.
+         *
+         * @since
+         */
+        $phone = ( get_post_meta( $post_id, 'phone' ) ? get_post_meta( $post_id, 'phone' ) : array() );
+        $email = ( get_post_meta( $post_id, 'email' ) ? get_post_meta( $post_id, 'email' ) : array() );
+        $address = ( get_post_meta( $post_id, 'address' ) ? get_post_meta( $post_id, 'address' ) : array() );
+        $featured_img_url = get_the_post_thumbnail_url( $post_id, 'full' );
+        ob_start();
+        ?>
+
+		<!-- Personal Information -->
+		<h4>
+			<?php 
+        esc_html_e( 'Personal Information', 'genealogical-tree' );
+        ?>
+		</h4>
+		<table border="0" style="width:100%; max-width: 800px;" class="table table-hover table-condensed indi genealogical-tree-member">
+
+		<?php 
+        
+        if ( $featured_img_url ) {
+            ?>
+			<tr>
+				<td colspan="3">
+					<img src="<?php 
+            echo  esc_attr( $featured_img_url ) ;
+            ?>">
+				</td>
+			</tr>
+			<?php 
+        }
+        
+        ?>
+
+			<tr>
+				<td>
+					<div style="width:150px;">
+						<?php 
+        esc_html_e( 'Name', 'genealogical-tree' );
+        ?>
+					</div>
+				</td>
+				<td width="100%" colspan="2">
+					<a href="<?php 
+        echo  esc_attr( get_the_permalink( $post_id ) ) ;
+        ?>">
+						<?php 
+        echo  esc_html( $this->plugin->helper->get_full_name( $post_id ) ) ;
+        ?>
+					</a>
+					<?php 
+        $this->get_tree_link( $post_id );
+        ?>
+				</td>
+			</tr>
+
+			<?php 
+        
+        if ( $birt['date'] || $birt['plac'] ) {
+            ?>
+			<tr>
+				<td>
+					<?php 
+            esc_html_e( 'Born', 'genealogical-tree' );
+            ?>
+				</td>
+				<td>
+					<?php 
+            echo  esc_html( $birt['date'] ) ;
+            ?>
+				</td>
+				<td>
+					<?php 
+            echo  esc_html( $birt['plac'] ) ;
+            ?>
+				</td>
+			</tr>
+			<?php 
+        }
+        
+        ?>
+
+			<?php 
+        
+        if ( $chr['date'] || $chr['plac'] ) {
+            ?>
+			<tr>
+				<td>
+					<?php 
+            esc_html_e( 'Christened', 'genealogical-tree' );
+            ?>
+				</td>
+				<td>
+					<?php 
+            echo  esc_html( $chr['date'] ) ;
+            ?>
+				</td>
+				<td>
+					<?php 
+            echo  esc_html( $chr['plac'] ) ;
+            ?>
+				</td>
+			</tr>
+			<?php 
+        }
+        
+        ?>
+
+			<tr>
+				<td>
+					<?php 
+        esc_html_e( 'Gender', 'genealogical-tree' );
+        ?>
+				</td>
+				<td colspan="2">
+					<span class="gt-gender-emoji">
+						<?php 
+        echo  esc_html( $gender ) ;
+        ?>
+					</span>
+				</td>
+			</tr>
+
+			<?php 
+        
+        if ( $deat['date'] || $deat['plac'] ) {
+            ?>
+			<tr>
+				<td>
+					<?php 
+            esc_html_e( 'Died', 'genealogical-tree' );
+            ?>
+				</td>
+				<td>
+					<?php 
+            echo  esc_html( $deat['date'] ) ;
+            ?>
+				</td>
+				<td>
+					<?php 
+            echo  esc_html( $deat['plac'] ) ;
+            ?>
+				</td>
+			</tr>
+			<?php 
+        }
+        
+        ?>
+
+			<?php 
+        
+        if ( $buri['date'] || $buri['plac'] ) {
+            ?>
+			<tr>
+				<td>
+					<?php 
+            esc_html_e( 'Buried', 'genealogical-tree' );
+            ?>
+				</td>
+				<td>
+					<?php 
+            echo  esc_html( $buri['date'] ) ;
+            ?>
+				</td>
+				<td>
+					<?php 
+            echo  esc_html( $buri['plac'] ) ;
+            ?>
+				</td>
+			</tr>
+			<?php 
+        }
+        
+        ?>
+
+			<?php 
+        
+        if ( $bapl['date'] || $bapl['plac'] ) {
+            ?>
+			<tr>
+				<td>
+					<?php 
+            esc_html_e( 'Baptized (LDS)', 'genealogical-tree' );
+            ?>
+				</td>
+				<td>
+					<?php 
+            echo  esc_html( $bapl['date'] ) ;
+            ?>
+				</td>
+				<td>
+					<?php 
+            echo  esc_html( $bapl['plac'] ) ;
+            ?>
+				</td>
+			</tr>
+			<?php 
+        }
+        
+        ?>
+
+			<?php 
+        
+        if ( $endl['date'] || $endl['plac'] ) {
+            ?>
+			<tr>
+				<td>
+					<?php 
+            esc_html_e( 'Endowed (LDS)', 'genealogical-tree' );
+            ?>
+				</td>
+				<td>
+					<?php 
+            echo  esc_html( $endl['date'] ) ;
+            ?>
+				</td>
+				<td>
+					<?php 
+            echo  esc_html( $endl['plac'] ) ;
+            ?>
+				</td>
+			</tr>
+			<?php 
+        }
+        
+        ?>
+
+			<?php 
+        
+        if ( !empty($note) ) {
+            ?>
+			<tr>
+				<td valign="top"  colspan="3">
+					<?php 
+            esc_html_e( 'Notes ', 'genealogical-tree' );
+            ?>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<div style="max-height: 300px; width: 100%; overflow-y: scroll;">
+					<?php 
+            foreach ( $note as $key => $value ) {
+                
+                if ( (!isset( $value['isRef'] ) || $value['isRef']) && $value['note'] ) {
+                    echo  esc_html( nl2br( $value['note'] ) ) ;
+                    echo  '<br>' ;
+                    echo  '<br>' ;
+                }
+            
+            }
+            ?>
+					</div>
+				</td>
+			</tr>
+			<?php 
+        }
+        
+        ?>
+
+
+			<tr>
+				<td>
+					<?php 
+        esc_html_e( 'Person ID', 'genealogical-tree' );
+        ?>
+				</td>
+				<td colspan="2">
+					<?php 
+        echo  esc_html( $post_id ) ;
+        ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php 
+        esc_html_e( 'Last Modified', 'genealogical-tree' );
+        ?>
+				</td>
+				<td colspan="2">
+					<?php 
+        echo  esc_html( get_post( $post_id )->post_modified ) ;
+        ?>
+				</td>
+			</tr>
+
+
 		</table>
-		';
-        $additional_info = get_post_meta( $post_id, 'additional_info', true );
+
+		<!-- Parents -->
+		<?php 
         
-        if ( $additional_info ) {
-            $html .= '<h3>' . __( 'Additional Information', 'genealogical-tree' ) . '</h3>';
-            $html .= wpautop( wp_kses_post( get_post_meta( $post_id, 'additional_info', true ) ) );
+        if ( !empty($parents) ) {
+            ?>
+			<?php 
+            $parents_count = 1;
+            foreach ( $parents as $key => $family ) {
+                ?>
+		<h4>
+				<?php 
+                esc_html_e( 'Parents', 'genealogical-tree' );
+                ?> 
+				(
+					<?php 
+                echo  esc_html( $parents_count ) ;
+                ?> 
+					<?php 
+                $parents_count++;
+                ?>
+				)
+		</h4>
+		<table border="0" style="width:100%; max-width: 800px;">
+				<?php 
+                
+                if ( $family['father_id'] ) {
+                    ?>
+			<tr>
+				<td>
+					<div style="width:150px;">
+						<?php 
+                    esc_html_e( 'Father', 'genealogical-tree' );
+                    ?>
+					</div>
+				</td>
+				<td width="100%" colspan="2">
+					<a href="<?php 
+                    echo  esc_attr( get_the_permalink( $family['father_id'] ) ) ;
+                    ?>">
+						<?php 
+                    echo  esc_html( $this->plugin->helper->get_full_name( $family['father_id'] ) ) ;
+                    ?>
+					</a>
+				</td>
+			</tr>
+			<?php 
+                }
+                
+                ?>
+
+				<?php 
+                
+                if ( $family['mother_id'] ) {
+                    ?>
+			<tr>
+				<td>
+					<?php 
+                    esc_html_e( 'Mother', 'genealogical-tree' );
+                    ?>
+				</td>
+				<td colspan="2">
+					<a href="<?php 
+                    echo  esc_attr( get_the_permalink( $family['mother_id'] ) ) ;
+                    ?>">
+						<?php 
+                    echo  esc_html( $this->plugin->helper->get_full_name( $family['mother_id'] ) ) ;
+                    ?>
+					</a>
+				</td>
+			</tr>
+			<?php 
+                }
+                
+                ?>
+
+				<?php 
+                
+                if ( isset( $family['MARR'] ) && ($family['MARR']['date'] || $family['MARR']['plac']) ) {
+                    ?>
+			<tr>
+				<td>
+					<?php 
+                    esc_html_e( 'Married', 'genealogical-tree' );
+                    ?>
+				</td>
+				<td>
+					<?php 
+                    echo  esc_html( $family['MARR']['date'] ) ;
+                    ?>
+				</td>
+				<td>
+					<?php 
+                    echo  esc_html( $family['MARR']['plac'] ) ;
+                    ?>
+				</td>
+			</tr>
+			<?php 
+                }
+                
+                ?>
+
+				<?php 
+                
+                if ( $family['SLGC']['date'] || $family['SLGC']['plac'] ) {
+                    ?>
+			<tr>
+				<td>
+					<?php 
+                    esc_html_e( 'Sealed P (LDS)', 'genealogical-tree' );
+                    ?>
+				</td>
+				<td>
+					<?php 
+                    echo  esc_html( $family['SLGC']['date'] ) ;
+                    ?>
+				</td>
+				<td>
+					<?php 
+                    echo  esc_html( $family['SLGC']['plac'] ) ;
+                    ?>
+				</td>
+			</tr>
+			<?php 
+                }
+                
+                ?>
+
+				<?php 
+                
+                if ( !empty($family['chil']) ) {
+                    ?>
+			<tr>
+				<td valign="top">
+					<?php 
+                    esc_html_e( 'Siblings ', 'genealogical-tree' );
+                    ?>
+				</td>
+				<td colspan="2">
+					<?php 
+                    $chils = array_unique( $family['chil'] );
+                    foreach ( $chils as $key => $chil ) {
+                        
+                        if ( $post_id !== $chil ) {
+                            $gender = '⚥';
+                            if ( 'M' === get_post_meta( $chil, 'sex', true ) ) {
+                                $gender = '♂️';
+                            }
+                            if ( 'F' === get_post_meta( $chil, 'sex', true ) ) {
+                                $gender = '♀️';
+                            }
+                            ?>
+							<a href="<?php 
+                            echo  esc_attr( get_the_permalink( $chil ) ) ;
+                            ?>">
+								<span class="gt-gender-emoji"><?php 
+                            echo  esc_html( $gender ) ;
+                            ?></span> <?php 
+                            echo  esc_html( $this->plugin->helper->get_full_name( $chil ) ) ;
+                            ?>
+							</a>
+							<br>
+							<?php 
+                        }
+                    
+                    }
+                    ?>
+				</td>
+			</tr>
+			<?php 
+                }
+                
+                ?>
+			<tr>
+				<td>
+					<?php 
+                esc_html_e( 'Family  ID', 'genealogical-tree' );
+                ?>
+				</td>
+				<td colspan="2">
+					<?php 
+                echo  esc_html( $family['family_id'] ) ;
+                ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php 
+                esc_html_e( 'Last Modified', 'genealogical-tree' );
+                ?>
+				</td>
+				<td colspan="2">
+					<?php 
+                echo  esc_html( get_post( $family['family_id'] )->post_modified ) ;
+                ?>
+				</td>
+			</tr>
+		</table>
+		<?php 
+            }
+            ?>
+		<?php 
         }
         
-        $html .= $this->misha_gallery_images( 'some_custom_gallery', get_post_meta( $post_id, 'some_custom_gallery', true ) );
+        ?>
+
+		<?php 
+        
+        if ( !empty($spouses) ) {
+            ?>
+		<!-- Families -->
+			<?php 
+            $spouses_count = 1;
+            foreach ( $spouses as $key => $family ) {
+                ?>
+		<h4>
+				<?php 
+                esc_html_e( 'Spouses', 'genealogical-tree' );
+                ?> (
+				<?php 
+                echo  esc_html( $spouses_count ) ;
+                ?>
+				<?php 
+                $spouses_count++;
+                ?>
+				)
+		</h4>
+		<table border="0" style="width:100%; max-width: 800px;">
+			<tr>
+				<td>
+					<div style="width:150px;"><?php 
+                esc_html_e( 'Spouse', 'genealogical-tree' );
+                ?> </div>
+				</td>
+				<td width="100%" colspan="2">
+				<?php 
+                
+                if ( $family['spouse'] ) {
+                    ?>
+					<a href="<?php 
+                    echo  esc_attr( get_the_permalink( $family['spouse'] ) ) ;
+                    ?>">
+						<?php 
+                    echo  esc_html( $this->plugin->helper->get_full_name( $family['spouse'] ) ) ;
+                    ?>
+					</a>
+					<?php 
+                } else {
+                    ?>
+						<?php 
+                    esc_html_e( 'Unknown', 'genealogical-tree' );
+                    ?>
+					<?php 
+                }
+                
+                ?>
+				</td>
+			</tr>
+			<?php 
+                
+                if ( $family['MARR']['date'] || $family['MARR']['plac'] ) {
+                    ?>
+			<tr>
+				<td>
+					<?php 
+                    esc_html_e( 'Married', 'genealogical-tree' );
+                    ?>
+				</td>
+				<td>
+					<?php 
+                    echo  esc_html( $family['MARR']['date'] ) ;
+                    ?>
+				</td>
+				<td>
+					<?php 
+                    echo  esc_html( $family['MARR']['plac'] ) ;
+                    ?>
+				</td>
+			</tr>
+			<?php 
+                }
+                
+                ?>
+
+				<?php 
+                
+                if ( $family['SLGS']['date'] || $family['SLGS']['plac'] ) {
+                    ?>
+
+			<tr>
+				<td>
+					<?php 
+                    esc_html_e( 'Sealed S (LDS)', 'genealogical-tree' );
+                    ?>
+				</td>
+				<td>
+					<?php 
+                    echo  esc_html( $family['SLGS']['date'] ) ;
+                    ?>
+				</td>
+				<td>
+					<?php 
+                    echo  esc_html( ( isset( $family['SLGS']['plac'] ) ? $family['SLGS']['plac'] : '' ) ) ;
+                    ?>
+				</td>
+			</tr>
+			<?php 
+                }
+                
+                ?>
+
+				<?php 
+                
+                if ( !empty($family['chil']) ) {
+                    ?>
+			<tr>
+				<td valign="top">
+					<?php 
+                    esc_html_e( 'Children', 'genealogical-tree' );
+                    ?>
+				</td>
+				<td colspan="2">
+					<?php 
+                    foreach ( $family['chil'] as $key => $chil ) {
+                        ?>
+						<?php 
+                        $gender = '⚥';
+                        if ( 'M' === get_post_meta( $chil, 'sex', true ) ) {
+                            $gender = '♂️';
+                        }
+                        if ( 'F' === get_post_meta( $chil, 'sex', true ) ) {
+                            $gender = '♀️';
+                        }
+                        ?>
+						<a href="<?php 
+                        echo  esc_attr( get_the_permalink( $chil ) ) ;
+                        ?>">
+							<span class="gt-gender-emoji"><?php 
+                        echo  esc_html( $gender ) ;
+                        ?></span> <?php 
+                        echo  esc_html( $this->plugin->helper->get_full_name( $chil ) ) ;
+                        ?>
+						</a>
+						<br>
+					<?php 
+                    }
+                    ?>
+				</td>
+			</tr>
+			<?php 
+                }
+                
+                ?>
+			<!--
+			<tr>
+				<td>
+					<?php 
+                esc_html_e( 'Family  ID', 'genealogical-tree' );
+                ?>
+				</td>
+				<td colspan="2">
+					<?php 
+                echo  esc_html( $family['family_id'] ) ;
+                ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php 
+                esc_html_e( 'Last Modified', 'genealogical-tree' );
+                ?>
+				</td>
+				<td colspan="2">
+					<?php 
+                echo  esc_html( get_post( $family['family_id'] )->post_modified ) ;
+                ?>
+				</td>
+			</tr>
+			-->
+		</table>
+		<?php 
+            }
+            ?>
+		<?php 
+        }
+        
+        ?>
+		<?php 
+        $individual_events = $this->plugin->helper->get_individual_events();
+        foreach ( $even_array as $key => $value ) {
+            $even_array[$key]['title'] = $this->plugin->helper->search_for_tag( $value['type'], $individual_events );
+            if ( !$value['date'] && !$value['plac'] ) {
+                unset( $even_array[$key] );
+            }
+        }
+        ?>
+		<?php 
+        
+        if ( !empty($even_array) ) {
+            ?>
+		<!-- Events -->
+		<h4>
+			<?php 
+            esc_html_e( 'Events', 'genealogical-tree' );
+            ?>
+		</h4>
+			<?php 
+            uasort( $even_array, array( $this->plugin->helper, 'sort_events' ) );
+            ?>
+		<div class="gt-tree-timeline" style="max-width:800px;">
+			<?php 
+            foreach ( $even_array as $key => $value ) {
+                ?>
+			<div class="gt-tree-timeline__event">
+				<div class="gt-tree-timeline__event__icon ">
+					<i class="lni-cake"></i>
+					<div class="gt-tree-timeline__event__date">
+						<?php 
+                echo  esc_html( $value['date'] ) ;
+                ?>
+					</div>
+				</div>
+				<div class="gt-tree-timeline__event__content ">
+					<div class="gt-tree-timeline__event__title">
+						<?php 
+                echo  esc_html( ( $value['title'] ? $value['title'] : $value['type'] ) ) ;
+                ?>
+					</div>
+					<div class="gt-tree-timeline__event__description">
+						<p> 📍 <?php 
+                echo  esc_html( $value['plac'] ) ;
+                ?></p>
+					</div>
+				</div>
+			</div>
+			<?php 
+            }
+            ?>
+		</div>
+		<?php 
+        }
+        
+        ?>
+
+		<?php 
+        foreach ( $additional_fields as $key => $value ) {
+            if ( !$value['name'] && !$value['value'] ) {
+                unset( $additional_fields[$key] );
+            }
+        }
+        
+        if ( !empty($additional_fields) || get_post_meta( $post_id, 'additional_info', true ) ) {
+            ?>
+
+		<!-- Additional Information -->
+		<h4>
+			<?php 
+            esc_html_e( 'Additional Information', 'genealogical-tree' );
+            ?>
+		</h4>
+		<table border="0" style="width:100%; max-width: 800px;">
+
+			<?php 
+            
+            if ( !empty($additional_fields) ) {
+                ?>
+				<?php 
+                foreach ( $additional_fields as $key => $additional_field ) {
+                    ?>
+					<tr>
+						<td>
+							<div style="width:150px;">
+								<strong><?php 
+                    echo  esc_html( $additional_fields[$key]['name'] ) ;
+                    ?></strong>
+							</div>
+						</td>
+						<td width="100%">
+							<?php 
+                    echo  esc_html( $additional_fields[$key]['value'] ) ;
+                    ?>
+						</td>
+					</tr>
+				<?php 
+                }
+                ?>
+			<?php 
+            }
+            
+            ?>
+
+			<?php 
+            
+            if ( get_post_meta( $post_id, 'additional_info', true ) ) {
+                ?>
+			<tr>
+				<td colspan="2">
+					<div style="width:150px;">
+						<strong> <?php 
+                esc_html_e( 'Additional Info', 'genealogical-tree' );
+                ?> </strong>
+					</div>
+					<?php 
+                echo  wp_kses_post( wpautop( get_post_meta( $post_id, 'additional_info', true ) ) ) ;
+                ?>
+				</td>
+			</tr>
+			<?php 
+            }
+            
+            ?>
+
+		</table>
+		<?php 
+        }
+        
+        ?>
+
+
+		<?php 
+        
+        if ( get_post_meta( $post_id, 'some_custom_gallery', true ) ) {
+            ?>
+
+		<!-- Photos -->
+		<h4><?php 
+            esc_html_e( 'Photos', 'genealogical-tree' );
+            ?> </h4>
+		<table border="0" style="width:100%; max-width: 800px;">
+			<tr>
+				<td>
+					<?php 
+            $this->gt_member_gallery_images( $post_id );
+            ?>
+				</td>
+			</tr>
+		</table>
+		<?php 
+        }
+        
+        ?>
+
+		<?php 
+        
+        if ( $phone && !empty($phone) && current( $phone ) || $email && !empty($email) && current( $email ) || $address && !empty($address) && current( $address ) ) {
+            ?>
+
+		<!-- Contact Information -->
+		<h4>
+			<?php 
+            esc_html_e( 'Contact Information', 'genealogical-tree' );
+            ?>
+		</h4>
+
+		<table border="0" style="width:100%; max-width: 800px;">
+			<?php 
+            
+            if ( $phone && !empty($phone) && current( $phone ) ) {
+                ?>
+
+				<tr>
+					<td width="10" valign="top" rowspan="<?php 
+                echo  count( $phone ) ;
+                ?>">
+						<div style="width:150px;">
+							<?php 
+                esc_html_e( 'Phone', 'genealogical-tree' );
+                ?>
+						</div>
+					</td>
+				<?php 
+                foreach ( $phone as $key => $value ) {
+                    ?>
+
+					<?php 
+                    if ( $key >= 1 ) {
+                        ?>
+				<tr>
+				<?php 
+                    }
+                    ?>
+					<td>
+						<?php 
+                    echo  esc_html( $value ) ;
+                    ?>
+					</td>
+				</tr>
+				<?php 
+                }
+                ?>
+
+			<?php 
+            }
+            
+            ?>
+
+			<?php 
+            
+            if ( $email && !empty($email) && current( $email ) ) {
+                ?>
+				<tr>
+					<td rowspan="<?php 
+                echo  count( $email ) ;
+                ?>">
+						<?php 
+                esc_html_e( 'Email', 'genealogical-tree' );
+                ?>
+					</td>
+				<?php 
+                foreach ( $email as $key => $value ) {
+                    ?>
+					<?php 
+                    if ( $key >= 1 ) {
+                        ?>
+				<tr>
+				<?php 
+                    }
+                    ?>
+					<td>
+						<?php 
+                    echo  esc_html( $value ) ;
+                    ?>
+					</td>
+				</tr>
+				<?php 
+                }
+                ?>
+			<?php 
+            }
+            
+            ?>
+
+			<?php 
+            
+            if ( $address && !empty($address) && current( $address ) ) {
+                ?>
+				<tr>
+					<td rowspan="<?php 
+                echo  count( $address ) ;
+                ?>">
+						<?php 
+                esc_html_e( 'Address', 'genealogical-tree' );
+                ?>
+					</td>
+				<?php 
+                foreach ( $address as $key => $value ) {
+                    ?>
+					<?php 
+                    if ( $key >= 1 ) {
+                        ?>
+				<tr>
+				<?php 
+                    }
+                    ?>
+					<td>
+						<?php 
+                    echo  esc_html( $value ) ;
+                    ?>
+					</td>
+				</tr>
+				<?php 
+                }
+                ?>
+			<?php 
+            }
+            
+            ?>
+		</table>
+
+		<?php 
+        }
+        
+        ?>
+
+		<!-- Colabaration -->
+		<?php 
         $allow_merge_request = false;
         $allow_use_request = false;
         $allow_suggestion = false;
@@ -766,13 +1227,15 @@ trait Genealogical_Tree_Single_Member_info
                 }
             }
         }
-        // use_request + merge_request + suggestion
+        // use_request + merge_request + suggestion.
         
         if ( is_single() && get_current_user_id() && ($allow_merge_request || $allow_use_request || $allow_suggestion) && (current_user_can( 'editor' ) || current_user_can( 'administrator' ) || current_user_can( 'gt_member' ) || current_user_can( 'gt_manager' )) && get_post_field( 'post_author', $post_id ) != get_current_user_id() ) {
-            $html .= '<div class="allow-merge-request">';
+            ?>
+			<div class="allow-merge-request">
+			<?php 
             
             if ( $allow_use_request ) {
-                // use_request
+                // use_request.
                 $use_request = ( get_post_meta( $post_id, 'use_request' ) ? get_post_meta( $post_id, 'use_request' ) : array() );
                 
                 if ( isset( $_POST['use_request'] ) ) {
@@ -784,31 +1247,49 @@ trait Genealogical_Tree_Single_Member_info
                     }
                 }
                 
-                $html .= '<form action="" method="POST">';
-                $html .= '<table>';
-                $html .= '<tr>';
-                $html .= '<td>';
-                $html .= '<a href="">' . __( 'Request Use', 'genealogical-tree' ) . '</a>';
-                $html .= '</td></tr>';
-                $html .= '<td>';
+                ?>
+				<form action="" method="POST">
+					<table>
+						<tr>
+							<td>
+								<a href=""><?php 
+                esc_html_e( 'Request Use', 'genealogical-tree' );
+                ?></a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<?php 
                 
                 if ( in_array( get_current_user_id(), $use_request ) ) {
-                    $html .= 'Already Requested';
+                    ?>
+									<?php 
+                    esc_html_e( 'Already Requested', 'genealogical-tree' );
+                    ?>
+								<?php 
                 } else {
-                    $html .= '<button name="use_request" type="submit">' . __( 'Send Request', 'genealogical-tree' ) . '</button>';
+                    ?>
+								<button name="use_request" type="submit">
+									<?php 
+                    esc_html_e( 'Send Request', 'genealogical-tree' );
+                    ?>
+								</button>
+								<?php 
                 }
                 
-                $html .= '</td>';
-                $html .= '</tr>';
-                $html .= '</table>';
-                $html .= '</form>';
+                ?>
+							</td>
+						</tr>
+					</table>
+				</form>
+				<?php 
             }
             
             
             if ( $allow_merge_request ) {
                 
                 if ( isset( $_POST['merge_request'] ) ) {
-                    // merge_request
+                    // merge_request.
                     $merge_request = ( get_post_meta( $post_id, 'merge_request' ) ? get_post_meta( $post_id, 'merge_request' ) : array() );
                     
                     if ( isset( $_POST['member_id'] ) && $_POST['member_id'] ) {
@@ -833,30 +1314,49 @@ trait Genealogical_Tree_Single_Member_info
                 ) );
                 
                 if ( count_user_posts( get_current_user_id(), 'gt-member' ) ) {
-                    $html .= '<form action="" method="POST">';
-                    $html .= '<table>';
-                    $html .= '<tr>';
-                    $html .= '<td>';
-                    $html .= '<a href="">' . __( 'Request Merge With', 'genealogical-tree' ) . '</a>';
-                    $html .= '</td></tr><tr>';
-                    $html .= '<td>';
-                    $html .= '<select name="member_id">';
+                    ?>
+					<form action="" method="POST">
+						<table>
+							<tr>
+								<td>
+									<a href=""><?php 
+                    esc_html_e( 'Request Merge With', 'genealogical-tree' );
+                    ?></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<select name="member_id">
+									<?php 
                     if ( $query->posts ) {
                         foreach ( $query->posts as $key => $member ) {
-                            $html .= '<option value="' . $member->ID . '">';
-                            $html .= $member->post_title;
-                            $html .= '</option>';
+                            ?>
+										<option value="<?php 
+                            echo  esc_attr( $member->ID ) ;
+                            ?>">
+											<?php 
+                            echo  esc_html( $member->post_title ) ;
+                            ?>
+										</option>
+											<?php 
                         }
                     }
-                    $html .= '</select>
-                                    ';
-                    $html .= '</td></tr><tr>';
-                    $html .= '<td>';
-                    $html .= '<button name="merge_request" type="submit">' . __( 'Send Request', 'genealogical-tree' ) . '</button>';
-                    $html .= '</td>';
-                    $html .= '</tr>';
-                    $html .= '</table>';
-                    $html .= '</form>';
+                    ?>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<button name="merge_request" type="submit">
+										<?php 
+                    esc_html_e( 'Send Request', 'genealogical-tree' );
+                    ?>
+									</button>
+								</td>
+							</tr>
+						</table>
+					</form>
+					<?php 
                 }
             
             }
@@ -874,26 +1374,44 @@ trait Genealogical_Tree_Single_Member_info
                     }
                 
                 }
-                $html .= '<form action="" method="POST">';
-                $html .= '<table>';
-                $html .= '<tr>';
-                $html .= '<td>';
-                $html .= '<a href="">' . __( 'Suggest Information', 'genealogical-tree' ) . '</a>';
-                $html .= '</td></tr><tr>';
-                $html .= '<td>';
-                $html .= '<textarea name="suggestion"></textarea>';
-                $html .= '</td></tr><tr>';
-                $html .= '<td>';
-                $html .= '<button name="submit_suggestion" type="submit">' . __( 'Send Suggest', 'genealogical-tree' ) . '</button>';
-                $html .= '</td>';
-                $html .= '</tr>';
-                $html .= '</table>';
-                $html .= '</form>';
+                ?>
+				<form action="" method="POST">
+					<table>
+						<tr>
+							<td>
+								<a href=""><?php 
+                esc_html_e( 'Suggest Information', 'genealogical-tree' );
+                ?></a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<textarea name="suggestion"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button name="submit_suggestion" type="submit">
+									<?php 
+                esc_html_e( 'Send Suggest', 'genealogical-tree' );
+                ?>
+								</button>
+							</td>
+						</tr>
+					</table>
+				</form>
+			<?php 
             }
             
-            $html .= '</div>';
+            ?>
+			</div>
+		<?php 
         }
         
+        ?>
+
+		<?php 
+        $html = ob_get_clean();
         return $html;
     }
 

@@ -1,6 +1,4 @@
 <?php
-namespace Genealogical_Tree\Includes;
-
 /**
  * Define the internationalization functionality
  *
@@ -13,6 +11,8 @@ namespace Genealogical_Tree\Includes;
  * @package    Genealogical_Tree
  * @subpackage Genealogical_Tree/includes
  */
+
+namespace Zqe;
 
 /**
  * Define the internationalization functionality.
@@ -39,9 +39,5 @@ class Genealogical_Tree_i18n {
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
-
 	}
-
-
-
 }

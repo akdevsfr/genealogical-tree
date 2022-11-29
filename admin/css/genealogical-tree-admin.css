@@ -2,6 +2,13 @@
  * All of the CSS for your admin-specific functionality should be
  * included in this file.
  */
+.toplevel_page_genealogical-tree .wp-menu-image.dashicons-before {
+
+}
+.toplevel_page_genealogical-tree .wp-menu-image.dashicons-before img{
+	    width: 20px;
+    margin: 0 auto;
+}
 .gta-container * {
 	box-sizing: border-box;
 }
@@ -25,21 +32,21 @@
 	clear: both;
 }
 
-.gta-col-3 {
+.gta-col-2 {
 	float: left;
-	width: 33.3333333%;
+	width: 50%;
 	padding-left: 12px;
 	padding-right: 12px;
 }
 
 @media(max-width: 1650px) {
-	.gta-col-3 {
+	.gta-col-2 {
 		width: 50%;
 	}
 }
 
 @media(max-width: 1350px) {
-	.gta-col-3 {
+	.gta-col-2 {
 		width: 100%;
 	}
 }
@@ -117,7 +124,7 @@ table.gta-table td {
 
 .gta-table .repetead-field .clone {
 	position: absolute;
-	right: 0px;
+	right: 5px;
 	top: 1px;
 	font-size: 0px;
 	width: 27px;
@@ -209,20 +216,16 @@ th p.description {
 #genealogical-tree-tree-meta-box .handlediv {
 	display: none;
 }
-
+.repetead-field.rep-birt-deat-event {
+	border: 1px solid #d5d5d5;
+    padding: 8px;
+    border-radius: 4px;
+}
 .repetead-field.rep-birt-deat-event .delete,
 .repetead-field.rep-birt-deat-event .clone {
 	top: 10px;
 }
-#gt-family-groupchecklist li {
-	display: none;
-}
-#gt-family-groupchecklist-pop li {
-	display: none;
-}
-#gt-family-group-adder {
-	display: none;
-}
+
 
 .type-gt-member.merged_with {
 	background-color: rgb(0 128 0 / 25%) !important;
@@ -230,10 +233,10 @@ th p.description {
 .type-gt-member.merged_to {
 	    background-color: rgb(255 255 0 / 25%) !important
 }
-.misha_gallery_mtb {
+.gt-member-gallery-images {
 	
 }
-.misha_gallery_mtb > li {
+.gt-member-gallery-images > li {
     display: inline-block;
     width: 28%;
     border: 1px solid #c3c4c7;
@@ -241,10 +244,10 @@ th p.description {
     position: relative;
     padding: 3px;
 }
-.misha_gallery_mtb > li img {
+.gt-member-gallery-images > li img {
 	max-width: 100%;
 }
-.misha_gallery_mtb > li .misha_gallery_remove {
+.gt-member-gallery-images > li .misha_gallery_remove {
     position: absolute;
     top: 3px;
     right: 3px;
@@ -255,4 +258,8 @@ th p.description {
     line-height: 15px;
     color: #fff;
     text-decoration: none;
+}
+.gt-spouse-order {
+	width: 30px !important;
+	text-align: center;
 }

@@ -16,7 +16,7 @@
  * Plugin Name: Genealogical Tree
  * Plugin URI:        https://wordpress.org/plugins/genealogical-tree
  * Description:       Genealogical Tree is a ultimate solution for creating and displaying family trees, family history on WordPress.
- * Version:           2.1.3
+ * Version:           2.2.0
  * Author:            ak devs
  * Author URI:        https://github.com/akdevsfr
  * License:           GPL-2.0+
@@ -28,12 +28,22 @@
 if ( !defined( 'WPINC' ) ) {
     die;
 }
+/**
+ * The code that runs during agendapress activation.
+ * This action is documented in vendor/autoload.php
+ */
+require dirname( __FILE__ ) . '/vendor/autoload.php';
 
 if ( function_exists( 'gt_fs' ) ) {
     gt_fs()->set_basename( false, __FILE__ );
 } else {
     
     if ( !function_exists( 'gt_fs' ) ) {
+        /**
+         * `gt_fs` Create a helper function for easy SDK access.
+         *
+         * @return mixed
+         */
         function gt_fs()
         {
             global  $gt_fs ;
@@ -62,6 +72,10 @@ if ( function_exists( 'gt_fs' ) ) {
                     'menu'           => array(
                     'slug'       => 'genealogical-tree',
                     'first-path' => '/edit-tags.php?taxonomy=gt-family-group&post_type=gt-member',
+                    'support'    => false,
+                    'parent'     => array(
+                    'slug' => 'genealogical-tree',
+                ),
                 ),
                     'is_live'        => true,
                 ) );
@@ -70,22 +84,18 @@ if ( function_exists( 'gt_fs' ) ) {
             return $gt_fs;
         }
         
+        // Init Freemius.
         gt_fs();
         // Signal that SDK was initiated.
         do_action( 'gt_fs_loaded' );
     }
     
     /**
-     * The code that runs during agendapress activation.
-     * This action is documented in vendor/autoload.php
-     */
-    include dirname( __FILE__ ) . '/vendor/autoload.php';
-    /**
      * Currently plugin version.
      * Start at version 1.0.0 and use SemVer - https://semver.org
      * Rename this for your plugin and update it as you release new versions.
      */
-    define( 'GENEALOGICAL_TREE_VERSION', '2.1.2' );
+    define( 'GENEALOGICAL_TREE_VERSION', '2.2.0' );
     define( 'GENEALOGICAL_TREE_DIR_URL', plugin_dir_url( __FILE__ ) );
     define( 'GENEALOGICAL_TREE_DIR_PATH', plugin_dir_path( __FILE__ ) );
     /**
@@ -94,7 +104,7 @@ if ( function_exists( 'gt_fs' ) ) {
      */
     function activate_genealogical_tree()
     {
-        \Genealogical_Tree\Includes\Genealogical_Tree_Activator::activate();
+        \Zqe\Genealogical_Tree_Activator::activate();
     }
     
     /**
@@ -103,9 +113,9 @@ if ( function_exists( 'gt_fs' ) ) {
      */
     function deactivate_genealogical_tree()
     {
-        \Genealogical_Tree\Includes\Genealogical_Tree_Deactivator::deactivate();
+        \Zqe\Genealogical_Tree_Deactivator::deactivate();
     }
-        
+    
     register_activation_hook( __FILE__, 'activate_genealogical_tree' );
     register_deactivation_hook( __FILE__, 'deactivate_genealogical_tree' );
     /**
@@ -119,7 +129,7 @@ if ( function_exists( 'gt_fs' ) ) {
      */
     function run_genealogical_tree()
     {
-        $plugin = new \Genealogical_Tree\Includes\Genealogical_Tree();
+        $plugin = new \Zqe\Genealogical_Tree();
         $plugin->run();
     }
     

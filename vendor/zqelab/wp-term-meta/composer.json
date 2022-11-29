@@ -1,0 +1,22 @@
+{
+    "name": "zqelab/wp-term-meta",
+    "type": "library",
+    "description": "WordPress term-meta Class to make option page",
+    "keywords": ["wp","wordpress", "term-meta"],
+    "homepage": "https://github.com/zqelab/wp-term-meta",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "ZQE",
+            "email": "dev@zqe.io",
+            "homepage": "https://zqe.io",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload": {
+        "classmap": ["src/"]
+    }
+}

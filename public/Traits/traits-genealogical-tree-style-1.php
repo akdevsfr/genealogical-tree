@@ -1,213 +1,164 @@
 <?php
-namespace Genealogical_Tree\Genealogical_Tree_Public\Traits;
+/**
+ * The admin-specific functionality of the plugin.
+ *
+ * @link       https://wordpress.org/plugins/genealogical-tree
+ * @since      1.0.0
+ *
+ * @package    Genealogical_Tree
+ * @subpackage Genealogical_Tree/admin
+ */
 
+namespace Zqe\Traits;
 
 trait Genealogical_Tree_Style_1 {
 
 	/**
-	 * Get display members for shortcode
+	 * Function for `display_tree_style1`.
+	 *
+	 * @param  mixed $tree tree.
+	 * @param  mixed $setting setting.
+	 * @param  mixed $gen gen.
+	 *
+	 * @return mixed
 	 *
 	 * @since    1.0.0
 	 */
-	public function display_tree_style1($tree, $setting) {
-
-		$html  ='';
-		$html .='
-		<div class="gt-style-1">';
-			if(isset($setting->ancestor) && $setting->ancestor=='on'){
-				$html .= '<ul class="has-ancestor">';
-					$html .= '<li class="parent alter-tree">';
-						$html .='<ul class="parents">';
-							$html .= $this->tree_style_alter($tree, $setting);
-						$html .='</ul>';
-					$html .='</li>';
-					$html .= '<li class="child root">'; }
-						$html .='<ul class="childs">';
-							$html .= $this->tree_style1($tree, $setting);
-						$html .='</ul>';
-			if(isset($setting->ancestor) && $setting->ancestor=='on'){
-					$html .='</li>';
-				$html .='</ul>';
-			}
-		$html .='
-		</div>';
-		return $html;
+	public function display_tree_style1( $tree, $setting, $gen ) {
+		ob_start();
+		?>
+		<div class="gt-style-1">
+			<?php if ( isset( $setting->ancestor ) && 'on' === $setting->ancestor ) { ?>
+				<ul class="has-ancestor">
+					<li class="parent alter-tree">
+						<ul class="parents">
+							<?php $this->tree_style_alter( $tree, $setting, ( $gen + 1 ) ); ?>
+						</ul>
+					</li>
+					<li class="child root">
+					<?php } ?>
+						<ul class="childs">
+							<?php $this->tree_style1( $tree, $setting, $gen ); ?>
+						</ul>
+					<?php if ( isset( $setting->ancestor ) && 'on' === $setting->ancestor ) { ?>
+					</li>
+				</ul>
+			<?php } ?>
+		</div>
+		<?php
+		return ob_get_clean();
 	}
 
 	/**
-	 * Get display members for shortcode
+	 * Function for `tree_style1`.
+	 *
+	 * @param  mixed $tree tree.
+	 * @param  mixed $setting setting.
+	 * @param  mixed $gen gen.
+	 * @param  mixed $checker checker.
+	 *
+	 * @return mixed
 	 *
 	 * @since    1.0.0
 	 */
-	public function tree_style_alter($tree, $setting, $checker = array(), $gen = 0) {
+	public function tree_style1( $tree, $setting, $gen = 0, $checker = array() ) {
 
 		$gen++;
 
-		if( $gen > 2 ) {
+		if ( $gen > 5 ) {
 			if ( gt_fs()->is_not_paying() && ! gt_fs()->is_trial() ) {
-			 	return;
-			}
-		}
-		
-		if( $setting->generation_number_ancestor != -1 ) {
-			if( $gen > $setting->generation_number_ancestor ) {
-			 	return;
+				return;
 			}
 		}
 
-		$famc = get_post_meta($tree, 'famc', true);
+		if ( '-1' !== (string) $setting->generation_number ) {
+			if ( $gen > $setting->generation_number ) {
+				return;
+			}
+		}
 
-		$father = get_post_meta($famc, 'father', true);
-		$mother = get_post_meta($famc, 'mother', true);
+		$families = $this->get_families_by_root( $tree, $setting );
 
-		$families = [1];
-
-		if($setting->collapsible_family_root && $setting->collapsible_family_onload && count($families) > 0){
-			$collapsible_family_onload = 'display:none;';
-			$sign = '+';
+		if ( $setting->collapsible_family_root && $setting->collapsible_family_onload && count( $families ) > 0 ) {
+			$collapsible_family_root      = 'display:none;';
+			$collapsible_family_root_sign = '+';
 		} else {
-			$collapsible_family_onload = '';
-			$sign = '-';
+			$collapsible_family_root      = '';
+			$collapsible_family_root_sign = '-';
+		}
+		if ( $setting->collapsible_family_spouse && $setting->collapsible_family_onload && count( $families ) > 0 ) {
+			$collapsible_family_spouse      = 'display:none;';
+			$collapsible_family_spouse_sign = '+';
+		} else {
+			$collapsible_family_spouse      = '';
+			$collapsible_family_spouse_sign = '-';
 		}
 
-		$html ='';
-		if($father){
-			$html .='<li class="parent father">';
-				$html .='<ul class="parents">';
-					$html .= $this->tree_style_alter($father, $setting, $families, $gen);
-				$html .='</ul>';
-				$html .= $this->ind_style($father, $setting, $gen, $families, 'alter', $sign);
-			$html .='</li>';
-		}
+		$sex = get_post_meta( $tree, 'sex', true );
 
-		if($mother){
-			$html .='<li class="parent mother">';
-				$html .='<ul class="parents">';
-					$html .= $this->tree_style_alter($mother, $setting, $families, $gen);
-				$html .='</ul>';
-				$html .= $this->ind_style($mother, $setting, $gen, $families, 'alter', $sign);
-			$html .='</li>';
+		$sex_alt = '';
+
+		if ( 'M' === $sex ) {
+			$sex_alt = 'F';
 		}
-		return $html;
+		if ( 'F' === $sex ) {
+			$sex_alt = 'M';
+		}
+		?>
+		<li class="child root">
+			<?php $this->ind_style( $tree, $setting, $gen, $families, 'root', $collapsible_family_root_sign ); ?>
+			<?php if ( $families ) { ?>
+				<ul class="families" style="<?php echo esc_attr( $collapsible_family_root ); ?>">
+					<?php foreach ( $families as $key => $family ) { ?>
+						<?php if ( 'M' === $sex || ( 'F' === $sex && 'on' !== $setting->female_tree ) ) { ?>
+							<?php if ( $family->spouse ) { ?>
+								<?php array_push( $checker, $family->spouse ); ?>
+								<li class="family spouse">
+									<?php $this->ind_style( $family->spouse, $setting, null, $family->chil, 'spouse', $collapsible_family_spouse_sign ); ?>
+									<?php if ( $family->chil ) { ?>
+										<?php $this->tree_style1__childs( $family->chil, $setting, $gen, $checker, $collapsible_family_spouse ); ?>
+									<?php } ?>
+								</li>
+							<?php } else { ?>
+								<?php if ( $family->chil ) { ?>
+									<li class="family">
+										<?php $this->ind_style_unknown( $setting, $sex_alt ); ?>
+										<?php $this->tree_style1__childs( $family->chil, $setting, $gen, $checker ); ?>
+									</li>
+								<?php } ?>
+							<?php } ?>
+						<?php } ?>
+					<?php } ?>
+				</ul>
+			<?php } ?>
+		</li>
+		<?php
 	}
 
 	/**
-	 * Get display members for shortcode
+	 * Function for `tree_style1__childs`.
+	 *
+	 * @param  mixed $chills chills.
+	 * @param  mixed $setting setting.
+	 * @param  mixed $gen gen.
+	 * @param  mixed $checker checker.
+	 * @param  mixed $collapsible collapsible.
+	 *
+	 * @return void
 	 *
 	 * @since    1.0.0
 	 */
-	public function tree_style1($tree, $setting, $checker = array(), $gen = 0) {
-
-		$gen++;
-
-		if($gen > 5){
-			if (gt_fs()->is_not_paying() && !gt_fs()->is_trial()) {
-			 	return;
-			}
-		}
-
-		if($setting->generation_number != -1) {
-			if($gen > $setting->generation_number){
-			 	return;
-			}
-		}
-		
-		$families = $this->get_families_by_root($tree, $setting);
-
-		if($setting->collapsible_family_root && $setting->collapsible_family_onload && count($families) > 0){
-			$collapsible_family_onload = 'display:none;';
-			$sign = '+';
-		} else {
-			$collapsible_family_onload = '';
-			$sign = '-';
-		}
-
-		$html ='';
-		$html .='<li class="child root">';
-			$html .= $this->ind_style($tree, $setting, $gen, $families, 'root', $sign);
-			
-			if($families) {
-
-				$html .='<ul class="families" style="'.$collapsible_family_onload.'">';
-				foreach ($families as $key => $family) {
-
-					$sex = get_post_meta($tree, 'sex', true);
-					if($sex == 'M' || ($sex == 'F' && $setting->female_tree != 'on')){
-						if($family->spouse) {
-							array_push($checker, $family->spouse);
-							$html .='<li class="family spouse">';
-								if($setting->collapsible_family_spouse && $setting->collapsible_family_onload && count($families) > 0){
-									$collapsible_family_onload = 'display:none;';
-									$sign = '+';
-								} else {
-									$collapsible_family_onload = '';
-									$sign = '-';
-								}
-								$html .= $this->ind_style($family->spouse, $setting, null, $family->chill, 'spouse', $sign);
-								if($family->chill) {
-									$html .='<ul class="childs" style="'.$collapsible_family_onload.'">';
-									foreach ($family->chill as $key => $chill) {
-										if(!in_array($chill, $checker)){
-											$html .= $this->tree_style1($chill, $setting, $checker, $gen);
-										}
-									}
-									$html .='
-									</ul>';
-								 }
-								$html .='
-							</li>';
-						} else {
-							if($family->chill) {
-							
-							$sex_alt = '';
-							
-							if($sex == 'M') {
-								$sex_alt = 'F';
-							}
-							
-							if($sex == 'F') {
-								$sex_alt = 'M';
-							}
-
-							$html .='
-								<li class="family">
-									<div class="ind">
-										<div class="ind-cont">';
-											if(isset($setting->thumb->show) && $setting->thumb->show == 'on') {
-											$image_url = GENEALOGICAL_TREE_DIR_URL . 'public/img/ava-'.$sex_alt.'.jpg';
-											$html .='
-											<div class="image">
-												<div class="image-cont">
-													<img src="'.$image_url.'">
-												</div>
-											</div>';
-											}
-											$html .='
-											<div class="info">
-												<div class="name">
-													Unknown
-												</div>
-											</div>
-										</div>
-									</div>';
-									$html .='
-									<ul class="childs">';
-									foreach ($family->chill as $key => $chill) {
-										if(!in_array($chill, $checker)){
-											$html .= $this->tree_style1($chill, $setting, $checker, $gen);
-										}
-									}
-									$html .='
-									</ul>';
-									$html .='
-								</li>';
-							}
-						}
-					}
-				}
-				$html .='</ul>';
-			}
-		$html .='</li>';
-		return $html;
+	public function tree_style1__childs( $chills, $setting, $gen = 0, $checker = array(), $collapsible = null ) {
+		?>
+		<ul class="childs" style="<?php echo esc_attr( $collapsible ); ?>">
+			<?php foreach ( $chills as $key => $chill ) { ?>
+				<?php if ( ! in_array( $chill, $checker, true ) ) { ?>
+					<?php array_push( $checker, $chill ); ?>
+					<?php $this->tree_style1( $chill, $setting, $gen, $checker ); ?>
+				<?php } ?>
+			<?php } ?>
+		</ul>
+		<?php
 	}
+
 }

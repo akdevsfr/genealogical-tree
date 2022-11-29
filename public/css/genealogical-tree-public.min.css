@@ -51,6 +51,7 @@ div.gt-container .gt-zoom-contorl button {
     float: right;
     margin-left: 2px;
     outline: none !important;
+    text-decoration: none;
 }
 div.gt-container .gt-zoom-contorl button img {
     outline: none !important;
@@ -437,16 +438,11 @@ div.gt-tree.gt-tree-hr .gt-collapse-family:after {
     top: 50%;
 }
 
-.gt-member .wp-post-image {
-    display: none;
-}
-
 div.gt-tree.gt-tree-hr .gt-style-3 .gt-collapse-family {
     right: 4px;
     top: 4px;
     margin-top: 0px;
 }
-
 
 ul.has-ancestor > li {
     display: block !important;
@@ -457,8 +453,6 @@ ul.has-ancestor > li:before,
 ul.has-ancestor:before {
     display: none !important;
 }
-
-
 
 ul.has-ancestor > .alter-tree  li {
     vertical-align: bottom !important;
@@ -482,3 +476,94 @@ ul.has-ancestor > .alter-tree  li.parent {
     text-align: right;
 }
 
+.single-gt-member .gt-member.type-gt-member .wp-post-image {
+    display: none !important;
+}
+
+
+.gt-tree-timeline {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.gt-tree-timeline__event {
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  margin: 10px 0;
+  border: 1px solid #dcd7ca;
+  border-radius: 8px;
+}
+.gt-tree-timeline__event__title {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #9251ac;
+  letter-spacing: 1.5px;
+      padding-left: 30px;
+}
+.gt-tree-timeline__event__content {
+  padding: 10px;
+}
+.gt-tree-timeline__event__date {
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 100px;
+  text-align: center;
+}
+.gt-tree-timeline__event__icon {
+  border-radius: 8px 0 0 8px;
+  border-right: 1px solid #dcd7ca;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 10px 20px;
+}
+.gt-tree-timeline__event__icon i {
+  position: absolute;
+  top: 50%;
+  left: -65px;
+  font-size: 2.5rem;
+  transform: translateY(-50%);
+}
+.gt-tree-timeline__event__description {
+  flex-basis: 60%;
+}
+.gt-tree-timeline__event:after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: #dcd7ca;
+  position: absolute;
+  top: 52%;
+  left: -3.5rem;
+  z-index: -1;
+}
+.gt-tree-timeline__event:before {
+  content: "";
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  background: #ffffff;
+  border-radius: 100%;
+  left: -6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid #dcd7ca;
+}
+
+.gt-tree-timeline__event:last-child:after {
+  content: none;
+}
+
+@media (max-width: 786px) {
+  .gt-tree-timeline__event {
+    flex-direction: column;
+  }
+
+  .gt-tree-timeline__event__icon {
+    border-radius: 4px 4px 0 0;
+  }
+}

@@ -1,6 +1,4 @@
 <?php
-namespace Genealogical_Tree\Includes;
-
 /**
  * Fired during plugin deactivation
  *
@@ -10,6 +8,8 @@ namespace Genealogical_Tree\Includes;
  * @package    Genealogical_Tree
  * @subpackage Genealogical_Tree/includes
  */
+
+namespace Zqe;
 
 /**
  * Fired during plugin deactivation.
@@ -31,7 +31,6 @@ class Genealogical_Tree_Deactivator {
 	 * @since    1.0.0
 	 */
 	public static function deactivate() {
-
 	}
 
 }

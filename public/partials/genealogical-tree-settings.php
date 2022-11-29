@@ -79,17 +79,6 @@ foreach ( $fonts as $key => $font ) {
 $inline_style = '';
 $inline_style .= '
 <style type="text/css">';
-if ( defined( 'GENEALOGICAL_DEV' ) && GENEALOGICAL_DEV ) {
-    /*	$inline_style .='
-    	div.gt-content{
-    		position: fixed;
-    		left: 0;
-    		right: 0;
-    		top: 0;
-    		bottom: 0;
-    		z-index: 999999999;
-    	}';*/
-}
 $inline_style .= '
 div.gt-tree:not(.type-gt-tree).' . $rand_id . '  {
 	background: ' . $background_color . ';
@@ -274,6 +263,7 @@ if ( $setting->layout == 'vr' || $setting->layout != 'hr' ) {
 
 
 	';
+    
     if ( $setting->style == '1' ) {
         $inline_style .= '
 		div.gt-tree.' . $rand_id . ' .gt-style-1 div.ind {
@@ -297,7 +287,17 @@ if ( $setting->layout == 'vr' || $setting->layout != 'hr' ) {
 			margin-left: -15px;
 			font-size: 15px !important;
 			line-height: ' . (30 - intval( $line_border_width ) * 2) . 'px;
-			text-align: center;
+			text-align: center; ';
+        if ( $setting->marr_icon ) {
+            $inline_style .= '
+				font-size: 0px !important;
+				background: url(' . $setting->marr_icon . ');
+				background-position: center;
+				background-size: 100%;
+				background-repeat: no-repeat;';
+        }
+        $inline_style .= '
+
 		} 
 		div.gt-tree.' . $rand_id . ' .gt-style-1 li.family:only-child {
 			padding-top: 40px !important;
@@ -326,6 +326,7 @@ if ( $setting->layout == 'vr' || $setting->layout != 'hr' ) {
 			margin-left: -' . intval( $line_border_width ) / 2 . 'px;
 		}';
     }
+
 }
 
 $inline_style .= '
